@@ -62,7 +62,7 @@ const generate = async (language: 'en' | 'ja') => {
     localizedStrings.install[language],
   ])
 
-  for (const banner of banners) {
+  for (const banner of banners.toSorted((a, b) => a.id.localeCompare(b.id))) {
     table.appendRow([
       typeof banner.name === 'string' ? banner.name : banner.name[language] ?? '',
       banner.version,
