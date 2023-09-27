@@ -1,0 +1,39 @@
+name: 'Check'
+
+on:
+  push:
+    branches:
+      - 'master'
+
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: SlashNephy/.github/.github/workflows/yarn-run.yml@master
+    with:
+      script: 'build'
+    permissions:
+      contents: 'read'
+
+  lint:
+    uses: SlashNephy/.github/.github/workflows/yarn-lint.yml@master
+    with:
+      script: 'lint'
+    permissions:
+      contents: 'read'
+      pull-requests: 'write'
+
+  format-and-build-ci:
+    if: github.event_name != 'pull_request'
+    uses: SlashNephy/.github/.github/workflows/yarn-format.yml@master
+    with:
+      script: ''
+      command: 'NODE_OPTIONS="--max-old-space-size=8172" yarn ci'
+      commit-message: '⚙️ Build'
+    permissions:
+      contents: 'write'
