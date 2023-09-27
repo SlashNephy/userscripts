@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AKASHI Show Remaining Hours
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.0
+// @version         0.1.1
 // @author          SlashNephy
 // @description     Display the remaining required working hours in attendance page.
 // @description:ja  出勤簿ページに残り必要な労働時間を表示します。

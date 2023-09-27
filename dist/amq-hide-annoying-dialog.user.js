@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Hide Annoying Dialog
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.0
+// @version         0.2.1
 // @author          SlashNephy
 // @description     Hide annoying message dialogs when disconnecting and reconnecting.
 // @description:ja  コネクションの切断や再接続時の邪魔なメッセージダイアログを非表示にします。

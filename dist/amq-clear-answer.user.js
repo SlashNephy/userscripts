@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Clear Answer
 // @namespace       https://github.com/SlashNephy
-// @version         1.1.0
+// @version         1.1.1
 // @author          SlashNephy
 // @description     Add a feature to clear text in the answer column with Delete key.
 // @description:ja  Delete キーを押下することで解答欄のテキストをクリアする機能を追加します。

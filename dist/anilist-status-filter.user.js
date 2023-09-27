@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AniList Status Filter
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.1
+// @version         0.1.2
 // @author          SlashNephy
 // @description     Filter anime by your status on AniList search page.
 // @description:ja  AniListの作品検索ページ内で自分の視聴ステータスでフィルターできるようにします。

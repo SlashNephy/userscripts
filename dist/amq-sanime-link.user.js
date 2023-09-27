@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ sanime Link
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.0
+// @version         0.2.1
 // @author          SlashNephy
 // @description     Display links to sanime and "i(lyl)2m" in the player list.
 // @description:ja  プレイヤーリストに sanime や "i(lyl)2m" へのリンクを表示します。

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Preload Video
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.0
+// @version         0.3.1
 // @author          SlashNephy
 // @description     Just enable media preloading. Buffering may be faster.
 // @description:ja  プレイヤーのプリロードを有効にします。バッファリングが速くなるかもしれません。

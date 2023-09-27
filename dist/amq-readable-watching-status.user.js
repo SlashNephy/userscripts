@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Readable Watching Status
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.0
+// @version         0.2.1
 // @author          SlashNephy
 // @description     Narrow the width of the answered anime titles to make the watching status indicator readable.
 // @description:ja  解答欄の幅を狭め、視聴状況のインジケーターを読みやすくします。

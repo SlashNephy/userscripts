@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Auto Continue Login
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.0
+// @version         0.2.1
 // @author          SlashNephy
 // @description     Press the Continue Login button automatically in Login Page.
 // @description:ja  ログインページの「Continue Login」ボタンを自動で押下します。

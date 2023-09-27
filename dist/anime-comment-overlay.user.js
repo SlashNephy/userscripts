@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Anime Comment Overlay
 // @namespace       https://github.com/SlashNephy
-// @version         0.4.0
+// @version         0.4.1
 // @author          SlashNephy
 // @description     Display overlay of comments on various streaming sites and EPGStation.
 // @description:ja  アニメ配信サイト (dアニメストア / ABEMAビデオ / Netflix) や EPGStation で実況コメをオーバーレイ表示します。

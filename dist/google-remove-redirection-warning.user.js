@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Google Remove Redirection Warning
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.3
+// @version         0.1.4
 // @author          SlashNephy
 // @description     Remove redirection warning from https://google.com/url
 // @description:ja  https://google.com/url のリダイレクト警告をスキップします。

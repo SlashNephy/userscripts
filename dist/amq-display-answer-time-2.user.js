@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Display Answer Time 2
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.0
+// @version         0.3.1
 // @author          SlashNephy
 // @description     Display player answer time in seconds.
 // @description:ja  プレイヤーの解答時間を秒単位で表示します。

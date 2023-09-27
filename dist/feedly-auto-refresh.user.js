@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Feedly Auto Refresh
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.3
+// @version         0.2.4
 // @author          SlashNephy
 // @description     Auto refresh feeds when there are no unread articles in Feedly.
 // @description:ja  Feedly で未読記事がないとき、フィードを自動リフレッシュします。

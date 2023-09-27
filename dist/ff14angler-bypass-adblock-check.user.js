@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            FF14Angler Bypass AdBlocker Check
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.3
+// @version         0.2.4
 // @author          SlashNephy
 // @description     Disable AdBlocker check in FF14Angler.
 // @description:ja  FF14Angler の AdBlocker チェックを無効にします。

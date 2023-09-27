@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Private Session
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.0
+// @version         0.3.1
 // @author          SlashNephy
 // @description     Set invisible status automatically on login.
 // @description:ja  ログイン時に Invisible ステータスを設定します。
