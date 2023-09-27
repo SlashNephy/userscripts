@@ -703,7 +703,7 @@
     const utils_1 = utils;
     const japaneseNumerics_1 = japaneseNumerics$1;
     function kanji2number(japanese) {
-      japanese = utils_1.normalize(japanese);
+      japanese = (0, utils_1.normalize)(japanese);
       if (japanese.match('〇') || japanese.match(/^[〇一二三四五六七八九]+$/)) {
         for (const key in japaneseNumerics_1.default) {
           const reg = new RegExp(key, 'g');
@@ -712,7 +712,7 @@
         return Number(japanese);
       } else {
         let number = 0;
-        const numbers = utils_1.splitLargeNumber(japanese);
+        const numbers = (0, utils_1.splitLargeNumber)(japanese);
         // 万以上の数字を数値に変換
         for (const key in utils_1.largeNumbers) {
           if (numbers[key]) {
@@ -740,11 +740,11 @@
         const n = Math.floor(number / utils_1.largeNumbers[key]);
         if (n) {
           number = number - n * utils_1.largeNumbers[key];
-          kanji = `${kanji}${utils_1.n2kan(n)}${key}`;
+          kanji = `${kanji}${(0, utils_1.n2kan)(n)}${key}`;
         }
       }
       if (number) {
-        kanji = `${kanji}${utils_1.n2kan(number)}`;
+        kanji = `${kanji}${(0, utils_1.n2kan)(number)}`;
       }
       return kanji;
     }
