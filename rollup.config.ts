@@ -7,7 +7,7 @@ export const banners: Banner[] = [
   {
     id: 'annict-work-links',
     name: 'Annict Work Links',
-    version: '0.3.2',
+    version: '0.3.3',
     description: {
       en: 'Add links to "Shoboi Calendar", "MyAnimeList" and "AniList" on Annict works page.',
       ja: 'Annict の作品ページに「しょぼいカレンダー」「MyAnimeList」「AniList」へのリンクを追加します。',
@@ -22,7 +22,7 @@ export const banners: Banner[] = [
   {
     id: 'dominion-online-auto-table-setter',
     name: 'dominion.games Auto Table Setter',
-    version: '0.4.0',
+    version: '0.4.1',
     description: {
       en: 'Automatically configures the table settings in dominion.games.',
       ja: 'dominion.games の卓設定を自動的に設定します。',
@@ -35,7 +35,7 @@ export const banners: Banner[] = [
   {
     id: 'ff14angler-bypass-adblock-check',
     name: 'FF14Angler Bypass AdBlocker Check',
-    version: '0.2.3',
+    version: '0.2.4',
     description: {
       en: 'Disable AdBlocker check in FF14Angler.',
       ja: 'FF14Angler の AdBlocker チェックを無効にします。',
@@ -50,7 +50,7 @@ export const banners: Banner[] = [
   {
     id: 'feedly-auto-refresh',
     name: 'Feedly Auto Refresh',
-    version: '0.2.3',
+    version: '0.2.4',
     description: {
       en: 'Auto refresh feeds when there are no unread articles in Feedly.',
       ja: 'Feedly で未読記事がないとき、フィードを自動リフレッシュします。',
@@ -63,7 +63,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-preload-video',
     name: 'AMQ Preload Video',
-    version: '0.3.0',
+    version: '0.3.1',
     description: {
       en: 'Just enable media preloading. Buffering may be faster.',
       ja: 'プレイヤーのプリロードを有効にします。バッファリングが速くなるかもしれません。',
@@ -81,7 +81,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-result-exporter',
     name: 'AMQ Result Exporter',
-    version: '0.5.1',
+    version: '0.5.2',
     description: {
       en: 'Export song results to your Google Spreadsheet!',
       ja: 'Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。',
@@ -100,7 +100,7 @@ export const banners: Banner[] = [
   {
     id: 'google-remove-redirection-warning',
     name: 'Google Remove Redirection Warning',
-    version: '0.1.3',
+    version: '0.1.4',
     description: {
       en: 'Remove redirection warning from https://google.com/url',
       ja: 'https://google.com/url のリダイレクト警告をスキップします。',
@@ -113,7 +113,7 @@ export const banners: Banner[] = [
   {
     id: 'annict-hide-future-programs',
     name: 'Annict Hide Future Programs',
-    version: '0.1.6',
+    version: '0.1.7',
     description: {
       en: 'Hide programs for the next day or later in Annict track page. In addition, it hides works that have no unwatched episodes.',
       ja: 'Annict の「記録するページ」で翌日以降の番組を非表示にします。さらに未視聴エピソードがない作品を非表示にします。',
@@ -126,7 +126,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-private-session',
     name: 'AMQ Private Session',
-    version: '0.3.0',
+    version: '0.3.1',
     description: {
       en: 'Set invisible status automatically on login.',
       ja: 'ログイン時に Invisible ステータスを設定します。',
@@ -144,7 +144,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-detailed-song-info',
     name: 'AMQ Detailed Song Info',
-    version: '0.7.1',
+    version: '0.7.2',
     description: {
       en: 'Display detailed information on the side panel of the song.',
       ja: '曲のサイドパネルに詳細な情報を表示します。',
@@ -163,7 +163,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-hide-annoying-dialog',
     name: 'AMQ Hide Annoying Dialog',
-    version: '0.2.0',
+    version: '0.2.1',
     description: {
       en: 'Hide annoying message dialogs when disconnecting and reconnecting.',
       ja: 'コネクションの切断や再接続時の邪魔なメッセージダイアログを非表示にします。',
@@ -181,7 +181,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-readable-watching-status',
     name: 'AMQ Readable Watching Status',
-    version: '0.2.0',
+    version: '0.2.1',
     description: {
       en: 'Narrow the width of the answered anime titles to make the watching status indicator readable.',
       ja: '解答欄の幅を狭め、視聴状況のインジケーターを読みやすくします。',
@@ -199,7 +199,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-clear-answer',
     name: 'AMQ Clear Answer',
-    version: '1.1.0',
+    version: '1.1.1',
     description: {
       en: 'Add a feature to clear text in the answer column with Delete key.',
       ja: 'Delete キーを押下することで解答欄のテキストをクリアする機能を追加します。',
@@ -216,7 +216,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-song-guess-rate',
     name: 'AMQ Song Guess Rate',
-    version: '0.3.1',
+    version: '0.3.2',
     description: {
       en: 'Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)',
       ja: '曲のサイドパネルに曲ごとの正答率を表示します。(0.3.0 以降の AMQ Detailed Song Info プラグインが必要です。)',
@@ -234,7 +234,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-sanime-link',
     name: 'AMQ sanime Link',
-    version: '0.2.0',
+    version: '0.2.1',
     description: {
       en: 'Display links to sanime and "i(lyl)2m" in the player list.',
       ja: 'プレイヤーリストに sanime や "i(lyl)2m" へのリンクを表示します。',
@@ -252,7 +252,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-display-answer-time-2',
     name: 'AMQ Display Answer Time 2',
-    version: '0.3.0',
+    version: '0.3.1',
     description: {
       en: 'Display player answer time in seconds.',
       ja: 'プレイヤーの解答時間を秒単位で表示します。',
@@ -270,7 +270,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-auto-continue-login',
     name: 'AMQ Auto Continue Login',
-    version: '0.2.0',
+    version: '0.2.1',
     description: {
       en: 'Press the Continue Login button automatically in Login Page.',
       ja: 'ログインページの「Continue Login」ボタンを自動で押下します。',
@@ -288,7 +288,7 @@ export const banners: Banner[] = [
   {
     id: 'akashi-show-remaining-hours',
     name: 'AKASHI Show Remaining Hours',
-    version: '0.1.0',
+    version: '0.1.1',
     description: {
       en: 'Display the remaining required working hours in attendance page.',
       ja: '出勤簿ページに残り必要な労働時間を表示します。',
@@ -301,7 +301,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-dynamic-background',
     name: 'AMQ Dynamic Background',
-    version: '0.3.0',
+    version: '0.3.1',
     description: {
       en: 'Set the currently playing video surface as the background image.',
       ja: '現在再生中の動画を背景画像に設定します。',
@@ -319,7 +319,7 @@ export const banners: Banner[] = [
   {
     id: 'annict-following-viewings',
     name: 'Annict Following Viewings',
-    version: '0.3.2',
+    version: '0.3.3',
     description: {
       en: 'Display following viewings on Annict work page.',
       ja: 'Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。',
@@ -337,7 +337,7 @@ export const banners: Banner[] = [
   {
     id: 'anilist-status-filter',
     name: 'AniList Status Filter',
-    version: '0.1.1',
+    version: '0.1.2',
     description: {
       en: 'Filter anime by your status on AniList search page.',
       ja: 'AniListの作品検索ページ内で自分の視聴ステータスでフィルターできるようにします。',
@@ -350,7 +350,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-i18n-titles',
     name: 'AMQ i18n Titles',
-    version: '0.1.2',
+    version: '0.1.3',
     description: {
       en: 'Display localized anime titles. (Currently support only Japanese.)',
       ja: '選択肢やドロップダウンに表示されているアニメのタイトルを日本語に置換します。',
@@ -382,7 +382,7 @@ export const banners: Banner[] = [
   {
     id: 'anime-comment-overlay',
     name: 'Anime Comment Overlay',
-    version: '0.4.0',
+    version: '0.4.1',
     description: {
       en: 'Display overlay of comments on various streaming sites and EPGStation.',
       ja: 'アニメ配信サイト (dアニメストア / ABEMAビデオ / Netflix) や EPGStation で実況コメをオーバーレイ表示します。',
@@ -415,7 +415,7 @@ export const banners: Banner[] = [
   {
     id: 'auto-close-aws-vpn-client-window',
     name: 'Auto-Close AWS VPN Client Window',
-    version: '0.1.0',
+    version: '0.1.1',
     description: {
       en: 'Close the AWS VPN Client window automatically.',
       ja: '認証後に AWS VPN Client のウィンドウを自動的に閉じます。',
