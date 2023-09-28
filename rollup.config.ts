@@ -415,7 +415,7 @@ export const banners: Banner[] = [
   {
     id: 'auto-close-aws-vpn-client-window',
     name: 'Auto-Close AWS VPN Client Window',
-    version: '0.1.1',
+    version: '0.1.2',
     description: {
       en: 'Close the AWS VPN Client window automatically.',
       ja: '認証後に AWS VPN Client のウィンドウを自動的に閉じます。',
