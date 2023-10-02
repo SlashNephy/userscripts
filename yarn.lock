@@ -1895,10 +1895,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.7.0":
-  version: 20.7.0
-  resolution: "@types/node@npm:20.7.0"
-  checksum: 1b2919925c213f4d2039ada7a8354c998e144f7291db8d719ef58ea9924ab636c113690073b0ec3b82ba62907385f7e0f51e9d1583c1a818776daa5156d3a590
+"@types/node@npm:20.7.2":
+  version: 20.7.2
+  resolution: "@types/node@npm:20.7.2"
+  checksum: 5baa09368c8daa50ad1eaa2499b988b2f4c06cacf8b251d1e63f68ad32df97b21d8104f1ac06889481f1d3e84056842732bb848dd1136164d823c1d4a6baf435
   languageName: node
   linkType: hard
 
@@ -6974,7 +6974,7 @@ __metadata:
     "@types/babel__preset-env": 7.9.3
     "@types/fuzzyset": 1.0.5
     "@types/jquery": 3.5.20
-    "@types/node": 20.7.0
+    "@types/node": 20.7.2
     "@types/tampermonkey": 4.20.3
     "@xpadev-net/niconicomments": 0.2.56
     concurrently: 8.2.1
