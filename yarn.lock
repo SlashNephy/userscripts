@@ -1759,6 +1759,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@slashnephy/types-amq@npm:0.4.2":
+  version: 0.4.2
+  resolution: "@slashnephy/types-amq@npm:0.4.2"
+  dependencies:
+    "@types/bootstrap": 3.3.33
+    "@types/cookieconsent": 3.1.1
+    "@types/jquery": 3.2.0
+    "@types/js-cookie": 2.2.7
+    perfect-scrollbar: 0.7.0
+    sweetalert: 2.1
+  checksum: f258916bdcce427e8314e7c17889ba7e255deaa538b0ee4f3435c03034ad4453e12dfff5ae12aeadb2a82065b9118bfcea03d2530e530952ae18b9cfcfe5e5ab
+  languageName: node
+  linkType: hard
+
 "@storybook/csf@npm:^0.0.1":
   version: 0.0.1
   resolution: "@storybook/csf@npm:0.0.1"
@@ -1851,6 +1865,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/bootstrap@npm:3.3.33":
+  version: 3.3.33
+  resolution: "@types/bootstrap@npm:3.3.33"
+  dependencies:
+    "@types/jquery": "*"
+  checksum: ae2d806b8f1402da69aeda3140acd4a456f4e5e5e301743fe752e1672245fbcb1ad9347d483d3dca3979b2bbfaedd0b97b22c1ee811bc7cead58eea32853892d
+  languageName: node
+  linkType: hard
+
+"@types/cookieconsent@npm:3.1.1":
+  version: 3.1.1
+  resolution: "@types/cookieconsent@npm:3.1.1"
+  dependencies:
+    csstype: ^3.0.2
+  checksum: 6cb12c04a53176df691858c29d6050bbdc02e00d4053fdb2e0040516644c1c9389d8f5a87d80cf77ce85063cb3e98d92373dcb1c68e12c8bd392da34c2d25895
+  languageName: node
+  linkType: hard
+
 "@types/estree@npm:*, @types/estree@npm:^1.0.0":
   version: 1.0.2
   resolution: "@types/estree@npm:1.0.2"
@@ -1865,12 +1897,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/jquery@npm:*":
+  version: 3.5.22
+  resolution: "@types/jquery@npm:3.5.22"
+  dependencies:
+    "@types/sizzle": "*"
+  checksum: b81c95e27bb30686c1ad5d3f414781243d0cbb468b91d5584dedd3d3ca07ac99796d876e257a7246d6d9b69916bbb0cd0508142ab9f88848605c6d431144d729
+  languageName: node
+  linkType: hard
+
+"@types/jquery@npm:3.2.0":
+  version: 3.2.0
+  resolution: "@types/jquery@npm:3.2.0"
+  checksum: 9bffaca2982cfd1f0e16619e04eb0d1cfeac67d7e1993175a85d127df1c495b98dae6c162c9c39b608a3551e62f3f9e32be5326824631f5fc62a82c7b7464602
+  languageName: node
+  linkType: hard
+
 "@types/jquery@npm:3.5.20":
   version: 3.5.20
   resolution: "@types/jquery@npm:3.5.20"
   dependencies:
     "@types/sizzle": "*"
   checksum: 9bd69faea3d60f52d3029a87b890003042a9dcf4f538c23ac2c11b3bd0e0ccd86b281d5ba3028d1b02df67c69266b8dc0ef0a35696ae174515ecf34523a0287b
+  languageName: node
+  linkType: hard
+
+"@types/js-cookie@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@types/js-cookie@npm:2.2.7"
+  checksum: 851f47e94ca1fc43661d8f51614d67a613e7810c91b876d0a3b311ce72f7df800107fd02a08cb6948184e12c120b4f058edca2f50424d8798bdcffd6627281e3
   languageName: node
   linkType: hard
 
@@ -2938,6 +2993,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"csstype@npm:^3.0.2":
+  version: 3.1.2
+  resolution: "csstype@npm:3.1.2"
+  checksum: e1a52e6c25c1314d6beef5168da704ab29c5186b877c07d822bd0806717d9a265e8493a2e35ca7e68d0f5d472d43fac1cdce70fd79fd0853dff81f3028d857b5
+  languageName: node
+  linkType: hard
+
 "damerau-levenshtein@npm:^1.0.8":
   version: 1.0.8
   resolution: "damerau-levenshtein@npm:1.0.8"
@@ -3259,6 +3321,13 @@ __metadata:
     is-date-object: ^1.0.1
     is-symbol: ^1.0.2
   checksum: 4ead6671a2c1402619bdd77f3503991232ca15e17e46222b0a41a5d81aebc8740a77822f5b3c965008e631153e9ef0580540007744521e72de8e33599fca2eed
+  languageName: node
+  linkType: hard
+
+"es6-object-assign@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "es6-object-assign@npm:1.1.0"
+  checksum: 8d4fdf63484d78b5c64cacc2c2e1165bc7b6a64b739d2a9db6a4dc8641d99cc9efb433cdd4dc3d3d6b00bfa6ce959694e4665e3255190339945c5f33b692b5d8
   languageName: node
   linkType: hard
 
@@ -5742,6 +5811,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"perfect-scrollbar@npm:0.7.0":
+  version: 0.7.0
+  resolution: "perfect-scrollbar@npm:0.7.0"
+  checksum: 5b30e0763818c2862432f660ed6089dd1994f1eb7a2a47a9b6cbb4ce1f12f7986306c8aa3d38ab99d9bdc26f12da73df0fa6fbf283801821c0346db3d15663f6
+  languageName: node
+  linkType: hard
+
 "picocolors@npm:^1.0.0":
   version: 1.0.0
   resolution: "picocolors@npm:1.0.0"
@@ -5789,6 +5865,13 @@ __metadata:
   bin:
     prettier: bin/prettier.cjs
   checksum: e10b9af02b281f6c617362ebd2571b1d7fc9fb8a3bd17e371754428cda992e5e8d8b7a046e8f7d3e2da1dcd21aa001e2e3c797402ebb6111b5cd19609dd228e0
+  languageName: node
+  linkType: hard
+
+"promise-polyfill@npm:^6.0.2":
+  version: 6.1.0
+  resolution: "promise-polyfill@npm:6.1.0"
+  checksum: 6f1899cca37e48f67a424842282acd525d8d99d3536f2d97e37a117cfc4a0006683330ceaf5a15fbc09b4450f319a680292f9970a5f8e9cf90acbce0bdb0f751
   languageName: node
   linkType: hard
 
@@ -6545,6 +6628,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sweetalert@npm:2.1":
+  version: 2.1.2
+  resolution: "sweetalert@npm:2.1.2"
+  dependencies:
+    es6-object-assign: ^1.1.0
+    promise-polyfill: ^6.0.2
+  checksum: 6f15adc82643c1374b70390ca56eca62f07365ca933c6b3722e2f651a19fff810120c2d7547e76de17a2b5da36e31f14d1a12358e69e0548c91b74e5af887bd3
+  languageName: node
+  linkType: hard
+
 "tapable@npm:^2.2.0":
   version: 2.2.1
   resolution: "tapable@npm:2.2.1"
@@ -6894,6 +6987,7 @@ __metadata:
     "@rollup/plugin-typescript": 11.1.4
     "@slashnephy/eslint-config": 2.0.28
     "@slashnephy/prettier-config": 1.0.18
+    "@slashnephy/types-amq": 0.4.2
     "@types/babel__core": 7.20.2
     "@types/babel__preset-env": 7.9.3
     "@types/fuzzyset": 1.0.5
