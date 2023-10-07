@@ -27,7 +27,7 @@ UserScript collection
 | Annict Following Viewings         | 0.3.3      | https://github.com/SlashNephy/userscripts/raw/master/dist/annict-following-viewings.user.js         |
 | Annict Hide Future Programs       | 0.1.7      | https://github.com/SlashNephy/userscripts/raw/master/dist/annict-hide-future-programs.user.js       |
 | Annict Work Links                 | 0.3.3      | https://github.com/SlashNephy/userscripts/raw/master/dist/annict-work-links.user.js                 |
-| Auto-Close AWS VPN Client Window  | 0.1.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/auto-close-aws-vpn-client-window.user.js  |
+| Auto-Close AWS VPN Client Window  | 0.1.2      | https://github.com/SlashNephy/userscripts/raw/master/dist/auto-close-aws-vpn-client-window.user.js  |
 | Detect Types                      | 0.1.0      | https://github.com/SlashNephy/userscripts/raw/master/dist/detect-types.user.js                      |
 | dominion.games Auto Table Setter  | 0.4.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/dominion-online-auto-table-setter.user.js |
 | Feedly Auto Refresh               | 0.2.4      | https://github.com/SlashNephy/userscripts/raw/master/dist/feedly-auto-refresh.user.js               |
@@ -178,7 +178,7 @@ window の型定義を生成する関数を登録します。
 
 アニメ配信サイト (dアニメストア / ABEMAビデオ / Netflix) や EPGStation で実況コメをオーバーレイ表示します。
 
-### Auto-Close AWS VPN Client Window (v0.1.1)
+### Auto-Close AWS VPN Client Window (v0.1.2)
 
 [📥 インストール](https://github.com/SlashNephy/userscripts/raw/master/dist/auto-close-aws-vpn-client-window.user.js) / [💻 ソースコード](https://github.com/SlashNephy/userscripts/blob/master/src/auto-close-aws-vpn-client-window.ts) / [📖 Scrapbox](https://scrapbox.io/slashnephy/AWS_VPN_Client_%E3%81%AE%E8%AA%8D%E8%A8%BC%E7%94%BB%E9%9D%A2%E3%82%92%E8%87%AA%E5%8B%95%E7%9A%84%E3%81%AB%E9%96%89%E3%81%98%E3%82%8B_UserScript)
 

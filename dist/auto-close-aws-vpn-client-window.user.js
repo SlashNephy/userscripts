@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Auto-Close AWS VPN Client Window
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.1
+// @version         0.1.2
 // @author          SlashNephy
 // @description     Close the AWS VPN Client window automatically.
 // @description:ja  認証後に AWS VPN Client のウィンドウを自動的に閉じます。
@@ -20,8 +20,12 @@
     'use strict';
 
     const expectedBody = '認証の詳細を受信、詳細を処理中です。このウィンドウをいつでも閉じることができます。';
-    if (document.body.textContent === expectedBody) {
-        window.close();
+    function closeWindow() {
+        if (document.body.textContent === expectedBody) {
+            window.close();
+        }
     }
+    closeWindow();
+    addEventListener('load', closeWindow);
 
 })();
