@@ -6,33 +6,34 @@ UserScript collection
 
 ## UserScript
 
-| ⚙ スクリプト                     | バージョン | 📥 インストール                                                                                     |
-| :-------------------------------- | :--------- | :-------------------------------------------------------------------------------------------------- |
-| AKASHI Show Remaining Hours       | 0.1.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/akashi-show-remaining-hours.user.js       |
-| AMQ Auto Continue Login           | 0.2.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-auto-continue-login.user.js           |
-| AMQ Clear Answer                  | 1.1.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-clear-answer.user.js                  |
-| AMQ Detailed Song Info            | 0.7.2      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-detailed-song-info.user.js            |
-| AMQ Display Answer Time 2         | 0.3.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-display-answer-time-2.user.js         |
-| AMQ Dynamic Background            | 0.3.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-dynamic-background.user.js            |
-| AMQ Hide Annoying Dialog          | 0.2.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-hide-annoying-dialog.user.js          |
-| AMQ i18n Titles                   | 0.1.3      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-i18n-titles.user.js                   |
-| AMQ Preload Video                 | 0.3.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-preload-video.user.js                 |
-| AMQ Private Session               | 0.3.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-private-session.user.js               |
-| AMQ Readable Watching Status      | 0.2.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-readable-watching-status.user.js      |
-| AMQ Result Exporter               | 0.5.2      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-result-exporter.user.js               |
-| AMQ sanime Link                   | 0.2.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-sanime-link.user.js                   |
-| AMQ Song Guess Rate               | 0.3.2      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-song-guess-rate.user.js               |
-| AniList Status Filter             | 0.1.2      | https://github.com/SlashNephy/userscripts/raw/master/dist/anilist-status-filter.user.js             |
-| Anime Comment Overlay             | 0.4.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/anime-comment-overlay.user.js             |
-| Annict Following Viewings         | 0.3.3      | https://github.com/SlashNephy/userscripts/raw/master/dist/annict-following-viewings.user.js         |
-| Annict Hide Future Programs       | 0.1.7      | https://github.com/SlashNephy/userscripts/raw/master/dist/annict-hide-future-programs.user.js       |
-| Annict Work Links                 | 0.3.3      | https://github.com/SlashNephy/userscripts/raw/master/dist/annict-work-links.user.js                 |
-| Auto-Close AWS VPN Client Window  | 0.1.2      | https://github.com/SlashNephy/userscripts/raw/master/dist/auto-close-aws-vpn-client-window.user.js  |
-| Detect Types                      | 0.1.0      | https://github.com/SlashNephy/userscripts/raw/master/dist/detect-types.user.js                      |
-| dominion.games Auto Table Setter  | 0.4.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/dominion-online-auto-table-setter.user.js |
-| Feedly Auto Refresh               | 0.2.4      | https://github.com/SlashNephy/userscripts/raw/master/dist/feedly-auto-refresh.user.js               |
-| FF14Angler Bypass AdBlocker Check | 0.2.4      | https://github.com/SlashNephy/userscripts/raw/master/dist/ff14angler-bypass-adblock-check.user.js   |
-| Google Remove Redirection Warning | 0.1.4      | https://github.com/SlashNephy/userscripts/raw/master/dist/google-remove-redirection-warning.user.js |
+| ⚙ スクリプト                        | バージョン | 📥 インストール                                                                                     |
+| :----------------------------------- | :--------- | :-------------------------------------------------------------------------------------------------- |
+| AKASHI Show Remaining Hours          | 0.1.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/akashi-show-remaining-hours.user.js       |
+| [Closed Test] AMQ Accelerate Loading | 0.2.0      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-accelerate-loading.user.js            |
+| AMQ Auto Continue Login              | 0.2.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-auto-continue-login.user.js           |
+| AMQ Clear Answer                     | 1.1.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-clear-answer.user.js                  |
+| AMQ Detailed Song Info               | 0.7.2      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-detailed-song-info.user.js            |
+| AMQ Display Answer Time 2            | 0.3.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-display-answer-time-2.user.js         |
+| AMQ Dynamic Background               | 0.3.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-dynamic-background.user.js            |
+| AMQ Hide Annoying Dialog             | 0.2.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-hide-annoying-dialog.user.js          |
+| AMQ i18n Titles                      | 0.1.3      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-i18n-titles.user.js                   |
+| AMQ Preload Video                    | 0.3.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-preload-video.user.js                 |
+| AMQ Private Session                  | 0.3.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-private-session.user.js               |
+| AMQ Readable Watching Status         | 0.2.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-readable-watching-status.user.js      |
+| AMQ Result Exporter                  | 0.5.2      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-result-exporter.user.js               |
+| AMQ sanime Link                      | 0.2.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-sanime-link.user.js                   |
+| AMQ Song Guess Rate                  | 0.3.2      | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-song-guess-rate.user.js               |
+| AniList Status Filter                | 0.1.2      | https://github.com/SlashNephy/userscripts/raw/master/dist/anilist-status-filter.user.js             |
+| Anime Comment Overlay                | 0.4.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/anime-comment-overlay.user.js             |
+| Annict Following Viewings            | 0.3.3      | https://github.com/SlashNephy/userscripts/raw/master/dist/annict-following-viewings.user.js         |
+| Annict Hide Future Programs          | 0.1.7      | https://github.com/SlashNephy/userscripts/raw/master/dist/annict-hide-future-programs.user.js       |
+| Annict Work Links                    | 0.3.3      | https://github.com/SlashNephy/userscripts/raw/master/dist/annict-work-links.user.js                 |
+| Auto-Close AWS VPN Client Window     | 0.1.2      | https://github.com/SlashNephy/userscripts/raw/master/dist/auto-close-aws-vpn-client-window.user.js  |
+| Detect Types                         | 0.1.0      | https://github.com/SlashNephy/userscripts/raw/master/dist/detect-types.user.js                      |
+| dominion.games Auto Table Setter     | 0.4.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/dominion-online-auto-table-setter.user.js |
+| Feedly Auto Refresh                  | 0.2.4      | https://github.com/SlashNephy/userscripts/raw/master/dist/feedly-auto-refresh.user.js               |
+| FF14Angler Bypass AdBlocker Check    | 0.2.4      | https://github.com/SlashNephy/userscripts/raw/master/dist/ff14angler-bypass-adblock-check.user.js   |
+| Google Remove Redirection Warning    | 0.1.4      | https://github.com/SlashNephy/userscripts/raw/master/dist/google-remove-redirection-warning.user.js |
 
 ### Annict Work Links (v0.3.3)
 
@@ -183,3 +184,9 @@ window の型定義を生成する関数を登録します。
 [📥 インストール](https://github.com/SlashNephy/userscripts/raw/master/dist/auto-close-aws-vpn-client-window.user.js) / [💻 ソースコード](https://github.com/SlashNephy/userscripts/blob/master/src/auto-close-aws-vpn-client-window.ts) / [📖 Scrapbox](https://scrapbox.io/slashnephy/AWS_VPN_Client_%E3%81%AE%E8%AA%8D%E8%A8%BC%E7%94%BB%E9%9D%A2%E3%82%92%E8%87%AA%E5%8B%95%E7%9A%84%E3%81%AB%E9%96%89%E3%81%98%E3%82%8B_UserScript)
 
 認証後に AWS VPN Client のウィンドウを自動的に閉じます。
+
+### [Closed Test] AMQ Accelerate Loading (v0.2.0)
+
+[📥 インストール](https://github.com/SlashNephy/userscripts/raw/master/dist/amq-accelerate-loading.user.js) / [💻 ソースコード](https://github.com/SlashNephy/userscripts/blob/master/src/amq-accelerate-loading.ts) / [📖 Scrapbox](https://scrapbox.io/slashnephy/)
+
+メディアを代替ソースから高速にロードします。
