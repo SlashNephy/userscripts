@@ -48,7 +48,7 @@
     "@types/node": "20.8.2",
     "@types/tampermonkey": "4.20.3",
     "concurrently": "8.2.1",
-    "eslint": "8.50.0",
+    "eslint": "8.51.0",
     "markdown-doc-builder": "1.3.0",
     "prettier": "3.0.3",
     "rollup": "4.0.2",
