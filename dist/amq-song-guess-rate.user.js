@@ -153,7 +153,7 @@
                 title: 'Guess Rate',
                 async content(event) {
                     const self = Object.values(unsafeWindow.quiz.players).find((p) => p.isSelf && p._inGame);
-                    if (self === undefined) {
+                    if (!self) {
                         return null;
                     }
                     const isCorrect = event.players.find((p) => p.gamePlayerId === self.gamePlayerId)?.correct === true;

@@ -47,7 +47,7 @@
             .catch(console.error);
     };
 
-    const isReady = () => unsafeWindow.setupDocumentDone === true;
+    const isReady = () => !!unsafeWindow.setupDocumentDone;
 
     class PlayerAnswerTimeManager {
         #songStartTime = 0;

@@ -49,36 +49,31 @@
 
     onReady(() => {
         const video = document.createElement('video');
-        video.id = 'dynamic-background-video';
+        video.style.position = 'fixed';
+        video.style.top = '0';
+        video.style.left = '0';
+        video.style.width = '100%';
+        video.style.height = '100%';
+        video.style.objectFit = 'cover';
         video.muted = true;
         video.loop = true;
         const container = document.getElementById('quizPage') ?? document.body;
         container.insertAdjacentElement('afterbegin', video);
         new Listener('answer results', () => {
-            const quizPlayer = unsafeWindow.quizVideoController.getCurrentPlayer();
-            if (quizPlayer === undefined) {
+            const quizPlayer = quizVideoController.getCurrentPlayer();
+            if (!quizPlayer) {
                 return;
             }
-            if (quizPlayer.player.isAudio()) {
+            if (quizPlayer.resolution === 0) {
                 return;
             }
             const quizVideo = quizPlayer.$player[0];
-            if (quizVideo !== undefined && video.src !== quizVideo.src) {
+            if (quizVideo && video.src !== quizVideo.src) {
                 video.src = quizVideo.src;
                 video.currentTime = quizVideo.currentTime;
-                video.play().catch(console.error);
+                void video.play();
             }
         }).bindListener();
-        AMQ_addStyle(`
-    #dynamic-background-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  `);
         AMQ_addScriptData({
             name: 'Dynamic Background',
             author: 'SlashNephy &lt;spica@starry.blue&gt;',
