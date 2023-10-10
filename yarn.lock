@@ -1981,7 +1981,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jquery@npm:*":
+"@types/jquery@npm:*, @types/jquery@npm:3.5.22":
   version: 3.5.22
   resolution: "@types/jquery@npm:3.5.22"
   dependencies:
@@ -1994,15 +1994,6 @@ __metadata:
   version: 3.2.0
   resolution: "@types/jquery@npm:3.2.0"
   checksum: 9bffaca2982cfd1f0e16619e04eb0d1cfeac67d7e1993175a85d127df1c495b98dae6c162c9c39b608a3551e62f3f9e32be5326824631f5fc62a82c7b7464602
-  languageName: node
-  linkType: hard
-
-"@types/jquery@npm:3.5.20":
-  version: 3.5.20
-  resolution: "@types/jquery@npm:3.5.20"
-  dependencies:
-    "@types/sizzle": "*"
-  checksum: 9bd69faea3d60f52d3029a87b890003042a9dcf4f538c23ac2c11b3bd0e0ccd86b281d5ba3028d1b02df67c69266b8dc0ef0a35696ae174515ecf34523a0287b
   languageName: node
   linkType: hard
 
@@ -7111,7 +7102,7 @@ __metadata:
     "@types/babel__core": 7.20.2
     "@types/babel__preset-env": 7.9.3
     "@types/fuzzyset": 1.0.5
-    "@types/jquery": 3.5.20
+    "@types/jquery": 3.5.22
     "@types/node": 20.8.2
     "@types/tampermonkey": 4.20.3
     "@xpadev-net/niconicomments": 0.2.56
