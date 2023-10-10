@@ -53,7 +53,7 @@ onReady(() => {
         title: 'Guess Rate',
         async content(event: AnswerResultsEvent): Promise<string | null> {
           const self = Object.values(unsafeWindow.quiz.players).find((p) => p.isSelf && p._inGame)
-          if (self === undefined) {
+          if (!self) {
             return null
           }
 

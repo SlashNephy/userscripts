@@ -1,1 +1,1 @@
-export const isReady = (): boolean => unsafeWindow.setupDocumentDone === true
+export const isReady = (): boolean => !!unsafeWindow.setupDocumentDone
