@@ -28,6 +28,7 @@
     "@geolonia/japanese-numeral": "1.0.1",
     "@xpadev-net/niconicomments": "0.2.56",
     "fast-xml-parser": "4.3.2",
+    "jszip": "3.10.1",
     "ts-array-length": "0.1.2"
   },
   "devDependencies": {
@@ -43,6 +44,7 @@
     "@slashnephy/types-amq": "0.4.2",
     "@types/babel__core": "7.20.2",
     "@types/babel__preset-env": "7.9.3",
+    "@types/file-saver": "2.0.5",
     "@types/fuzzyset": "1.0.5",
     "@types/jquery": "3.5.22",
     "@types/node": "20.8.2",

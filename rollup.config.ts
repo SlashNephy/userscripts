@@ -442,6 +442,32 @@ export const banners: Banner[] = [
     ],
     grant: 'GM_xmlhttpRequest',
   },
+  {
+    id: 'download-scripts',
+    name: 'Download Scripts',
+    version: '0.0.1',
+    description: {
+      en: 'Register a function to download all the JavaScript files from current document into window.',
+      ja: '現在の document 内のすべての JavaScript ファイルをダウンロードする関数を window に登録します。',
+    },
+    homepage: 'https://scrapbox.io/slashnephy/',
+    author: 'SlashNephy',
+    match: ['http://*/*', 'https://*/*'],
+    require: [
+      'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js',
+    ],
+    grant: ['unsafeWindow', 'GM_xmlhttpRequest', 'GM_registerMenuCommand'],
+    options: {
+      external: ['jszip', 'file-saver'],
+      output: {
+        globals: {
+          jszip: 'JSZip',
+          'file-saver': 'FileSaver',
+        },
+      },
+    },
+  },
 ]
 
 const config: RollupOptions[] = banners.map((banner) => buildOptions(banner))
