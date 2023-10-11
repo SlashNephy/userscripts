@@ -31,6 +31,7 @@ UserScript collection
 | Auto-Close AWS VPN Client Window     | 0.1.2          | https://github.com/SlashNephy/userscripts/raw/master/dist/auto-close-aws-vpn-client-window.user.js  |
 | Detect Types                         | 0.1.0          | https://github.com/SlashNephy/userscripts/raw/master/dist/detect-types.user.js                      |
 | dominion.games Auto Table Setter     | 0.4.1          | https://github.com/SlashNephy/userscripts/raw/master/dist/dominion-online-auto-table-setter.user.js |
+| Download Scripts                     | 0.0.1          | https://github.com/SlashNephy/userscripts/raw/master/dist/download-scripts.user.js                  |
 | Feedly Auto Refresh                  | 0.2.4          | https://github.com/SlashNephy/userscripts/raw/master/dist/feedly-auto-refresh.user.js               |
 | FF14Angler Bypass AdBlocker Check    | 0.2.4          | https://github.com/SlashNephy/userscripts/raw/master/dist/ff14angler-bypass-adblock-check.user.js   |
 | Google Remove Redirection Warning    | 0.1.4          | https://github.com/SlashNephy/userscripts/raw/master/dist/google-remove-redirection-warning.user.js |
@@ -190,3 +191,9 @@ Close the AWS VPN Client window automatically.
 [📥 Install](https://github.com/SlashNephy/userscripts/raw/master/dist/amq-accelerate-loading.user.js) / [💻 Source](https://github.com/SlashNephy/userscripts/blob/master/src/amq-accelerate-loading.ts) / [📖 Scrapbox](https://scrapbox.io/slashnephy/)
 
 Load media faster from alternative sources.
+
+### Download Scripts (v0.0.1)
+
+[📥 Install](https://github.com/SlashNephy/userscripts/raw/master/dist/download-scripts.user.js) / [💻 Source](https://github.com/SlashNephy/userscripts/blob/master/src/download-scripts.ts) / [📖 Scrapbox](https://scrapbox.io/slashnephy/)
+
+Register a function to download all the JavaScript files from current document into window.

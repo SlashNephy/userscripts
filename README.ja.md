@@ -31,6 +31,7 @@ UserScript collection
 | Auto-Close AWS VPN Client Window     | 0.1.2      | https://github.com/SlashNephy/userscripts/raw/master/dist/auto-close-aws-vpn-client-window.user.js  |
 | Detect Types                         | 0.1.0      | https://github.com/SlashNephy/userscripts/raw/master/dist/detect-types.user.js                      |
 | dominion.games Auto Table Setter     | 0.4.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/dominion-online-auto-table-setter.user.js |
+| Download Scripts                     | 0.0.1      | https://github.com/SlashNephy/userscripts/raw/master/dist/download-scripts.user.js                  |
 | Feedly Auto Refresh                  | 0.2.4      | https://github.com/SlashNephy/userscripts/raw/master/dist/feedly-auto-refresh.user.js               |
 | FF14Angler Bypass AdBlocker Check    | 0.2.4      | https://github.com/SlashNephy/userscripts/raw/master/dist/ff14angler-bypass-adblock-check.user.js   |
 | Google Remove Redirection Warning    | 0.1.4      | https://github.com/SlashNephy/userscripts/raw/master/dist/google-remove-redirection-warning.user.js |
@@ -190,3 +191,9 @@ window の型定義を生成する関数を登録します。
 [📥 インストール](https://github.com/SlashNephy/userscripts/raw/master/dist/amq-accelerate-loading.user.js) / [💻 ソースコード](https://github.com/SlashNephy/userscripts/blob/master/src/amq-accelerate-loading.ts) / [📖 Scrapbox](https://scrapbox.io/slashnephy/)
 
 メディアを代替ソースから高速にロードします。
+
+### Download Scripts (v0.0.1)
+
+[📥 インストール](https://github.com/SlashNephy/userscripts/raw/master/dist/download-scripts.user.js) / [💻 ソースコード](https://github.com/SlashNephy/userscripts/blob/master/src/download-scripts.ts) / [📖 Scrapbox](https://scrapbox.io/slashnephy/)
+
+現在の document 内のすべての JavaScript ファイルをダウンロードする関数を window に登録します。
