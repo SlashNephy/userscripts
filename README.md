@@ -9,7 +9,7 @@ UserScript collection
 | ⚙ Script                            | Latest Version | 📥 Install                                                                                          |
 | :----------------------------------- | :------------- | :-------------------------------------------------------------------------------------------------- |
 | AKASHI Show Remaining Hours          | 0.1.1          | https://github.com/SlashNephy/userscripts/raw/master/dist/akashi-show-remaining-hours.user.js       |
-| [Closed Test] AMQ Accelerate Loading | 0.2.0          | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-accelerate-loading.user.js            |
+| [Closed Test] AMQ Accelerate Loading | 0.2.1          | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-accelerate-loading.user.js            |
 | AMQ Auto Continue Login              | 0.2.1          | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-auto-continue-login.user.js           |
 | AMQ Clear Answer                     | 1.1.1          | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-clear-answer.user.js                  |
 | AMQ Detailed Song Info               | 0.7.2          | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-detailed-song-info.user.js            |
@@ -186,9 +186,9 @@ Display overlay of comments on various streaming sites and EPGStation.
 
 Close the AWS VPN Client window automatically.
 
-### [Closed Test] AMQ Accelerate Loading (v0.2.0)
+### [Closed Test] AMQ Accelerate Loading (v0.2.1)
 
-[📥 Install](https://github.com/SlashNephy/userscripts/raw/master/dist/amq-accelerate-loading.user.js) / [💻 Source](https://github.com/SlashNephy/userscripts/blob/master/src/amq-accelerate-loading.ts) / [📖 Scrapbox](https://scrapbox.io/slashnephy/)
+[📥 Install](https://github.com/SlashNephy/userscripts/raw/master/dist/amq-accelerate-loading.user.js) / [💻 Source](https://github.com/SlashNephy/userscripts/blob/master/src/amq-accelerate-loading.ts) / [📖 Scrapbox](https://scrapbox.io/slashnephy/AMQ_Accelerate_Loading)
 
 Load media faster from alternative sources.
 

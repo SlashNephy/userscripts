@@ -1,19 +1,19 @@
 // ==UserScript==
 // @name            [Closed Test] AMQ Accelerate Loading
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.0
+// @version         0.2.1
 // @author          SlashNephy
 // @description     Load media faster from alternative sources.
 // @description:ja  メディアを代替ソースから高速にロードします。
-// @homepage        https://scrapbox.io/slashnephy/
-// @homepageURL     https://scrapbox.io/slashnephy/
+// @homepage        https://scrapbox.io/slashnephy/AMQ_Accelerate_Loading
+// @homepageURL     https://scrapbox.io/slashnephy/AMQ_Accelerate_Loading
 // @icon            https://animemusicquiz.com/favicon-32x32.png
 // @updateURL       https://github.com/SlashNephy/userscripts/raw/master/dist/amq-accelerate-loading.user.js
 // @downloadURL     https://github.com/SlashNephy/userscripts/raw/master/dist/amq-accelerate-loading.user.js
 // @supportURL      https://github.com/SlashNephy/userscripts/issues
 // @match           https://animemusicquiz.com/*
 // @require         https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js
-// @grant           GM_xmlhttpRequest
+// @grant           none
 // @license         MIT license
 // ==/UserScript==
 
@@ -47,27 +47,15 @@
             .catch(console.error);
     };
 
-    const executeGmXhr = async (request) => new Promise((resolve, reject) => {
-        GM_xmlhttpRequest({
-            ...request,
-            onload: (response) => {
-                resolve(response);
-            },
-            onerror: (error) => {
-                reject(error);
-            },
-        });
-    });
-
     const proxyHost = 'https://amq-proxy.starry.blue';
     async function checkSession() {
         try {
-            const response = await executeGmXhr({
-                url: `${proxyHost}/healthcheck`,
+            const response = await fetch(`${proxyHost}/healthcheck`, {
                 redirect: 'error',
-                anonymous: false,
+                mode: 'cors',
+                credentials: 'include',
             });
-            return response.status >= 200 && response.status < 300;
+            return response.ok;
         }
         catch (e) {
             return false;
