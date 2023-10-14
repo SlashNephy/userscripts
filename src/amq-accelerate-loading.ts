@@ -1,5 +1,4 @@
 import { onReady } from '../lib/amq/onReady'
-import { executeGmXhr } from '../lib/tampermonkey/executeGmXhr'
 
 declare function swal(message: Record<string, unknown>): Promise<void>
 
@@ -20,14 +19,13 @@ const proxyHost = 'https://amq-proxy.starry.blue'
 
 async function checkSession(): Promise<boolean> {
   try {
-    // eslint-disable-next-line deprecation/deprecation
-    const response = await executeGmXhr({
-      url: `${proxyHost}/healthcheck`,
+    const response = await fetch(`${proxyHost}/healthcheck`, {
       redirect: 'error',
-      anonymous: false,
+      mode: 'cors',
+      credentials: 'include',
     })
 
-    return response.status >= 200 && response.status < 300
+    return response.ok
   } catch (e: unknown) {
     return false
   }

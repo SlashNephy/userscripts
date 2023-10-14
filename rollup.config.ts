@@ -428,19 +428,18 @@ export const banners: Banner[] = [
   {
     id: 'amq-accelerate-loading',
     name: '[Closed Test] AMQ Accelerate Loading',
-    version: '0.2.0',
+    version: '0.2.1',
     description: {
       en: 'Load media faster from alternative sources.',
       ja: 'メディアを代替ソースから高速にロードします。',
     },
-    homepage: 'https://scrapbox.io/slashnephy/',
+    homepage: 'https://scrapbox.io/slashnephy/AMQ_Accelerate_Loading',
     author: 'SlashNephy',
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     require: [
       'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
     ],
-    grant: 'GM_xmlhttpRequest',
   },
   {
     id: 'download-scripts',
