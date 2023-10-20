@@ -42,7 +42,7 @@
     "@slashnephy/eslint-config": "2.0.38",
     "@slashnephy/prettier-config": "1.0.25",
     "@slashnephy/types-amq": "0.4.22",
-    "@types/babel__core": "7.20.2",
+    "@types/babel__core": "7.20.3",
     "@types/babel__preset-env": "7.9.3",
     "@types/file-saver": "2.0.5",
     "@types/fuzzyset": "1.0.5",
