@@ -1981,10 +1981,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/fuzzyset@npm:1.0.5":
-  version: 1.0.5
-  resolution: "@types/fuzzyset@npm:1.0.5"
-  checksum: 45fe8fbbc3bb34eb3df6a4d0ad34fd508838a49132cce169d3ce7e86840c6fc4de0c422545b5783acf78c9e9c42570e9e729fbaa5b2fcf7155c8ba8db76acac4
+"@types/fuzzyset@npm:1.0.6":
+  version: 1.0.6
+  resolution: "@types/fuzzyset@npm:1.0.6"
+  checksum: 79b629d7ddad444a0dd5a469b6e3d2fdca2b294b9f082317a7f34ff5c35b84615002dd69e4ed2bd9544251539294adeff66c78ccf5524ca543f0b74f6fba0ac6
   languageName: node
   linkType: hard
 
@@ -7230,7 +7230,7 @@ __metadata:
     "@types/babel__core": 7.20.3
     "@types/babel__preset-env": 7.9.4
     "@types/file-saver": 2.0.6
-    "@types/fuzzyset": 1.0.5
+    "@types/fuzzyset": 1.0.6
     "@types/jquery": 3.5.22
     "@types/node": 20.8.6
     "@types/tampermonkey": 4.20.3
