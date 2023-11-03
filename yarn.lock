@@ -1425,10 +1425,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@geolonia/japanese-numeral@npm:1.0.1":
-  version: 1.0.1
-  resolution: "@geolonia/japanese-numeral@npm:1.0.1"
-  checksum: fd6f0ac524b8402b3fe3beba617d8ea2eb78f1106f364269e8d7de010f7cc4b8ec651ca5d3a3ce65c37a27cfceeb66b6f4dbb8cb38554ae99180252a029751f4
+"@geolonia/japanese-numeral@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@geolonia/japanese-numeral@npm:1.0.2"
+  checksum: dbc11aad65049d234c67fb5c24b7b1e25b88c2701101c1037ddbfce979d070dbf49abc2d88e229148a4706dba8e744296ba2164413c0bb63e779ae8f717e3423
   languageName: node
   linkType: hard
 
@@ -7136,7 +7136,7 @@ __metadata:
     "@babel/core": 7.23.2
     "@babel/preset-env": 7.23.2
     "@babel/preset-typescript": 7.23.2
-    "@geolonia/japanese-numeral": 1.0.1
+    "@geolonia/japanese-numeral": 1.0.2
     "@rollup/plugin-babel": 6.0.4
     "@rollup/plugin-commonjs": 25.0.7
     "@rollup/plugin-node-resolve": 15.2.3
