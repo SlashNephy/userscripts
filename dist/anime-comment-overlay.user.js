@@ -746,7 +746,7 @@
       if (number) {
         kanji = `${kanji}${(0, utils_1.n2kan)(number)}`;
       }
-      return kanji;
+      return kanji || '〇';
     }
     dist.number2kanji = number2kanji;
     function findKanjiNumbers(text) {
