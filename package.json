@@ -45,7 +45,7 @@
     "@types/babel__core": "7.20.4",
     "@types/babel__preset-env": "7.9.5",
     "@types/file-saver": "2.0.7",
-    "@types/fuzzyset": "1.0.6",
+    "@types/fuzzyset": "1.0.7",
     "@types/jquery": "3.5.25",
     "@types/node": "20.8.10",
     "@types/tampermonkey": "5.0.0",
