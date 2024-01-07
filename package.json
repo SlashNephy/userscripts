@@ -55,7 +55,7 @@
     "prettier": "3.0.3",
     "rollup": "4.5.0",
     "serve": "14.2.1",
-    "ts-node": "10.9.1",
+    "ts-node": "10.9.2",
     "typescript": "5.2.2"
   },
   "packageManager": "yarn@3.7.0",
