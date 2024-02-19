@@ -2462,10 +2462,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xpadev-net/niconicomments@npm:0.2.56":
-  version: 0.2.56
-  resolution: "@xpadev-net/niconicomments@npm:0.2.56"
-  checksum: 83058ee11ed53a1d98800ad571de8413a1206b5093887a1bcfeda49194cbe29319b9360737d931ca972bef108f1c59d4c878bfbbb4a8cd4f1c7f85acb0b1a195
+"@xpadev-net/niconicomments@npm:0.2.71":
+  version: 0.2.71
+  resolution: "@xpadev-net/niconicomments@npm:0.2.71"
+  checksum: 3ca3edf99981e2296da3b2b6e0d23956133de03f50cdbfe5d50f5c553534c528a2a9707ca849e13670bef0292b1134ad6213662a721428fcd20accdac9b4ec47
   languageName: node
   linkType: hard
 
@@ -7406,7 +7406,7 @@ __metadata:
     "@types/jquery": 3.5.27
     "@types/node": 20.9.0
     "@types/tampermonkey": 5.0.2
-    "@xpadev-net/niconicomments": 0.2.56
+    "@xpadev-net/niconicomments": 0.2.71
     concurrently: 8.2.2
     eslint: 8.54.0
     fast-xml-parser: 4.3.2
