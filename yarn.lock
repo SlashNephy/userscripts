@@ -2089,12 +2089,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.9.0":
-  version: 20.9.0
-  resolution: "@types/node@npm:20.9.0"
+"@types/node@npm:20.16.12":
+  version: 20.16.12
+  resolution: "@types/node@npm:20.16.12"
   dependencies:
-    undici-types: ~5.26.4
-  checksum: bfd927da6bff8a32051fa44bb47ca32a56d2c8bc8ba0170770f181cc1fa3c0b05863c9b930f0ba8604a48d5eb0d319166601709ca53bf2deae0025d8b6c6b8a3
+    undici-types: ~6.19.2
+  checksum: 648b2a35713157f1d5861123c29546cf316b543afd536ff2c02234d78a99cea07d2259559efd7f58cf2c45c6a2e80c1064ff03c5b5213bb99b91a7d598b7975f
   languageName: node
   linkType: hard
 
@@ -7302,6 +7302,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"undici-types@npm:~6.19.2":
+  version: 6.19.8
+  resolution: "undici-types@npm:6.19.8"
+  checksum: de51f1b447d22571cf155dfe14ff6d12c5bdaec237c765085b439c38ca8518fc360e88c70f99469162bf2e14188a7b0bcb06e1ed2dc031042b984b0bb9544017
+  languageName: node
+  linkType: hard
+
 "unicode-canonical-property-names-ecmascript@npm:^2.0.0":
   version: 2.0.0
   resolution: "unicode-canonical-property-names-ecmascript@npm:2.0.0"
@@ -7404,7 +7411,7 @@ __metadata:
     "@types/file-saver": 2.0.7
     "@types/fuzzyset": 1.0.7
     "@types/jquery": 3.5.27
-    "@types/node": 20.9.0
+    "@types/node": 20.16.12
     "@types/tampermonkey": 5.0.2
     "@xpadev-net/niconicomments": 0.2.56
     concurrently: 8.2.2
