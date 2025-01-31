@@ -8,29 +8,9 @@ export type AnnictFollowingStatusesResponse = {
           name: string
           username: string
           avatarUrl: string
-          watched: {
+          works: {
             nodes: {
-              annictId: number
-            }[]
-          }
-          watching: {
-            nodes: {
-              annictId: number
-            }[]
-          }
-          stopWatching: {
-            nodes: {
-              annictId: number
-            }[]
-          }
-          onHold: {
-            nodes: {
-              annictId: number
-            }[]
-          }
-          wannaWatch: {
-            nodes: {
-              annictId: number
+              viewerStatusState: 'WATCHING' | 'WATCHED' | 'ON_HOLD' | 'STOP_WATCHING' | 'WANNA_WATCH' | 'NO_STATE'
             }[]
           }
         }[]
@@ -51,48 +31,17 @@ async function fetchAnnictFollowingStatuses(
   const response = await fetch('https://api.annict.com/graphql', {
     method: 'POST',
     body: JSON.stringify({
-      /*
-       * libraryEntries に annictId で引ける引数がないので works を個別に叩いている...
-       * ↓ 本当はこう叩きたい
-       * libraryEntries(annictIds: [$workId]) {
-       *   nodes {
-       *     status {
-       *       state
-       *     }
-       *   }
-       * }
-       */
       query: `
-        query($workId: Int!, $cursor: String) {
+        query ($workId: Int!, $cursor: String) {
           viewer {
-            following(after: $cursor) {
+            following(after: $cursor, first: 100) {
               nodes {
                 name
                 username
                 avatarUrl
-                watched: works(annictIds: [$workId], state: WATCHED) {
+                works(annictIds: [$workId], first: 1) {
                   nodes {
-                    annictId
-                  }
-                }
-                watching: works(annictIds: [$workId], state: WATCHING) {
-                  nodes {
-                    annictId
-                  }
-                }
-                stopWatching: works(annictIds: [$workId], state: STOP_WATCHING) {
-                  nodes {
-                    annictId
-                  }
-                }
-                onHold: works(annictIds: [$workId], state: ON_HOLD) {
-                  nodes {
-                    annictId
-                  }
-                }
-                wannaWatch: works(annictIds: [$workId], state: WANNA_WATCH) {
-                  nodes {
-                    annictId
+                    viewerStatusState
                   }
                 }
               }

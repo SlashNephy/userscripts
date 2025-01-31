@@ -216,27 +216,33 @@ const parseAnnictFollowingStatuses = (response: AnnictFollowingStatusesResponse)
       let label: string
       let iconClasses: string[]
       let iconColor: string
-      if (u.watched.nodes.length > 0) {
+      switch (u.works.nodes[0]?.viewerStatusState) {
+        case 'WATCHED':
         label = '見た'
         iconClasses = ['far', 'fa-check']
         iconColor = '--ann-status-completed-color'
-      } else if (u.watching.nodes.length > 0) {
+          break
+        case 'WATCHING':
         label = '見てる'
         iconClasses = ['far', 'fa-play']
         iconColor = '--ann-status-watching-color'
-      } else if (u.stopWatching.nodes.length > 0) {
+          break
+        case 'STOP_WATCHING':
         label = '視聴停止'
         iconClasses = ['far', 'fa-stop']
         iconColor = '--ann-status-dropped-color'
-      } else if (u.onHold.nodes.length > 0) {
+          break
+        case 'ON_HOLD':
         label = '一時中断'
         iconClasses = ['far', 'fa-pause']
         iconColor = '--ann-status-on-hold-color'
-      } else if (u.wannaWatch.nodes.length > 0) {
+          break
+        case 'WANNA_WATCH':
         label = '見たい'
         iconClasses = ['far', 'fa-circle']
         iconColor = '--ann-status-plan-to-watch-color'
-      } else {
+          break
+        default:
         return null
       }
 
