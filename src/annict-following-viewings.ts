@@ -1,10 +1,6 @@
 import { hasMinLength } from 'ts-array-length'
 
-import {
-  fetchAniListViewer,
-  fetchPaginatedAniListFollowings,
-  fetchPaginatedAniListFollowingStatuses,
-} from '../lib/external/anilist'
+import { fetchPaginatedAniListFollowingStatuses } from '../lib/external/anilist'
 import { fetchPaginatedAnnictFollowingStatuses } from '../lib/external/annict'
 import { fetchArmEntries } from '../lib/external/arm'
 import { GM_Value } from '../lib/tampermonkey/GM_Value'
@@ -206,6 +202,7 @@ type FollowingState = {
   username: string
   avatarUrl: string
   label: string
+  comment?: string
   iconClasses: string[]
   iconColor: string
 }
@@ -218,32 +215,32 @@ const parseAnnictFollowingStatuses = (response: AnnictFollowingStatusesResponse)
       let iconColor: string
       switch (u.works.nodes[0]?.viewerStatusState) {
         case 'WATCHED':
-        label = '見た'
-        iconClasses = ['far', 'fa-check']
-        iconColor = '--ann-status-completed-color'
+          label = '見た'
+          iconClasses = ['far', 'fa-check']
+          iconColor = '--ann-status-completed-color'
           break
         case 'WATCHING':
-        label = '見てる'
-        iconClasses = ['far', 'fa-play']
-        iconColor = '--ann-status-watching-color'
+          label = '見てる'
+          iconClasses = ['far', 'fa-play']
+          iconColor = '--ann-status-watching-color'
           break
         case 'STOP_WATCHING':
-        label = '視聴停止'
-        iconClasses = ['far', 'fa-stop']
-        iconColor = '--ann-status-dropped-color'
+          label = '視聴停止'
+          iconClasses = ['far', 'fa-stop']
+          iconColor = '--ann-status-dropped-color'
           break
         case 'ON_HOLD':
-        label = '一時中断'
-        iconClasses = ['far', 'fa-pause']
-        iconColor = '--ann-status-on-hold-color'
+          label = '一時中断'
+          iconClasses = ['far', 'fa-pause']
+          iconColor = '--ann-status-on-hold-color'
           break
         case 'WANNA_WATCH':
-        label = '見たい'
-        iconClasses = ['far', 'fa-circle']
-        iconColor = '--ann-status-plan-to-watch-color'
+          label = '見たい'
+          iconClasses = ['far', 'fa-circle']
+          iconColor = '--ann-status-plan-to-watch-color'
           break
         default:
-        return null
+          return null
       }
 
       return {
@@ -260,40 +257,48 @@ const parseAnnictFollowingStatuses = (response: AnnictFollowingStatusesResponse)
 
 const parseAniListFollowingStatuses = (response: AniListFollowingStatusesResponse): FollowingState[] =>
   response.data.Page.mediaList.map((u) => {
-    let label: string
+    let statusLabel: string
     let iconClasses: string[]
     let iconColor: string
     switch (u.status) {
       case 'CURRENT':
-        label = '見てる'
+        statusLabel = '見てる'
         iconClasses = ['far', 'fa-play']
         iconColor = '--ann-status-watching-color'
         break
       case 'PLANNING':
-        label = '見たい'
+        statusLabel = '見たい'
         iconClasses = ['far', 'fa-circle']
         iconColor = '--ann-status-plan-to-watch-color'
         break
       case 'COMPLETED':
-        label = '見た'
+        statusLabel = '見た'
         iconClasses = ['far', 'fa-check']
         iconColor = '--ann-status-completed-color'
         break
       case 'DROPPED':
-        label = '視聴停止'
+        statusLabel = '視聴停止'
         iconClasses = ['far', 'fa-stop']
         iconColor = '--ann-status-dropped-color'
         break
       case 'PAUSED':
-        label = '一時中断'
+        statusLabel = '一時中断'
         iconClasses = ['far', 'fa-pause']
         iconColor = '--ann-status-on-hold-color'
         break
       case 'REPEATING':
-        label = 'リピート中'
+        statusLabel = 'リピート中'
         iconClasses = ['far', 'fa-forward']
         iconColor = '--ann-status-watching-color'
         break
+    }
+
+    let label = statusLabel
+    if (u.progress > 0 && u.progress !== u.media.episodes && u.status !== 'COMPLETED') {
+      label += ` (${u.progress}話まで見た)`
+    }
+    if (u.score > 0) {
+      label += ` [${u.score} / 10]`
     }
 
     return {
@@ -301,7 +306,8 @@ const parseAniListFollowingStatuses = (response: AniListFollowingStatusesRespons
       service: 'anilist' as const,
       username: u.user.name,
       avatarUrl: u.user.avatar.large,
-      label: u.score > 0 ? `${label} (${u.score} / 10)` : label,
+      label,
+      comment: u.notes ?? undefined,
       iconClasses,
       iconColor,
     }
@@ -433,6 +439,15 @@ const renderSectionBodyContent = (row: HTMLDivElement, statuses: FollowingState[
           small.style.marginLeft = '5px'
           small.textContent = status.label
           div2.appendChild(small)
+        }
+        if (status.comment) {
+          const p = document.createElement('p')
+          {
+            const i = document.createElement('i')
+            i.textContent = status.comment ?? ''
+            p.appendChild(i)
+          }
+          div2.appendChild(p)
         }
       }
     }
@@ -567,26 +582,9 @@ const insertAniListFollowingStatuses = async (
     return
   }
 
-  const viewerResponse = await fetchAniListViewer(anilistToken)
   card.querySelector('.loading')?.remove()
 
-  if ('errors' in viewerResponse) {
-    const error = viewerResponse.errors.map(({ message }) => message).join('\n')
-    card.append(`AniList GraphQL API がエラーを返しました。\n${error}`)
-
-    return
-  }
-
-  const followingsResponses = await fetchPaginatedAniListFollowings(viewerResponse.data.Viewer.id, anilistToken)
-  if ('errors' in followingsResponses) {
-    const error = followingsResponses.errors.map(({ message }) => message).join('\n')
-    card.append(`AniList GraphQL API がエラーを返しました。\n${error}`)
-
-    return
-  }
-
-  const followings = followingsResponses.map((r) => r.data.Page.followers.map((f) => f.id)).flat()
-  const responses = await fetchPaginatedAniListFollowingStatuses(mediaId, followings, anilistToken)
+  const responses = await fetchPaginatedAniListFollowingStatuses(mediaId, anilistToken)
   if ('errors' in responses) {
     const error = responses.errors.map(({ message }) => message).join('\n')
     card.append(`AniList GraphQL API がエラーを返しました。\n${error}`)
