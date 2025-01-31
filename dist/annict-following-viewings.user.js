@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Annict Following Viewings
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.3
+// @version         0.4.0
 // @author          SlashNephy
 // @description     Display following viewings on Annict work page.
 // @description:ja  Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。
@@ -46,77 +46,14 @@
       return arr.length >= length;
     }
 
-    async function fetchAniListViewer(token) {
+    async function fetchAniListFollowingStatuses(mediaId, page, token) {
         const response = await fetch('https://graphql.anilist.co', {
             method: 'POST',
             body: JSON.stringify({
                 query: `
-        query {
-          Viewer {
-            id
-          }
-        }
-      `,
-            }),
-            headers: {
-                'Content-Type': 'application/json',
-                authorization: `Bearer ${token}`,
-            },
-        });
-        return response.json();
-    }
-    async function fetchAniListFollowings(userId, page, token) {
-        const response = await fetch('https://graphql.anilist.co', {
-            method: 'POST',
-            body: JSON.stringify({
-                query: `
-        query($userId: Int!, $page: Int!) {
+        query($mediaId: Int!, $page: Int!) {
           Page(page: $page, perPage: 50) {
-            followers(userId: $userId) {
-              id
-            }
-            pageInfo {
-              hasNextPage
-            }
-          }
-        }
-      `,
-                variables: {
-                    userId,
-                    page,
-                },
-            }),
-            headers: {
-                'Content-Type': 'application/json',
-                authorization: `Bearer ${token}`,
-            },
-        });
-        return response.json();
-    }
-    async function fetchPaginatedAniListFollowings(userId, token) {
-        const results = [];
-        let page = 1;
-        while (true) {
-            const response = await fetchAniListFollowings(userId, page, token);
-            if ('errors' in response) {
-                return response;
-            }
-            results.push(response);
-            if (!response.data.Page.pageInfo.hasNextPage) {
-                break;
-            }
-            page++;
-        }
-        return results;
-    }
-    async function fetchAniListFollowingStatuses(mediaId, userIds, page, token) {
-        const response = await fetch('https://graphql.anilist.co', {
-            method: 'POST',
-            body: JSON.stringify({
-                query: `
-        query($mediaId: Int!, $userIds: [Int!]!, $page: Int!) {
-          Page(page: $page, perPage: 50) {
-            mediaList(type: ANIME, mediaId: $mediaId, userId_in: $userIds) {
+            mediaList(type: ANIME, mediaId: $mediaId, isFollowing: true) {
               user {
                 name
                 avatar {
@@ -125,6 +62,11 @@
               }
               status
               score
+              progress
+              media {
+                episodes
+              }
+              notes
             }
             pageInfo {
               hasNextPage
@@ -134,7 +76,6 @@
       `,
                 variables: {
                     mediaId,
-                    userIds,
                     page,
                 },
             }),
@@ -145,11 +86,11 @@
         });
         return response.json();
     }
-    async function fetchPaginatedAniListFollowingStatuses(mediaId, userIds, token) {
+    async function fetchPaginatedAniListFollowingStatuses(mediaId, token) {
         const results = [];
         let page = 1;
         while (true) {
-            const response = await fetchAniListFollowingStatuses(mediaId, userIds, page, token);
+            const response = await fetchAniListFollowingStatuses(mediaId, page, token);
             if ('errors' in response) {
                 return response;
             }
@@ -167,36 +108,16 @@
             method: 'POST',
             body: JSON.stringify({
                 query: `
-        query($workId: Int!, $cursor: String) {
+        query ($workId: Int!, $cursor: String) {
           viewer {
-            following(after: $cursor) {
+            following(after: $cursor, first: 100) {
               nodes {
                 name
                 username
                 avatarUrl
-                watched: works(annictIds: [$workId], state: WATCHED) {
+                works(annictIds: [$workId], first: 1) {
                   nodes {
-                    annictId
-                  }
-                }
-                watching: works(annictIds: [$workId], state: WATCHING) {
-                  nodes {
-                    annictId
-                  }
-                }
-                stopWatching: works(annictIds: [$workId], state: STOP_WATCHING) {
-                  nodes {
-                    annictId
-                  }
-                }
-                onHold: works(annictIds: [$workId], state: ON_HOLD) {
-                  nodes {
-                    annictId
-                  }
-                }
-                wannaWatch: works(annictIds: [$workId], state: WANNA_WATCH) {
-                  nodes {
-                    annictId
+                    viewerStatusState
                   }
                 }
               }
@@ -284,24 +205,49 @@
                 type: 'text',
                 default: '',
             },
+            annictTokenButton: {
+                type: 'annictTokenButton',
+            },
             [anilistTokenKey]: {
                 label: 'AniList アクセストークン',
                 type: 'text',
                 default: '',
             },
-            anilistAuthorizeLabel: {
-                type: 'label',
+            anilistAuthorizeButton: {
+                type: 'anilistAuthorizeButton',
             },
             [anilistCallbackKey]: {
                 type: 'hidden',
             },
         },
         types: {
-            label: {
+            annictTokenButton: {
+                default: null,
+                toNode() {
+                    const div = document.createElement('div');
+                    const anchor = document.createElement('a');
+                    anchor.classList.add('button');
+                    anchor.href = 'https://annict.com/settings/tokens/new';
+                    anchor.textContent = 'Annict のアクセストークンを発行する';
+                    anchor.target = '_blank';
+                    div.appendChild(anchor);
+                    const description = document.createElement('p');
+                    description.classList.add('description');
+                    description.textContent =
+                        'スコープは「読み取り専用」を選択してください。発行されたアクセストークンを上に貼り付けてください。';
+                    div.appendChild(description);
+                    return div;
+                },
+                toValue() {
+                    return null;
+                },
+                reset() { },
+            },
+            anilistAuthorizeButton: {
                 default: null,
                 toNode() {
                     const anchor = document.createElement('a');
-                    anchor.classList.add('authorize');
+                    anchor.classList.add('button');
                     anchor.href = `https://anilist.co/api/v2/oauth/authorize?client_id=${anilistClientId}&response_type=token`;
                     anchor.textContent = 'AniList と連携する';
                     anchor.target = '_top';
@@ -326,11 +272,12 @@
         iframe#annict_following_viewings {
           border: 0 !important;
           border-radius: 20px;
-          height: 40% !important;
+          height: 70% !important;
           width: 50% !important;
-          left: 25% !important;
-          top: 33% !important;
+          left: 50% !important;
+          top: 50% !important;
           opacity: 0.9 !important;
+          transform: translate(-50%, -50%);
         }
       `;
             },
@@ -399,10 +346,14 @@
     .reset {
       color: #e9ecef !important;
     }
-    a.authorize {
+    a.button {
       color: #7ca1f3;
       text-decoration: none;
       padding-left: 2em;
+    }
+    p.description {
+      padding-left: 3em;
+      margin-top: 4px;
     }
     div#annict_following_viewings_anilist_callback_var {
       display: none;
@@ -421,33 +372,34 @@
         let label;
         let iconClasses;
         let iconColor;
-        if (u.watched.nodes.length > 0) {
-            label = '見た';
-            iconClasses = ['far', 'fa-check'];
-            iconColor = '--ann-status-completed-color';
-        }
-        else if (u.watching.nodes.length > 0) {
-            label = '見てる';
-            iconClasses = ['far', 'fa-play'];
-            iconColor = '--ann-status-watching-color';
-        }
-        else if (u.stopWatching.nodes.length > 0) {
-            label = '視聴停止';
-            iconClasses = ['far', 'fa-stop'];
-            iconColor = '--ann-status-dropped-color';
-        }
-        else if (u.onHold.nodes.length > 0) {
-            label = '一時中断';
-            iconClasses = ['far', 'fa-pause'];
-            iconColor = '--ann-status-on-hold-color';
-        }
-        else if (u.wannaWatch.nodes.length > 0) {
-            label = '見たい';
-            iconClasses = ['far', 'fa-circle'];
-            iconColor = '--ann-status-plan-to-watch-color';
-        }
-        else {
-            return null;
+        switch (u.works.nodes[0]?.viewerStatusState) {
+            case 'WATCHED':
+                label = '見た';
+                iconClasses = ['far', 'fa-check'];
+                iconColor = '--ann-status-completed-color';
+                break;
+            case 'WATCHING':
+                label = '見てる';
+                iconClasses = ['far', 'fa-play'];
+                iconColor = '--ann-status-watching-color';
+                break;
+            case 'STOP_WATCHING':
+                label = '視聴停止';
+                iconClasses = ['far', 'fa-stop'];
+                iconColor = '--ann-status-dropped-color';
+                break;
+            case 'ON_HOLD':
+                label = '一時中断';
+                iconClasses = ['far', 'fa-pause'];
+                iconColor = '--ann-status-on-hold-color';
+                break;
+            case 'WANNA_WATCH':
+                label = '見たい';
+                iconClasses = ['far', 'fa-circle'];
+                iconColor = '--ann-status-plan-to-watch-color';
+                break;
+            default:
+                return null;
         }
         return {
             name: u.name,
@@ -461,47 +413,55 @@
     })
         .filter((x) => !!x);
     const parseAniListFollowingStatuses = (response) => response.data.Page.mediaList.map((u) => {
-        let label;
+        let statusLabel;
         let iconClasses;
         let iconColor;
         switch (u.status) {
             case 'CURRENT':
-                label = '見てる';
+                statusLabel = '見てる';
                 iconClasses = ['far', 'fa-play'];
                 iconColor = '--ann-status-watching-color';
                 break;
             case 'PLANNING':
-                label = '見たい';
+                statusLabel = '見たい';
                 iconClasses = ['far', 'fa-circle'];
                 iconColor = '--ann-status-plan-to-watch-color';
                 break;
             case 'COMPLETED':
-                label = '見た';
+                statusLabel = '見た';
                 iconClasses = ['far', 'fa-check'];
                 iconColor = '--ann-status-completed-color';
                 break;
             case 'DROPPED':
-                label = '視聴停止';
+                statusLabel = '視聴停止';
                 iconClasses = ['far', 'fa-stop'];
                 iconColor = '--ann-status-dropped-color';
                 break;
             case 'PAUSED':
-                label = '一時中断';
+                statusLabel = '一時中断';
                 iconClasses = ['far', 'fa-pause'];
                 iconColor = '--ann-status-on-hold-color';
                 break;
             case 'REPEATING':
-                label = 'リピート中';
+                statusLabel = 'リピート中';
                 iconClasses = ['far', 'fa-forward'];
                 iconColor = '--ann-status-watching-color';
                 break;
+        }
+        let label = statusLabel;
+        if (u.progress > 0 && u.progress !== u.media.episodes && u.status !== 'COMPLETED') {
+            label += ` (${u.progress}話まで見た)`;
+        }
+        if (u.score > 0) {
+            label += ` [${u.score} / 10]`;
         }
         return {
             name: u.user.name,
             service: 'anilist',
             username: u.user.name,
             avatarUrl: u.user.avatar.large,
-            label: u.score > 0 ? `${label} (${u.score} / 10)` : label,
+            label,
+            comment: u.notes ?? undefined,
             iconClasses,
             iconColor,
         };
@@ -625,6 +585,15 @@
                         small.textContent = status.label;
                         div2.appendChild(small);
                     }
+                    if (status.comment) {
+                        const p = document.createElement('p');
+                        {
+                            const i = document.createElement('i');
+                            i.textContent = status.comment ?? '';
+                            p.appendChild(i);
+                        }
+                        div2.appendChild(p);
+                    }
                 }
             }
         }
@@ -714,21 +683,8 @@
         if (!mediaId) {
             return;
         }
-        const viewerResponse = await fetchAniListViewer(anilistToken);
         card.querySelector('.loading')?.remove();
-        if ('errors' in viewerResponse) {
-            const error = viewerResponse.errors.map(({ message }) => message).join('\n');
-            card.append(`AniList GraphQL API がエラーを返しました。\n${error}`);
-            return;
-        }
-        const followingsResponses = await fetchPaginatedAniListFollowings(viewerResponse.data.Viewer.id, anilistToken);
-        if ('errors' in followingsResponses) {
-            const error = followingsResponses.errors.map(({ message }) => message).join('\n');
-            card.append(`AniList GraphQL API がエラーを返しました。\n${error}`);
-            return;
-        }
-        const followings = followingsResponses.map((r) => r.data.Page.followers.map((f) => f.id)).flat();
-        const responses = await fetchPaginatedAniListFollowingStatuses(mediaId, followings, anilistToken);
+        const responses = await fetchPaginatedAniListFollowingStatuses(mediaId, anilistToken);
         if ('errors' in responses) {
             const error = responses.errors.map(({ message }) => message).join('\n');
             card.append(`AniList GraphQL API がエラーを返しました。\n${error}`);

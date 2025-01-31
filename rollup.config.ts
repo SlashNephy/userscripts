@@ -319,7 +319,7 @@ export const banners: Banner[] = [
   {
     id: 'annict-following-viewings',
     name: 'Annict Following Viewings',
-    version: '0.3.3',
+    version: '0.4.0',
     description: {
       en: 'Display following viewings on Annict work page.',
       ja: 'Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。',
@@ -452,17 +452,13 @@ export const banners: Banner[] = [
     homepage: 'https://scrapbox.io/slashnephy/',
     author: 'SlashNephy',
     match: ['http://*/*', 'https://*/*'],
-    require: [
-      'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js',
-      'https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js',
-    ],
+    require: 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js',
     grant: ['unsafeWindow', 'GM_xmlhttpRequest', 'GM_registerMenuCommand'],
     options: {
-      external: ['jszip', 'file-saver'],
+      external: 'jszip',
       output: {
         globals: {
           jszip: 'JSZip',
-          'file-saver': 'FileSaver',
         },
       },
     },
