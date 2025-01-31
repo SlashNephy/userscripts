@@ -25,7 +25,7 @@ UserScript collection
 | AMQ Song Guess Rate                  | 0.3.2          | https://github.com/SlashNephy/userscripts/raw/master/dist/amq-song-guess-rate.user.js               |
 | AniList Status Filter                | 0.1.2          | https://github.com/SlashNephy/userscripts/raw/master/dist/anilist-status-filter.user.js             |
 | Anime Comment Overlay                | 0.4.1          | https://github.com/SlashNephy/userscripts/raw/master/dist/anime-comment-overlay.user.js             |
-| Annict Following Viewings            | 0.3.3          | https://github.com/SlashNephy/userscripts/raw/master/dist/annict-following-viewings.user.js         |
+| Annict Following Viewings            | 0.4.0          | https://github.com/SlashNephy/userscripts/raw/master/dist/annict-following-viewings.user.js         |
 | Annict Hide Future Programs          | 0.1.7          | https://github.com/SlashNephy/userscripts/raw/master/dist/annict-hide-future-programs.user.js       |
 | Annict Work Links                    | 0.3.3          | https://github.com/SlashNephy/userscripts/raw/master/dist/annict-work-links.user.js                 |
 | Auto-Close AWS VPN Client Window     | 0.1.2          | https://github.com/SlashNephy/userscripts/raw/master/dist/auto-close-aws-vpn-client-window.user.js  |
@@ -150,7 +150,7 @@ Display the remaining required working hours in attendance page.
 
 Set the currently playing video surface as the background image.
 
-### Annict Following Viewings (v0.3.3)
+### Annict Following Viewings (v0.4.0)
 
 [📥 Install](https://github.com/SlashNephy/userscripts/raw/master/dist/annict-following-viewings.user.js) / [💻 Source](https://github.com/SlashNephy/userscripts/blob/master/src/annict-following-viewings.ts) / [📖 Scrapbox](https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E4%B8%AD%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E8%A6%96%E8%81%B4%E7%8A%B6%E6%B3%81%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
