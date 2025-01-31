@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Annict Following Viewings
 // @namespace       https://github.com/SlashNephy
-// @version         0.4.0
+// @version         0.4.1
 // @author          SlashNephy
 // @description     Display following viewings on Annict work page.
 // @description:ja  Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。
@@ -108,16 +108,36 @@
             method: 'POST',
             body: JSON.stringify({
                 query: `
-        query ($workId: Int!, $cursor: String) {
+        query($workId: Int!, $cursor: String) {
           viewer {
-            following(after: $cursor, first: 100) {
+            following(after: $cursor) {
               nodes {
                 name
                 username
                 avatarUrl
-                works(annictIds: [$workId], first: 1) {
+                watched: works(annictIds: [$workId], state: WATCHED) {
                   nodes {
-                    viewerStatusState
+                    annictId
+                  }
+                }
+                watching: works(annictIds: [$workId], state: WATCHING) {
+                  nodes {
+                    annictId
+                  }
+                }
+                stopWatching: works(annictIds: [$workId], state: STOP_WATCHING) {
+                  nodes {
+                    annictId
+                  }
+                }
+                onHold: works(annictIds: [$workId], state: ON_HOLD) {
+                  nodes {
+                    annictId
+                  }
+                }
+                wannaWatch: works(annictIds: [$workId], state: WANNA_WATCH) {
+                  nodes {
+                    annictId
                   }
                 }
               }
@@ -372,34 +392,33 @@
         let label;
         let iconClasses;
         let iconColor;
-        switch (u.works.nodes[0]?.viewerStatusState) {
-            case 'WATCHED':
-                label = '見た';
-                iconClasses = ['far', 'fa-check'];
-                iconColor = '--ann-status-completed-color';
-                break;
-            case 'WATCHING':
-                label = '見てる';
-                iconClasses = ['far', 'fa-play'];
-                iconColor = '--ann-status-watching-color';
-                break;
-            case 'STOP_WATCHING':
-                label = '視聴停止';
-                iconClasses = ['far', 'fa-stop'];
-                iconColor = '--ann-status-dropped-color';
-                break;
-            case 'ON_HOLD':
-                label = '一時中断';
-                iconClasses = ['far', 'fa-pause'];
-                iconColor = '--ann-status-on-hold-color';
-                break;
-            case 'WANNA_WATCH':
-                label = '見たい';
-                iconClasses = ['far', 'fa-circle'];
-                iconColor = '--ann-status-plan-to-watch-color';
-                break;
-            default:
-                return null;
+        if (u.watched.nodes.length > 0) {
+            label = '見た';
+            iconClasses = ['far', 'fa-check'];
+            iconColor = '--ann-status-completed-color';
+        }
+        else if (u.watching.nodes.length > 0) {
+            label = '見てる';
+            iconClasses = ['far', 'fa-play'];
+            iconColor = '--ann-status-watching-color';
+        }
+        else if (u.stopWatching.nodes.length > 0) {
+            label = '視聴停止';
+            iconClasses = ['far', 'fa-stop'];
+            iconColor = '--ann-status-dropped-color';
+        }
+        else if (u.onHold.nodes.length > 0) {
+            label = '一時中断';
+            iconClasses = ['far', 'fa-pause'];
+            iconColor = '--ann-status-on-hold-color';
+        }
+        else if (u.wannaWatch.nodes.length > 0) {
+            label = '見たい';
+            iconClasses = ['far', 'fa-circle'];
+            iconColor = '--ann-status-plan-to-watch-color';
+        }
+        else {
+            return null;
         }
         return {
             name: u.name,
