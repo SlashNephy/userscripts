@@ -29,24 +29,53 @@ GM_config.init({
       type: 'text',
       default: '',
     },
+    annictTokenButton: {
+      type: 'annictTokenButton',
+    },
     [anilistTokenKey]: {
       label: 'AniList アクセストークン',
       type: 'text',
       default: '',
     },
-    anilistAuthorizeLabel: {
-      type: 'label',
+    anilistAuthorizeButton: {
+      type: 'anilistAuthorizeButton',
     },
     [anilistCallbackKey]: {
       type: 'hidden',
     },
   },
   types: {
-    label: {
+    annictTokenButton: {
+      default: null,
+      toNode(): HTMLElement {
+        const div = document.createElement('div')
+
+        const anchor = document.createElement('a')
+        anchor.classList.add('button')
+        anchor.href = 'https://annict.com/settings/tokens/new'
+        anchor.textContent = 'Annict のアクセストークンを発行する'
+        anchor.target = '_blank'
+        div.appendChild(anchor)
+
+        const description = document.createElement('p')
+        description.classList.add('description')
+        description.textContent =
+          'スコープは「読み取り専用」を選択してください。発行されたアクセストークンを上に貼り付けてください。'
+        div.appendChild(description)
+
+        return div
+      },
+      toValue(): FieldValue | null {
+        return null
+      },
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
+      reset() {},
+    },
+    anilistAuthorizeButton: {
       default: null,
       toNode(): HTMLElement {
         const anchor = document.createElement('a')
-        anchor.classList.add('authorize')
+        anchor.classList.add('button')
         anchor.href = `https://anilist.co/api/v2/oauth/authorize?client_id=${anilistClientId}&response_type=token`
         anchor.textContent = 'AniList と連携する'
         anchor.target = '_top'
@@ -73,11 +102,12 @@ GM_config.init({
         iframe#annict_following_viewings {
           border: 0 !important;
           border-radius: 20px;
-          height: 40% !important;
+          height: 70% !important;
           width: 50% !important;
-          left: 25% !important;
-          top: 33% !important;
+          left: 50% !important;
+          top: 50% !important;
           opacity: 0.9 !important;
+          transform: translate(-50%, -50%);
         }
       `
     },
@@ -146,10 +176,14 @@ GM_config.init({
     .reset {
       color: #e9ecef !important;
     }
-    a.authorize {
+    a.button {
       color: #7ca1f3;
       text-decoration: none;
       padding-left: 2em;
+    }
+    p.description {
+      padding-left: 3em;
+      margin-top: 4px;
     }
     div#annict_following_viewings_anilist_callback_var {
       display: none;
