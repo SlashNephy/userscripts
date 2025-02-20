@@ -4344,14 +4344,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-xml-parser@npm:4.3.2":
-  version: 4.3.2
-  resolution: "fast-xml-parser@npm:4.3.2"
+"fast-xml-parser@npm:5.0.6":
+  version: 5.0.6
+  resolution: "fast-xml-parser@npm:5.0.6"
   dependencies:
-    strnum: ^1.0.5
+    strnum: ^2.0.4
   bin:
     fxparser: src/cli/cli.js
-  checksum: d507ce2efa5fd13d0a5ba28bd76dd68f2fc30ad8748357c37b70f360d19417866d79e35a688af067d5bceaaa796033fa985206aef9692f7a421e1326b6e73309
+  checksum: b5689eab30ea09447ff846b90b300acce9ba11cb72f714bfc6f035ebba9a0a4705972d856344e5d895a9540a9fbd62ebfd09ac89f1c0c7bd204c725db33c80ea
   languageName: node
   linkType: hard
 
@@ -6959,10 +6959,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strnum@npm:^1.0.5":
-  version: 1.0.5
-  resolution: "strnum@npm:1.0.5"
-  checksum: 651b2031db5da1bf4a77fdd2f116a8ac8055157c5420f5569f64879133825915ad461513e7202a16d7fec63c54fd822410d0962f8ca12385c4334891b9ae6dd2
+"strnum@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "strnum@npm:2.0.4"
+  checksum: d8bcf7c609b270e13a8cb4c070f144e9cd8d4f69b178b93a66b5c69823605a3f9df0dff77a3919e8be8f72e51f0472d68f5edc33187aae6b60dd3337eefd92f7
   languageName: node
   linkType: hard
 
@@ -7409,7 +7409,7 @@ __metadata:
     "@xpadev-net/niconicomments": 0.2.56
     concurrently: 8.2.2
     eslint: 8.54.0
-    fast-xml-parser: 4.3.2
+    fast-xml-parser: 5.0.6
     jszip: 3.10.1
     markdown-doc-builder: 1.3.0
     prettier: 3.0.3
