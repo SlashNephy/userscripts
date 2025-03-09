@@ -215,23 +215,23 @@ const parseAnnictFollowingStatuses = (response: AnnictFollowingStatusesResponse)
       let iconColor: string
       if (u.watched.nodes.length > 0) {
         label = '見た'
-        iconClasses = ['far', 'fa-check']
+        iconClasses = ['fa-solid', 'fa-check']
         iconColor = '--ann-status-completed-color'
       } else if (u.watching.nodes.length > 0) {
         label = '見てる'
-        iconClasses = ['far', 'fa-play']
+        iconClasses = ['fa-solid', 'fa-play']
         iconColor = '--ann-status-watching-color'
       } else if (u.stopWatching.nodes.length > 0) {
         label = '視聴停止'
-        iconClasses = ['far', 'fa-stop']
+        iconClasses = ['fa-solid', 'fa-stop']
         iconColor = '--ann-status-dropped-color'
       } else if (u.onHold.nodes.length > 0) {
         label = '一時中断'
-        iconClasses = ['far', 'fa-pause']
+        iconClasses = ['fa-solid', 'fa-pause']
         iconColor = '--ann-status-on-hold-color'
       } else if (u.wannaWatch.nodes.length > 0) {
         label = '見たい'
-        iconClasses = ['far', 'fa-circle']
+        iconClasses = ['fa-solid', 'fa-circle']
         iconColor = '--ann-status-plan-to-watch-color'
       } else {
         return null
@@ -257,32 +257,32 @@ const parseAniListFollowingStatuses = (response: AniListFollowingStatusesRespons
     switch (u.status) {
       case 'CURRENT':
         statusLabel = '見てる'
-        iconClasses = ['far', 'fa-play']
+        iconClasses = ['fa-solid', 'fa-play']
         iconColor = '--ann-status-watching-color'
         break
       case 'PLANNING':
         statusLabel = '見たい'
-        iconClasses = ['far', 'fa-circle']
+        iconClasses = ['fa-solid', 'fa-circle']
         iconColor = '--ann-status-plan-to-watch-color'
         break
       case 'COMPLETED':
         statusLabel = '見た'
-        iconClasses = ['far', 'fa-check']
+        iconClasses = ['fa-solid', 'fa-check']
         iconColor = '--ann-status-completed-color'
         break
       case 'DROPPED':
         statusLabel = '視聴停止'
-        iconClasses = ['far', 'fa-stop']
+        iconClasses = ['fa-solid', 'fa-stop']
         iconColor = '--ann-status-dropped-color'
         break
       case 'PAUSED':
         statusLabel = '一時中断'
-        iconClasses = ['far', 'fa-pause']
+        iconClasses = ['fa-solid', 'fa-pause']
         iconColor = '--ann-status-on-hold-color'
         break
       case 'REPEATING':
         statusLabel = 'リピート中'
-        iconClasses = ['far', 'fa-forward']
+        iconClasses = ['fa-solid', 'fa-forward']
         iconColor = '--ann-status-watching-color'
         break
     }
