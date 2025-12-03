@@ -41,7 +41,7 @@
     "@rollup/plugin-typescript": "11.1.5",
     "@slashnephy/eslint-config": "2.1.3",
     "@slashnephy/prettier-config": "1.0.73",
-    "@slashnephy/types-amq": "0.4.43",
+    "@slashnephy/types-amq": "0.4.84",
     "@types/babel__core": "7.20.4",
     "@types/babel__preset-env": "7.9.5",
     "@types/file-saver": "2.0.7",
