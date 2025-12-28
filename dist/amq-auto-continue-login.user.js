@@ -30,13 +30,6 @@
                 resolve();
             }
         }, 500);
-        if (timeout !== undefined) {
-            timer = window.setTimeout(() => {
-                clearInterval(interval);
-                clearTimeout(timer);
-                reject(new Error('timeout'));
-            }, timeout);
-        }
     });
 
     const onReady = (callback) => {
