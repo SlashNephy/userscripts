@@ -27,7 +27,7 @@ export type JikanAnime = {
       }
     }
     approved: boolean
-    titles: { type: string; title: string }[]
+    titles: { type: string, title: string }[]
     title: string
     title_english: string
     title_japanese: string
@@ -40,7 +40,7 @@ export type JikanAnime = {
     aired: {
       from: string
       to: string
-      prop: { from: { day: number; month: number; year: number }; to: { day: number; month: number; year: number } }
+      prop: { from: { day: number, month: number, year: number }, to: { day: number, month: number, year: number } }
       string: string
     }
     duration: string
@@ -55,8 +55,8 @@ export type JikanAnime = {
     background: null
     season: string
     year: number
-    broadcast: { day: string; time: string; timezone: string; string: string }
-    producers: { mal_id: number; type: string; name: string; url: string }[]
+    broadcast: { day: string, time: string, timezone: string, string: string }
+    producers: { mal_id: number, type: string, name: string, url: string }[]
     licensors: []
     studios: {
       mal_id: number

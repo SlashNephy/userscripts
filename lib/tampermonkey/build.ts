@@ -39,7 +39,7 @@ export const buildOptions = (banner: Banner): RollupOptions => {
 }
 
 const createDevScript = async (banner: Banner) => {
-  // eslint-disable-next-line @typescript-eslint/promise-function-async
+  // eslint-disable-next-line @typescript-eslint/promise-function-async, @susisu/safe-typescript/no-type-assertion
   const promises = (['dev-chrome', 'dev-firefox'] as RenderMode[]).map((mode) => {
     const filename = `${banner.id}.${mode}.user.js`
     const path = banner.private === true ? join('dist', 'private', filename) : join('dist', filename)
@@ -57,33 +57,33 @@ type BuildConfig = {
   options?: Omit<RollupOptions, 'input' | 'plugins'>
 }
 
-type InternationalizationStrings = Record<string, string> & { en: string; ja?: string }
+type InternationalizationStrings = Record<string, string> & { en: string, ja?: string }
 
-type TampermonkeyGrant =
-  | 'GM_setValue'
-  | 'GM_getValue'
-  | 'GM_setClipboard'
-  | 'unsafeWindow'
-  | 'window.close'
-  | 'window.focus'
-  | 'window.onurlchange'
-  | 'GM_log'
-  | 'GM_download'
-  | 'GM_xmlhttpRequest'
-  | 'GM_addStyle'
-  | 'GM_addValueChangeListener'
-  | 'GM_deleteValue'
-  | 'GM_getResourceText'
-  | 'GM_getResourceURL'
-  | 'GM_getTab'
-  | 'GM_getTabs'
-  | 'GM_listValues'
-  | 'GM_notification'
-  | 'GM_openInTab'
-  | 'GM_registerMenuCommand'
-  | 'GM_removeValueChangeListener'
-  | 'GM_saveTab'
-  | 'GM_unregisterMenuCommand'
+type TampermonkeyGrant
+  = | 'GM_setValue'
+    | 'GM_getValue'
+    | 'GM_setClipboard'
+    | 'unsafeWindow'
+    | 'window.close'
+    | 'window.focus'
+    | 'window.onurlchange'
+    | 'GM_log'
+    | 'GM_download'
+    | 'GM_xmlhttpRequest'
+    | 'GM_addStyle'
+    | 'GM_addValueChangeListener'
+    | 'GM_deleteValue'
+    | 'GM_getResourceText'
+    | 'GM_getResourceURL'
+    | 'GM_getTab'
+    | 'GM_getTabs'
+    | 'GM_listValues'
+    | 'GM_notification'
+    | 'GM_openInTab'
+    | 'GM_registerMenuCommand'
+    | 'GM_removeValueChangeListener'
+    | 'GM_saveTab'
+    | 'GM_unregisterMenuCommand'
 
 type TampermonkeyAntiFeature = 'ads' | 'membership' | 'miner' | 'payment' | 'referral-link' | 'tracking'
 
@@ -271,8 +271,8 @@ const headers: {
           return b.require
         case 'dev-chrome': {
           const require = b.require ?? []
-          const path =
-            b.private === true
+          const path
+            = b.private === true
               ? `file://${join(process.cwd(), 'dist', 'private', `${b.id}.user.js`)}`
               : `file://${join(process.cwd(), 'dist', `${b.id}.user.js`)}`
           if (typeof require === 'string') {
@@ -283,8 +283,8 @@ const headers: {
         }
         case 'dev-firefox': {
           const require = b.require ?? []
-          const path =
-            b.private === true
+          const path
+            = b.private === true
               ? `http://localhost:3000/private/${b.id}.user.js`
               : `http://localhost:3000/${b.id}.user.js`
           if (typeof require === 'string') {

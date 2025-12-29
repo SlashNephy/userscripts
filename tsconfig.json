@@ -5,7 +5,11 @@
     "moduleResolution": "node",
     "allowJs": true,
     "outDir": "./dist",
-    "typeRoots": ["./node_modules/@types", "../../node_modules/@types", "./types"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "../../node_modules/@types",
+      "./types"
+    ],
     "removeComments": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -16,5 +20,12 @@
     "useUnknownInCatchVariables": true,
     "noUncheckedIndexedAccess": true
   },
-  "include": ["src/**/*.ts", "lib/**/*.ts", "types/**/*.ts", "rollup.config.ts", "rollup.config.private.ts"]
+  "include": [
+    "src/**/*.ts",
+    "lib/**/*.ts",
+    "types/**/*.ts",
+    "rollup.config.ts",
+    "rollup.config.private.ts",
+    "bin/**/*.ts"
+  ],
 }

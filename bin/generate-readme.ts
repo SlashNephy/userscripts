@@ -79,12 +79,12 @@ const generate = async (language: 'en' | 'ja') => {
 
     md.link(
       `https://github.com/SlashNephy/userscripts/raw/master/dist/${banner.id}.user.js`,
-      localizedStrings.install[language]
+      localizedStrings.install[language],
     )
     md.text(' / ')
     md.link(
       `https://github.com/SlashNephy/userscripts/blob/master/src/${banner.id}.ts`,
-      localizedStrings.source[language]
+      localizedStrings.source[language],
     )
 
     if (banner.homepage !== undefined) {

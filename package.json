@@ -5,6 +5,8 @@
     "type": "git",
     "url": "https://github.com/SlashNephy/userscripts"
   },
+  "license": "MIT",
+  "type": "module",
   "scripts": {
     "build": "tsc --noEmit",
     "build:rollup": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
@@ -13,17 +15,17 @@
     "bundle:private": "yarn build:rollup:private",
     "ci": "concurrently -n ci: -m 1 'yarn:ci:*'",
     "ci:bundle": "yarn bundle",
-    "ci:generate-readme": "ts-node --project tsconfig.node.json bin/generate-readme.ts && yarn format:prettier",
-    "format": "concurrently -n format: -m 1 'yarn:format:*'",
-    "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "yarn lint:prettier --write",
-    "lint": "concurrently -n lint: 'yarn:lint:*'",
-    "lint:eslint": "eslint .",
-    "lint:prettier": "prettier --check .",
+    "ci:generate-readme": "ts-node --project tsconfig.node.json bin/generate-readme.ts && yarn format",
+    "format": "eslint --fix",
+    "lint": "eslint",
     "serve": "serve dist/",
     "watch": "yarn build:rollup -w",
     "watch:private": "yarn build:rollup:private -w"
   },
+  "browserslist": [
+    "> 0.25%",
+    "not dead"
+  ],
   "dependencies": {
     "@geolonia/japanese-numeral": "1.0.2",
     "@xpadev-net/niconicomments": "0.2.56",
@@ -39,8 +41,7 @@
     "@rollup/plugin-commonjs": "25.0.7",
     "@rollup/plugin-node-resolve": "15.2.3",
     "@rollup/plugin-typescript": "11.1.5",
-    "@slashnephy/eslint-config": "2.1.3",
-    "@slashnephy/prettier-config": "1.0.73",
+    "@slashnephy/eslint-config": "3.0.136",
     "@slashnephy/types-amq": "0.4.43",
     "@types/babel__core": "7.20.4",
     "@types/babel__preset-env": "7.9.5",
@@ -50,30 +51,18 @@
     "@types/node": "20.9.0",
     "@types/tampermonkey": "5.0.2",
     "concurrently": "8.2.2",
-    "eslint": "8.54.0",
+    "eslint": "9.39.2",
     "markdown-doc-builder": "1.3.0",
-    "prettier": "3.0.3",
     "rollup": "4.22.4",
     "serve": "14.2.1",
+    "storybook": "10.1.10",
     "ts-node": "10.9.1",
-    "typescript": "5.2.2"
+    "typescript": "5.9.3"
   },
   "packageManager": "yarn@3.7.0",
   "engines": {
     "node": "^20"
   },
-  "eslintConfig": {
-    "extends": [
-      "@slashnephy/eslint-config"
-    ],
-    "rules": {
-      "import/extensions": "off"
-    }
-  },
-  "browserslist": [
-    "> 0.25%",
-    "not dead"
-  ],
   "userscriptVersions": {
     "tampermonkey": "^4"
   }

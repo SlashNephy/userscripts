@@ -20,7 +20,7 @@ onReady(() => {
       // eslint-disable-next-line @typescript-eslint/no-empty-function
       callback ?? (() => {}),
       isOutsideDismiss ?? true,
-      disableSwal ?? false
+      disableSwal ?? false,
     )
   }
 

@@ -23,6 +23,7 @@ const links: CustomLink[] = [
           continue
         }
 
+        // eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check
         switch (list.type) {
           // AniList
           case 1:
@@ -51,6 +52,7 @@ const links: CustomLink[] = [
           continue
         }
 
+        // eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check
         switch (list.type) {
           // AniList
           case 1:
@@ -79,6 +81,7 @@ const links: CustomLink[] = [
           continue
         }
 
+        // eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check
         switch (list.type) {
           // AniList
           case 1:
@@ -118,7 +121,7 @@ const handle = (playerNames: string[]) => {
             ...link,
             href: link.href(animeLists),
           }))
-          .filter((x): x is Omit<typeof x, 'href'> & { href: string } => x.href !== null)
+          .filter((x): x is Omit<typeof x, 'href'> & { href: string } => x.href !== null),
       )
     })
     .catch(console.error)
@@ -134,7 +137,7 @@ const handleAnswerResults = () => {
   handle(playerNames)
 }
 
-const cache: { playerNames: string[]; lists: PlayerAnimeList[] } = {
+const cache: { playerNames: string[], lists: PlayerAnimeList[] } = {
   playerNames: [],
   lists: [],
 }

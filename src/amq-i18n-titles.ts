@@ -4,7 +4,7 @@ import { fetchAnimeTitles } from '../lib/external/collect-anime-data'
 declare class QuizMultipleChoiceAnswerOption {
   public $text: { text(content: string): void }
 
-  public setName(name: { english: string; romaji: string }): void
+  public setName(name: { english: string, romaji: string }): void
 }
 
 const localizeTitle = (titles: Record<string, string[]>, target: string): string | undefined =>

@@ -33,7 +33,7 @@ export const NetflixOverlay: CommentOverlayModule = {
   },
   async detectMedia(episodeId: string): Promise<Media> {
     const reactContextScript = Array.from(document.getElementsByTagName('script')).find(
-      (e) => e.textContent?.includes('reactContext') === true
+      (e) => e.textContent?.includes('reactContext') === true,
     )
     if (reactContextScript === undefined) {
       throw new Error('failed to find reactContext script')
@@ -49,7 +49,7 @@ export const NetflixOverlay: CommentOverlayModule = {
     const context: NetflixReactContext = JSON.parse(reactContextJson)
     const metadata = await fetchNetflixMediaMetadata(
       `${context.models.services.data.memberapi.protocol}://${context.models.services.data.memberapi.hostname}${context.models.services.data.memberapi.path[0]}`,
-      episodeId
+      episodeId,
     )
 
     const episode = metadata.video.seasons
@@ -66,7 +66,7 @@ export const NetflixOverlay: CommentOverlayModule = {
         title: metadata.video.title,
         annictIds: broadcasts
           .filter(
-            (x) => x.channel_id === AnnictSupportedVodChannelIds.netflix && x.vod_code === metadata.video.id.toString()
+            (x) => x.channel_id === AnnictSupportedVodChannelIds.netflix && x.vod_code === metadata.video.id.toString(),
           )
           .map((x) => x.work_id),
       },
@@ -78,7 +78,7 @@ export const NetflixOverlay: CommentOverlayModule = {
   },
   addEventListener<K extends keyof CommentOverlayModuleEventMap>(
     event: K,
-    callback: CommentOverlayModuleEventMap[K]
+    callback: CommentOverlayModuleEventMap[K],
   ): void {
     switch (event) {
       case 'mediaChanged':
@@ -87,7 +87,7 @@ export const NetflixOverlay: CommentOverlayModule = {
   },
   removeEventListener<K extends keyof CommentOverlayModuleEventMap>(
     event: K,
-    callback: CommentOverlayModuleEventMap[K]
+    callback: CommentOverlayModuleEventMap[K],
   ): void {
     switch (event) {
       case 'mediaChanged': {

@@ -8,7 +8,7 @@ onReady(() => {
         return
       default:
         unsafeWindow.socialTab.socialStatus?.changeSocialStatus(
-          unsafeWindow.socialTab.socialStatus.STATUS_IDS.INVISIBLE
+          unsafeWindow.socialTab.socialStatus.STATUS_IDS.INVISIBLE,
         )
     }
   })

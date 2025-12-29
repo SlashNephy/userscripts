@@ -70,7 +70,7 @@ export const AbemaVideoOverlay: CommentOverlayModule = {
   },
   addEventListener<K extends keyof CommentOverlayModuleEventMap>(
     event: K,
-    callback: CommentOverlayModuleEventMap[K]
+    callback: CommentOverlayModuleEventMap[K],
   ): void {
     switch (event) {
       case 'mediaChanged': {

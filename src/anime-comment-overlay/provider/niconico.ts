@@ -14,9 +14,9 @@ import {
   vposAdjustment,
 } from '../constant'
 
-import type { Comment, CommentProviderModule, Program } from './index'
 import type { NiconicoJikkyoChannel, NiconicoJikkyoKakoLogResponse } from '../../../lib/external/tsukumijima'
 import type { Media } from '../overlay'
+import type { Comment, CommentProviderModule, Program } from './index'
 
 export const NiconicoJikkyoKakoLogProvider: CommentProviderModule = {
   name: 'ニコニコ実況過去ログ',
@@ -27,6 +27,7 @@ export const NiconicoJikkyoKakoLogProvider: CommentProviderModule = {
     }
 
     const request = {
+      // eslint-disable-next-line @susisu/safe-typescript/no-type-assertion
       channel: `jk${jkId}` as NiconicoJikkyoChannel,
       startTime: program.startedAt,
       endTime: program.endedAt,
@@ -71,7 +72,7 @@ export const NiconicoJikkyoKakoLogProvider: CommentProviderModule = {
           // 最初の開始時刻から vpos を再計算
           vpos: Math.max(
             copyrightAdjustment + (c.date - request.startTime) * 100 + Math.floor(c.dateUsec / 10000) - vposAdjustment,
-            0
+            0,
           ),
         }))
     )
@@ -79,6 +80,7 @@ export const NiconicoJikkyoKakoLogProvider: CommentProviderModule = {
 }
 
 function convertChats(response: NiconicoJikkyoKakoLogResponse): Comment[] {
+  // eslint-disable-next-line @susisu/safe-typescript/no-unsafe-object-property-check
   if ('error' in response) {
     console.error(`[anime-comment-overlay] received error from niconico jikkyo kako log: ${response.error}`)
 
@@ -152,7 +154,7 @@ function processIntervalCms(
   symbol: string,
   normalInterval: number,
   sponsorInterval: number,
-  program: Program
+  program: Program,
 ) {
   const partComments = comments.filter((c) => c.content === symbol)
   if (!hasMinLength(partComments, partSymbolCommentsThreshold)) {

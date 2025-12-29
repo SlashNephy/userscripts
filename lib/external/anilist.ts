@@ -28,7 +28,7 @@ export type AniListFollowingStatusesResponse = {
 async function fetchAniListFollowingStatuses(
   mediaId: number,
   page: number,
-  token: string
+  token: string,
 ): Promise<AniListFollowingStatusesResponse | ErrorResponse> {
   const response = await fetch('https://graphql.anilist.co', {
     method: 'POST',
@@ -73,19 +73,20 @@ async function fetchAniListFollowingStatuses(
 
 export async function fetchPaginatedAniListFollowingStatuses(
   mediaId: number,
-  token: string
+  token: string,
 ): Promise<AniListFollowingStatusesResponse[] | ErrorResponse> {
   const results: AniListFollowingStatusesResponse[] = []
   let page = 1
 
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   while (true) {
     // eslint-disable-next-line no-await-in-loop
     const response: AniListFollowingStatusesResponse | ErrorResponse = await fetchAniListFollowingStatuses(
       mediaId,
       page,
-      token
+      token,
     )
+
+    // eslint-disable-next-line @susisu/safe-typescript/no-unsafe-object-property-check
     if ('errors' in response) {
       return response
     }

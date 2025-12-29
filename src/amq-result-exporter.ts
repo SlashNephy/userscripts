@@ -18,7 +18,7 @@ const executeGas = async (rows: (string | number | boolean)[]) => {
   }
 
   // XXX: CORS を回避するため GM_xmlhttpRequest を使う
-  // eslint-disable-next-line deprecation/deprecation
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   await executeGmXhr({
     url,
     method: 'POST',
@@ -93,8 +93,8 @@ onReady(async () => {
       event.songInfo.type === 3
         ? 'Insert Song'
         : event.songInfo.type === 2
-        ? `Ending ${event.songInfo.typeNumber}`
-        : `Opening ${event.songInfo.typeNumber}`,
+          ? `Ending ${event.songInfo.typeNumber}`
+          : `Opening ${event.songInfo.typeNumber}`,
       event.songInfo.vintage,
       event.songInfo.animeType,
       event.songInfo.animeScore,
@@ -107,7 +107,7 @@ onReady(async () => {
       '',
       '',
       parseFloat(
-        quizVideoController.moePlayers[quizVideoController.currentMoePlayerId]?.$player[0]?.duration.toFixed(2) ?? '0'
+        quizVideoController.moePlayers[quizVideoController.currentMoePlayerId]?.$player[0]?.duration.toFixed(2) ?? '0',
       ),
       quizVideoController.moePlayers[quizVideoController.currentMoePlayerId]?.startPoint ?? '',
       event.players.filter((player) => player.correct).length,

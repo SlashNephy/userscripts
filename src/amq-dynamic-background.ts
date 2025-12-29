@@ -3,9 +3,9 @@ import { onReady } from '../lib/amq/onReady'
 declare const quizVideoController: {
   getCurrentPlayer():
     | {
-        resolution: number
-        $player: JQuery<HTMLVideoElement>
-      }
+      resolution: number
+      $player: JQuery<HTMLVideoElement>
+    }
     | undefined
 }
 
