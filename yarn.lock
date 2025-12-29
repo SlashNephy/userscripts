@@ -2675,9 +2675,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-typescript@npm:11.1.6":
-  version: 11.1.6
-  resolution: "@rollup/plugin-typescript@npm:11.1.6"
+"@rollup/plugin-typescript@npm:12.3.0":
+  version: 12.3.0
+  resolution: "@rollup/plugin-typescript@npm:12.3.0"
   dependencies:
     "@rollup/pluginutils": ^5.1.0
     resolve: ^1.22.1
@@ -2690,7 +2690,7 @@ __metadata:
       optional: true
     tslib:
       optional: true
-  checksum: 3f5b981f4d9c9501be1f16396f7b6d4ae584cb1b61e9f0bed66f98245fb77f249caea2b9b5f222f933b46fd9043c1f2664a7445aefa386c1ffbb4f0b80fc6004
+  checksum: 280213903ce54f76a103850329b37170dddd6e8a2d81b74dcd0bb94fc7f633ef0e287036bb763102c48734197135d2657f28b7ddd4a4c487b17b495eff655064
   languageName: node
   linkType: hard
 
@@ -10335,7 +10335,7 @@ __metadata:
     "@rollup/plugin-babel": 6.0.4
     "@rollup/plugin-commonjs": 25.0.8
     "@rollup/plugin-node-resolve": 15.2.3
-    "@rollup/plugin-typescript": 11.1.6
+    "@rollup/plugin-typescript": 12.3.0
     "@slashnephy/eslint-config": 3.0.136
     "@slashnephy/types-amq": 0.4.43
     "@types/babel__core": 7.20.4
