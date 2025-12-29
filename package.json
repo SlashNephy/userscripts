@@ -39,7 +39,7 @@
     "@babel/preset-typescript": "7.23.3",
     "@rollup/plugin-babel": "6.0.4",
     "@rollup/plugin-commonjs": "25.0.8",
-    "@rollup/plugin-node-resolve": "15.2.3",
+    "@rollup/plugin-node-resolve": "16.0.3",
     "@rollup/plugin-typescript": "11.1.6",
     "@slashnephy/eslint-config": "3.0.136",
     "@slashnephy/types-amq": "0.4.43",
