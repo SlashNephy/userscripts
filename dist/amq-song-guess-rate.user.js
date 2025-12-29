@@ -59,7 +59,7 @@
             }
         }
         format(...args) {
-            return this.toString().replace(/{(\d+)}/g, (match, index) => args[index]?.toString() ?? 'undefined');
+            return this.toString().replace(/{(\d+)}/g, (_, index) => args[index]?.toString() ?? 'undefined');
         }
         toError() {
             return new Error(this.toString());

@@ -5,10 +5,10 @@ import { fetchArmEntries } from '../../../lib/external/arm'
 import { fetchSayaDefinitions } from '../../../lib/external/saya'
 import { fetchSyobocalProgLookup, fetchSyobocalProgLookupWithRange } from '../../../lib/external/syobocal'
 
-import type { SayaDefinitions } from '../../../lib/external/saya'
-import type { SyobocalProgLookup, SyobocalProgItem } from '../../../lib/external/syobocal'
-import type { Media } from '../overlay'
 import type { FormattedComment } from '@xpadev-net/niconicomments'
+import type { SayaDefinitions } from '../../../lib/external/saya'
+import type { SyobocalProgItem, SyobocalProgLookup } from '../../../lib/external/syobocal'
+import type { Media } from '../overlay'
 
 export type CommentProviderModule = {
   name: string
@@ -170,6 +170,7 @@ export async function* fetchComments(
               premium: c.isPremium,
               mail: c.mails,
               layer: c.layer,
+              is_my_post: false,
             }))
           })
           .catch((e) => {

@@ -20,25 +20,55 @@
 (function () {
     'use strict';
 
-    /**
-     * Checks whether given array's length is equal to given number.
-     *
-     * @example
-     * ```ts
-     * hasLength(arr, 1) // equivalent to arr.length === 1
-     * ```
-     */
-    /**
-     * Checks whether given array's length is greather than or equal to given number.
-     *
-     * @example
-     * ```ts
-     * hasMinLength(arr, 1) // equivalent to arr.length >= 1
-     * ```
-     */
-    function hasMinLength(arr, length) {
-      return arr.length >= length;
+    var lib = {};
+
+    var hasRequiredLib;
+    function requireLib() {
+      if (hasRequiredLib) return lib;
+      hasRequiredLib = 1;
+      Object.defineProperty(lib, "__esModule", {
+        value: true
+      });
+      lib.hasLength = hasLength;
+      lib.hasMinLength = hasMinLength;
+      lib.isNonEmpty = isNonEmpty;
+      /**
+       * Checks whether given array's length is equal to given number.
+       *
+       * @example
+       * ```ts
+       * hasLength(arr, 1) // equivalent to arr.length === 1
+       * ```
+       */
+      function hasLength(arr, length) {
+        return arr.length === length;
+      }
+      /**
+       * Checks whether given array's length is greather than or equal to given number.
+       *
+       * @example
+       * ```ts
+       * hasMinLength(arr, 1) // equivalent to arr.length >= 1
+       * ```
+       */
+      function hasMinLength(arr, length) {
+        return arr.length >= length;
+      }
+      /**
+       * Checks whether given array is not empty.
+       *
+       * @example
+       * ```ts
+       * isNonEmpty(arr) // equivalent to arr.length > 0
+       * ```
+       */
+      function isNonEmpty(arr) {
+        return arr.length >= 1;
+      }
+      return lib;
     }
+
+    var libExports = requireLib();
 
     async function fetchArmEntries(branch = 'master') {
         const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/arm-supplementary/${branch}/dist/arm.json`);
@@ -49,7 +79,7 @@
     const cachedEntries = [];
     const main = async () => {
         const match = annictWorkPageUrlPattern.exec(window.location.href);
-        if (!match || !hasMinLength(match, 2)) {
+        if (!match || !libExports.hasMinLength(match, 2)) {
             return;
         }
         const annictId = parseInt(match[1], 10);
