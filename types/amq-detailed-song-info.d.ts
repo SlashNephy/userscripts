@@ -4,10 +4,10 @@ declare global {
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface Window {
     detailedSongInfo?: {
-      register(item: CustomRow | CustomLink): void
-      unregister(item: CustomRow | CustomLink): void
       get rows(): CustomRow[]
       get links(): CustomLink[]
+      register(item: CustomRow | CustomLink): void
+      unregister(item: CustomRow | CustomLink): void
     }
   }
 }

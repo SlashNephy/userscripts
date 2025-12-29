@@ -38,7 +38,7 @@ export type SyobocalProgLookup = {
 
 export async function fetchSyobocalProgLookup(tids: number[]): Promise<SyobocalProgLookup> {
   // XXX: CORS を回避するために GM_xmlhttpRequest を使う
-  // eslint-disable-next-line deprecation/deprecation
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   const { responseText } = await executeGmXhr({
     url: `https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=${tids.join(',')}`,
   })
@@ -50,19 +50,19 @@ export async function fetchSyobocalProgLookup(tids: number[]): Promise<SyobocalP
 export async function fetchSyobocalProgLookupWithRange(
   startTime: Date,
   endTime: Date,
-  chId: number
+  chId: number,
 ): Promise<SyobocalProgLookup> {
   function zerofill(n: number): string {
     return `00${n}`.slice(-2)
   }
   function format(d: Date): string {
     return `${d.getFullYear()}${zerofill(d.getMonth() + 1)}${zerofill(d.getDate())}_${zerofill(d.getHours())}${zerofill(
-      d.getMinutes()
+      d.getMinutes(),
     )}${zerofill(d.getSeconds())}`
   }
 
   // XXX: CORS を回避するために GM_xmlhttpRequest を使う
-  // eslint-disable-next-line deprecation/deprecation
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   const { responseText } = await executeGmXhr({
     url: `https://cal.syoboi.jp/db.php?Command=ProgLookup&Range=${format(startTime)}-${format(endTime)}&ChID=${chId}`,
   })
@@ -106,7 +106,7 @@ export type SyobocalTitleLookup = {
 
 export async function fetchSyobocalTitleLookup(tids: number[]): Promise<SyobocalTitleLookup> {
   // XXX: CORS を回避するために GM_xmlhttpRequest を使う
-  // eslint-disable-next-line deprecation/deprecation
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   const { responseText } = await executeGmXhr({
     url: `https://cal.syoboi.jp/db.php?Command=TitleLookup&TID=${tids.join(',')}`,
   })

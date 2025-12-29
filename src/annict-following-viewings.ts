@@ -55,8 +55,8 @@ GM_config.init({
 
         const description = document.createElement('p')
         description.classList.add('description')
-        description.textContent =
-          'スコープは「読み取り専用」を選択してください。発行されたアクセストークンを上に貼り付けてください。'
+        description.textContent
+          = 'スコープは「読み取り専用」を選択してください。発行されたアクセストークンを上に貼り付けてください。'
         div.appendChild(description)
 
         return div
@@ -451,7 +451,7 @@ const renderSectionBodyContent = (row: HTMLDivElement, statuses: FollowingState[
 const handle = async () => {
   if (window.location.pathname === '/') {
     const hash = new URLSearchParams(
-      window.location.hash.substring(1) // skip the leading '#'
+      window.location.hash.substring(1), // skip the leading '#'
     )
     const token = hash.get('access_token')
     if (token !== null) {
@@ -465,7 +465,6 @@ const handle = async () => {
       GM_config.write()
 
       if (typeof callback === 'string' && callback.length > 0) {
-        // eslint-disable-next-line xss/no-location-href-assign
         window.location.href = callback
       }
     }
@@ -507,8 +506,8 @@ const handle = async () => {
   const anilistToken = GM_config.get(anilistTokenKey)
   if (!annictToken && !anilistToken) {
     const guideAnchor = document.createElement('a')
-    guideAnchor.href =
-      'https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E4%B8%AD%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E8%A6%96%E8%81%B4%E7%8A%B6%E6%B3%81%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript'
+    guideAnchor.href
+      = 'https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E4%B8%AD%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E8%A6%96%E8%81%B4%E7%8A%B6%E6%B3%81%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript'
     guideAnchor.textContent = 'ガイド'
     guideAnchor.target = '_blank'
 
@@ -518,7 +517,7 @@ const handle = async () => {
       guideAnchor,
       'を参考に',
       settingsAnchor,
-      'を行ってください。'
+      'を行ってください。',
     )
 
     return
@@ -546,11 +545,12 @@ const insertAnnictFollowingStatuses = async (
   annictWorkId: number,
   annictToken: string,
   card: HTMLElement,
-  row: HTMLDivElement
+  row: HTMLDivElement,
 ) => {
   const responses = await fetchPaginatedAnnictFollowingStatuses(annictWorkId, annictToken)
   card.querySelector('.loading')?.remove()
 
+  // eslint-disable-next-line @susisu/safe-typescript/no-unsafe-object-property-check
   if ('errors' in responses) {
     const error = responses.errors.map(({ message }) => message).join('\n')
     card.append(`Annict GraphQL API がエラーを返しました。\n${error}`)
@@ -568,7 +568,7 @@ const insertAniListFollowingStatuses = async (
   annictWorkId: number,
   anilistToken: string,
   card: HTMLElement,
-  row: HTMLDivElement
+  row: HTMLDivElement,
 ) => {
   const armEntries = await fetchArmEntries()
   const mediaId = armEntries.find((x) => x.annict_id === annictWorkId)?.anilist_id
@@ -579,6 +579,7 @@ const insertAniListFollowingStatuses = async (
   card.querySelector('.loading')?.remove()
 
   const responses = await fetchPaginatedAniListFollowingStatuses(mediaId, anilistToken)
+  // eslint-disable-next-line @susisu/safe-typescript/no-unsafe-object-property-check
   if ('errors' in responses) {
     const error = responses.errors.map(({ message }) => message).join('\n')
     card.append(`AniList GraphQL API がエラーを返しました。\n${error}`)

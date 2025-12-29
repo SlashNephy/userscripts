@@ -2,7 +2,7 @@ import { executeGmXhr } from '../tampermonkey/executeGmXhr'
 
 export async function fetchNetflixMediaMetadata(baseUrl: string, episodeId: string): Promise<NetflixMediaMetadata> {
   // CORS を回避する
-  // eslint-disable-next-line deprecation/deprecation
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   const { responseText } = await executeGmXhr({
     method: 'GET',
     url: `${baseUrl}/metadata?movieid=${episodeId}`,

@@ -26,7 +26,7 @@ async function checkSession(): Promise<boolean> {
     })
 
     return response.ok
-  } catch (e: unknown) {
+  } catch {
     return false
   }
 }

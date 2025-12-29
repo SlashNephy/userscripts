@@ -20,7 +20,7 @@ const main = async () => {
   }
 
   const links = document.querySelector(
-    'div.c-work-header.pt-3 > div.container > div > div.col.mt-3.mt-sm-0 > ul.list-inline.mb-0'
+    'div.c-work-header.pt-3 > div.container > div > div.col.mt-3.mt-sm-0 > ul.list-inline.mb-0',
   )
   if (!links || links.childNodes.length === 0) {
     throw new Error('Failed to find target container')
@@ -40,9 +40,10 @@ const main = async () => {
 
   if (entry.syobocal_tid !== undefined && links.firstChild) {
     const link = links.firstChild.cloneNode(true)
+    // eslint-disable-next-line @susisu/safe-typescript/no-type-assertion
     const aHtml = link.firstChild as HTMLAnchorElement
     aHtml.href = `https://cal.syoboi.jp/tid/${entry.syobocal_tid}`
-    // eslint-disable-next-line xss/no-mixed-html
+
     const node = aHtml.childNodes[0]
     if (node !== undefined) {
       node.textContent = 'しょぼいカレンダー'
@@ -52,9 +53,10 @@ const main = async () => {
 
   if (entry.anilist_id !== undefined && links.firstChild) {
     const link = links.firstChild.cloneNode(true)
+    // eslint-disable-next-line @susisu/safe-typescript/no-type-assertion
     const aHtml = link.firstChild as HTMLAnchorElement
     aHtml.href = `https://anilist.co/anime/${entry.anilist_id}`
-    // eslint-disable-next-line xss/no-mixed-html
+
     const node = aHtml.childNodes[0]
     if (node !== undefined) {
       node.textContent = 'AniList'
@@ -64,9 +66,10 @@ const main = async () => {
 
   if (entry.mal_id !== undefined && links.firstChild) {
     const link = links.firstChild.cloneNode(true)
+    // eslint-disable-next-line @susisu/safe-typescript/no-type-assertion
     const aHtml = link.firstChild as HTMLAnchorElement
     aHtml.href = `https://myanimelist.net/anime/${entry.mal_id}`
-    // eslint-disable-next-line xss/no-mixed-html
+
     const node = aHtml.childNodes[0]
     if (node !== undefined) {
       node.textContent = 'MyAnimeList'

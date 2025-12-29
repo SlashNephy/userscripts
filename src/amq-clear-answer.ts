@@ -1,7 +1,7 @@
 import { onReady } from '../lib/amq/onReady'
 
 const handleKeydown = (event: KeyboardEvent) => {
-  // eslint-disable-next-line xss/no-mixed-html
+  // eslint-disable-next-line @susisu/safe-typescript/no-type-assertion
   const target = event.target as HTMLInputElement | null
   if (target === null) {
     return

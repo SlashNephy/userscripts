@@ -41,7 +41,7 @@ const migrate = async () => {
 
       value.set(count)
       oldValue.delete()
-    })
+    }),
   )
 }
 

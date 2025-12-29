@@ -70,6 +70,7 @@ const renderCheckbox = (title: string, onClick: (e: MouseEvent) => void): HTMLEl
 }
 
 const renderCss = (): string => {
+  // eslint-disable-next-line @susisu/safe-typescript/no-unsafe-object-enum-method
   const statuses = Object.entries(hiddenStatuses)
     .filter(([_, hide]) => hide)
     .map(([key, _]) => key)
@@ -106,6 +107,7 @@ const toggleCheckbox = (e: MouseEvent, key: keyof typeof hiddenStatuses): void =
   hiddenStatuses[key] = !hiddenStatuses[key]
   style.textContent = renderCss()
 
+  // eslint-disable-next-line @susisu/safe-typescript/no-type-assertion
   const element = e.currentTarget as Element | null
   const check = element?.querySelector<HTMLDivElement>('.check')
   if (check === null || check === undefined) {
@@ -164,7 +166,7 @@ const attach = () => {
       renderCheckbox('Dropped', (e) => {
         toggleCheckbox(e, 'Dropped')
       }),
-    ])
+    ]),
   )
   extraFiltersWrap.toggleAttribute(attribute)
 }

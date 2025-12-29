@@ -11,7 +11,7 @@ export const EpgStationOnAirOverlay: CommentOverlayModule = {
     throw new Error('not implemented')
   },
   // eslint-disable-next-line @typescript-eslint/require-await
-  async detectMedia(partId: string): Promise<Media> {
+  async detectMedia(): Promise<Media> {
     throw new Error('not implemented')
   },
   addEventListener<K extends keyof CommentOverlayModuleEventMap>(event: K): void {

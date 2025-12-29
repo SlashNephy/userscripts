@@ -10,7 +10,7 @@ export type DetailedSongInfo = NonNullable<typeof unsafeWindow.detailedSongInfo>
 
 export const getDetailedSongInfo = async (): Promise<DetailedSongInfo> =>
   awaitFor(() => unsafeWindow.detailedSongInfo !== undefined, 10000)
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
     .then(() => unsafeWindow.detailedSongInfo!)
     .catch(() => {
       throw message.toError()

@@ -42,7 +42,7 @@ async function addRemoteScript(zip: JSZip, url: URL): Promise<void> {
     throw new Error(`failed to create folder: ${directoryName}`)
   }
 
-  // eslint-disable-next-line deprecation/deprecation
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   const { responseText } = await executeGmXhr({ url: url.toString() })
 
   const path = url.pathname.split('/').pop() ?? 'index.js'

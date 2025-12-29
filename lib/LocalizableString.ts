@@ -21,7 +21,7 @@ export class LocalizableString {
   public format(...args: unknown[]): string {
     return this.toString().replace(
       /{(\d+)}/g,
-      (match: string, index: number): string => args[index]?.toString() ?? 'undefined'
+      (_: string, index: number): string => args[index]?.toString() ?? 'undefined',
     )
   }
 

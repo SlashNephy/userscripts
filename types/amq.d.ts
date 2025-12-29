@@ -1,7 +1,5 @@
-// eslint-disable-next-line eslint-comments/disable-enable-pair
+// eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
 /* eslint-disable @typescript-eslint/naming-convention */
-// noinspection JSUnusedGlobalSymbols
-
 declare global {
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface Window {
@@ -20,7 +18,7 @@ declare global {
     // eslint-disable-next-line @typescript-eslint/no-empty-function
     callback: () => void = () => {},
     outsideDismiss = true,
-    disableSWAL = false
+    disableSWAL = false,
   ): void
 }
 
@@ -365,12 +363,12 @@ export type AnswerResultsEvent = {
     positionSlot: number
   }[]
   songInfo: {
-    animeNames: { english: string; romaji: string }
+    animeNames: { english: string, romaji: string }
     artist: string
     songName: string
     urlMap: {
-      catbox?: { 0?: string; 480?: string; 720?: string }
-      openingsmoe?: { 0?: string; 480?: string; 720?: string }
+      catbox?: { 0?: string, 480?: string, 720?: string }
+      openingsmoe?: { 0?: string, 480?: string, 720?: string }
     }
     type: number
     typeNumber: number
@@ -384,9 +382,9 @@ export type AnswerResultsEvent = {
     animeGenre: string[]
     altAnimeNames: string[]
     altAnimeNamesAnswers: string[]
-    siteIds: { annId: number; malId: number; kitsuId: number; aniListId: number }
+    siteIds: { annId: number, malId: number, kitsuId: number, aniListId: number }
   }
-  progressBarState: { length: number; played: number }
+  progressBarState: { length: number, played: number }
   groupMap: Record<string, number[]>
   watched: boolean
 }

@@ -72,7 +72,7 @@ export async function findPrograms(media: Media): Promise<Program[]> {
 function convertPrograms(
   response: SyobocalProgLookup,
   episodeNumber: number | undefined,
-  saya: SayaDefinitions
+  saya: SayaDefinitions,
 ): Program[] {
   const items = Array.isArray(response.ProgLookupResponse?.ProgItems?.ProgItem)
     ? response.ProgLookupResponse?.ProgItems?.ProgItem
@@ -142,11 +142,10 @@ function extractEpisodeNumber(text: string | number | undefined): number | undef
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/require-await
 export async function* fetchComments(
   providers: CommentProviderModule[],
   media: Media,
-  programs: Program[]
+  programs: Program[],
 ): AsyncGenerator<FormattedComment[]> {
   const promises: Promise<FormattedComment[]>[] = providers
     .map((provider) =>
@@ -177,8 +176,8 @@ export async function* fetchComments(
             console.error(`[anime-comment-overlay] failed to comments from ${provider.name}: ${e}`)
 
             return []
-          })
-      )
+          }),
+      ),
     )
     .flat()
 

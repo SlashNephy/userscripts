@@ -26,7 +26,7 @@ export type SayaDefinitions = {
 
 export async function fetchSayaDefinitions(branch = 'master'): Promise<SayaDefinitions> {
   const response = await fetch(
-    `https://raw.githubusercontent.com/SlashNephy/saya-definitions/${branch}/definitions.json`
+    `https://raw.githubusercontent.com/SlashNephy/saya-definitions/${branch}/definitions.json`,
   )
 
   return response.json()

@@ -2,7 +2,7 @@
  * @deprecated use fetch instead
  */
 export const executeGmXhr = async <T = unknown>(
-  request: Omit<Tampermonkey.Request<T>, 'onload' | 'onerror'>
+  request: Omit<Tampermonkey.Request<T>, 'onload' | 'onerror'>,
 ): Promise<Tampermonkey.Response<T>> =>
   new Promise((resolve, reject) => {
     GM_xmlhttpRequest<T>({
@@ -11,6 +11,7 @@ export const executeGmXhr = async <T = unknown>(
         resolve(response)
       },
       onerror: (error) => {
+        // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors
         reject(error)
       },
     })

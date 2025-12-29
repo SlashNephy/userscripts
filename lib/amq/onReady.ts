@@ -7,6 +7,7 @@ export const onReady = (callback: () => void | Promise<void>): void => {
   }
 
   awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
+    // eslint-disable-next-line promise/no-callback-in-promise
     .then(callback)
     .catch(console.error)
 }

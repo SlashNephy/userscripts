@@ -109,7 +109,7 @@ const links: CustomLink[] = [
     },
     href(event: AnswerResultsEvent) {
       return `spotify://search/${encodeURIComponent(event.songInfo.songName)}%20${encodeURIComponent(
-        event.songInfo.artist
+        event.songInfo.artist,
       )}/tracks`
     },
   },
@@ -122,7 +122,7 @@ const links: CustomLink[] = [
     },
     href(event: AnswerResultsEvent) {
       return `https://www.youtube.com/results?search_query=${encodeURIComponent(
-        event.songInfo.songName
+        event.songInfo.songName,
       )}+${encodeURIComponent(event.songInfo.artist)}`
     },
   },
@@ -198,7 +198,7 @@ const handle = (event: AnswerResultsEvent) => {
           href,
         }
       })
-      .filter((x): x is Exclude<typeof x, null> => x !== null)
+      .filter((x): x is Exclude<typeof x, null> => x !== null),
   )
 }
 
@@ -290,14 +290,17 @@ const renderLinks = (element: HTMLElement, ls: EvaluatedCustomLink[]) => {
 
 unsafeWindow.detailedSongInfo = {
   register(item: CustomRow | CustomLink) {
+    // eslint-disable-next-line @susisu/safe-typescript/no-unsafe-object-property-check
     const container = 'content' in item ? rows : links
     if (container.some((x) => x.id === item.id)) {
       return
     }
 
+    // eslint-disable-next-line @susisu/safe-typescript/no-type-assertion
     container.push(item as unknown as CustomRow & CustomLink)
   },
   unregister(item: CustomRow | CustomLink) {
+    // eslint-disable-next-line @susisu/safe-typescript/no-unsafe-object-property-check
     const container = 'content' in item ? rows : links
     const index = container.findIndex((x) => x.id === item.id)
     if (index >= 0) {

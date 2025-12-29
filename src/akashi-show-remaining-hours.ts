@@ -4,8 +4,8 @@ document.addEventListener('DOMNodeInserted', () => {
     return
   }
 
-  const [a1, a2] =
-    document
+  const [a1, a2]
+    = document
       .querySelector('#time-card-accordion-02 > div > div > table > tbody > tr > td:nth-child(1) > span')
       ?.textContent?.trim()
       .split(':') ?? []
@@ -18,8 +18,8 @@ document.addEventListener('DOMNodeInserted', () => {
     return
   }
 
-  const [c1, c2] =
-    document
+  const [c1, c2]
+    = document
       .querySelector('#time-card-accordion-02 > div > div > table > tbody > tr > td:nth-child(3) > span')
       ?.textContent?.trim()
       .split(':') ?? []

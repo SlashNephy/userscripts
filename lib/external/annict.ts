@@ -46,7 +46,7 @@ export type AnnictFollowingStatusesResponse = {
 async function fetchAnnictFollowingStatuses(
   workId: number,
   cursor: string | null,
-  token: string
+  token: string,
 ): Promise<AnnictFollowingStatusesResponse | ErrorResponse> {
   const response = await fetch('https://api.annict.com/graphql', {
     method: 'POST',
@@ -120,19 +120,20 @@ async function fetchAnnictFollowingStatuses(
 
 export async function fetchPaginatedAnnictFollowingStatuses(
   workId: number,
-  token: string
+  token: string,
 ): Promise<AnnictFollowingStatusesResponse[] | ErrorResponse> {
   const results: AnnictFollowingStatusesResponse[] = []
   let cursor: string | null = null
 
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   while (true) {
     // eslint-disable-next-line no-await-in-loop
     const response: AnnictFollowingStatusesResponse | ErrorResponse = await fetchAnnictFollowingStatuses(
       workId,
       cursor,
-      token
+      token,
     )
+
+    // eslint-disable-next-line @susisu/safe-typescript/no-unsafe-object-property-check
     if ('errors' in response) {
       return response
     }

@@ -26,11 +26,11 @@ const getTypeString = (value: unknown): string => {
     return `${types.at(0)}[]`
   }
 
+  // eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check
   switch (typeof value) {
     case 'object': {
       const entries = Object.entries(value)
       if (entries.length === 0) {
-        // eslint-disable-next-line xss/no-mixed-html
         return 'Record<string, unknown>'
       }
 
