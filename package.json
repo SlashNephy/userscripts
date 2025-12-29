@@ -28,7 +28,7 @@
   ],
   "dependencies": {
     "@geolonia/japanese-numeral": "1.0.2",
-    "@xpadev-net/niconicomments": "0.2.56",
+    "@xpadev-net/niconicomments": "0.2.76",
     "fast-xml-parser": "4.3.2",
     "jszip": "3.10.1",
     "ts-array-length": "0.1.2"
