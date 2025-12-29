@@ -2882,9 +2882,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/types-amq@npm:0.4.43":
-  version: 0.4.43
-  resolution: "@slashnephy/types-amq@npm:0.4.43"
+"@slashnephy/types-amq@npm:0.4.84":
+  version: 0.4.84
+  resolution: "@slashnephy/types-amq@npm:0.4.84"
   dependencies:
     "@types/bootstrap": 3.3.33
     "@types/cookieconsent": 3.1.1
@@ -2892,7 +2892,7 @@ __metadata:
     "@types/js-cookie": 2.2.7
     perfect-scrollbar: 0.7.0
     sweetalert: 2.1
-  checksum: 75771757d342a5ade90b64ef08adadfa0f1f1de9bd91082018e2af6b05e026d778fbf3b31dcc7731cfd311187d009cb7af4024744ceb9cb5a22539af2d4318fd
+  checksum: 195d5440ff8dd3139697dd0362dc5eb486423c2f2ed9b3d85dfbd7d6dbb74139a22a6297aa7b81398ad7f6a33f9a3963a43f8a7900378d89afed069393d00704
   languageName: node
   linkType: hard
 
@@ -10337,7 +10337,7 @@ __metadata:
     "@rollup/plugin-node-resolve": 15.2.3
     "@rollup/plugin-typescript": 11.1.6
     "@slashnephy/eslint-config": 3.0.136
-    "@slashnephy/types-amq": 0.4.43
+    "@slashnephy/types-amq": 0.4.84
     "@types/babel__core": 7.20.4
     "@types/babel__preset-env": 7.9.5
     "@types/file-saver": 2.0.7
