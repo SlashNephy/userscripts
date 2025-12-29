@@ -15,7 +15,7 @@
     "bundle:private": "yarn build:rollup:private",
     "ci": "concurrently -n ci: -m 1 'yarn:ci:*'",
     "ci:bundle": "yarn bundle",
-    "ci:generate-readme": "ts-node --project tsconfig.node.json bin/generate-readme.ts && yarn format",
+    "ci:generate-readme": "node --experimental-strip-types bin/generate-readme.ts && yarn format",
     "format": "eslint --fix",
     "lint": "eslint",
     "serve": "serve dist/",
@@ -54,7 +54,6 @@
     "rollup": "4.54.0",
     "serve": "14.2.5",
     "storybook": "10.1.10",
-    "ts-node": "10.9.2",
     "typescript": "5.9.3"
   },
   "packageManager": "yarn@4.12.0",

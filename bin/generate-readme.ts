@@ -1,8 +1,8 @@
 import { writeFile } from 'fs/promises'
 
-import markdown, { MarkdownTableBuilder } from 'markdown-doc-builder'
+import { MarkdownBuilder, MarkdownTableBuilder } from 'markdown-doc-builder'
 
-import { banners } from '../rollup.config'
+import { banners } from '../rollup.config.ts'
 
 const filenames = {
   en: 'README.md',
@@ -37,7 +37,7 @@ const localizedStrings = {
 } as const
 
 const generate = async (language: 'en' | 'ja') => {
-  const md = markdown.newBuilder()
+  const md = MarkdownBuilder.newBuilder()
 
   md.headerOrdered(false)
   md.h1('userscripts')

@@ -5,10 +5,10 @@ import { fetchArmEntries } from '../../../lib/external/arm'
 import { fetchSayaDefinitions } from '../../../lib/external/saya'
 import { fetchSyobocalProgLookup, fetchSyobocalProgLookupWithRange } from '../../../lib/external/syobocal'
 
-import type { FormattedComment } from '@xpadev-net/niconicomments'
 import type { SayaDefinitions } from '../../../lib/external/saya'
 import type { SyobocalProgItem, SyobocalProgLookup } from '../../../lib/external/syobocal'
 import type { Media } from '../overlay'
+import type { FormattedComment } from '@xpadev-net/niconicomments'
 
 export type CommentProviderModule = {
   name: string

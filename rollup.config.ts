@@ -1,4 +1,4 @@
-import { buildOptions } from './lib/tampermonkey/build'
+import { buildOptions } from './lib/tampermonkey/build.ts'
 
 import type { RollupOptions } from 'rollup'
 import type { Banner } from './lib/tampermonkey/build'
