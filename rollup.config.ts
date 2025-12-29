@@ -1,7 +1,7 @@
 import { buildOptions } from './lib/tampermonkey/build'
 
-import type { Banner } from './lib/tampermonkey/build'
 import type { RollupOptions } from 'rollup'
+import type { Banner } from './lib/tampermonkey/build'
 
 export const banners: Banner[] = [
   {
@@ -440,28 +440,6 @@ export const banners: Banner[] = [
     require: [
       'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
     ],
-  },
-  {
-    id: 'download-scripts',
-    name: 'Download Scripts',
-    version: '0.0.1',
-    description: {
-      en: 'Register a function to download all the JavaScript files from current document into window.',
-      ja: '現在の document 内のすべての JavaScript ファイルをダウンロードする関数を window に登録します。',
-    },
-    homepage: 'https://scrapbox.io/slashnephy/',
-    author: 'SlashNephy',
-    match: ['http://*/*', 'https://*/*'],
-    require: 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js',
-    grant: ['unsafeWindow', 'GM_xmlhttpRequest', 'GM_registerMenuCommand'],
-    options: {
-      external: 'jszip',
-      output: {
-        globals: {
-          jszip: 'JSZip',
-        },
-      },
-    },
   },
 ]
 

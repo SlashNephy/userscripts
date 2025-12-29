@@ -26,25 +26,55 @@
 (function () {
     'use strict';
 
-    /**
-     * Checks whether given array's length is equal to given number.
-     *
-     * @example
-     * ```ts
-     * hasLength(arr, 1) // equivalent to arr.length === 1
-     * ```
-     */
-    /**
-     * Checks whether given array's length is greather than or equal to given number.
-     *
-     * @example
-     * ```ts
-     * hasMinLength(arr, 1) // equivalent to arr.length >= 1
-     * ```
-     */
-    function hasMinLength(arr, length) {
-      return arr.length >= length;
+    var lib = {};
+
+    var hasRequiredLib;
+    function requireLib() {
+      if (hasRequiredLib) return lib;
+      hasRequiredLib = 1;
+      Object.defineProperty(lib, "__esModule", {
+        value: true
+      });
+      lib.hasLength = hasLength;
+      lib.hasMinLength = hasMinLength;
+      lib.isNonEmpty = isNonEmpty;
+      /**
+       * Checks whether given array's length is equal to given number.
+       *
+       * @example
+       * ```ts
+       * hasLength(arr, 1) // equivalent to arr.length === 1
+       * ```
+       */
+      function hasLength(arr, length) {
+        return arr.length === length;
+      }
+      /**
+       * Checks whether given array's length is greather than or equal to given number.
+       *
+       * @example
+       * ```ts
+       * hasMinLength(arr, 1) // equivalent to arr.length >= 1
+       * ```
+       */
+      function hasMinLength(arr, length) {
+        return arr.length >= length;
+      }
+      /**
+       * Checks whether given array is not empty.
+       *
+       * @example
+       * ```ts
+       * isNonEmpty(arr) // equivalent to arr.length > 0
+       * ```
+       */
+      function isNonEmpty(arr) {
+        return arr.length >= 1;
+      }
+      return lib;
     }
+
+    var libExports = requireLib();
 
     async function fetchAniListFollowingStatuses(mediaId, page, token) {
         const response = await fetch('https://graphql.anilist.co', {
@@ -253,8 +283,8 @@
                     div.appendChild(anchor);
                     const description = document.createElement('p');
                     description.classList.add('description');
-                    description.textContent =
-                        'スコープは「読み取り専用」を選択してください。発行されたアクセストークンを上に貼り付けてください。';
+                    description.textContent
+                        = 'スコープは「読み取り専用」を選択してください。発行されたアクセストークンを上に貼り付けてください。';
                     div.appendChild(description);
                     return div;
                 },
@@ -635,7 +665,7 @@
             return;
         }
         const workMatch = annictWorkPageUrlPattern.exec(window.location.href);
-        if (!workMatch || !hasMinLength(workMatch, 2)) {
+        if (!workMatch || !libExports.hasMinLength(workMatch, 2)) {
             return;
         }
         const annictWorkId = parseInt(workMatch[1], 10);
@@ -662,8 +692,8 @@
         const anilistToken = GM_config.get(anilistTokenKey);
         if (!annictToken && !anilistToken) {
             const guideAnchor = document.createElement('a');
-            guideAnchor.href =
-                'https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E4%B8%AD%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E8%A6%96%E8%81%B4%E7%8A%B6%E6%B3%81%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript';
+            guideAnchor.href
+                = 'https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E4%B8%AD%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E8%A6%96%E8%81%B4%E7%8A%B6%E6%B3%81%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript';
             guideAnchor.textContent = 'ガイド';
             guideAnchor.target = '_blank';
             card.textContent = '';

@@ -26,14 +26,9 @@
     'use strict';
 
     const AnnictSupportedVodChannelIds = {
-        bandai: 107,
-        niconico: 165,
         dAnime: 241,
-        amazonPrimeVideo: 243,
         netflix: 244,
-        abemaVideo: 260,
-        dAnimeNiconico: 306,
-    };
+        abemaVideo: 260};
     const ChannelCmAttributes = {
         jk1: null,
         jk2: null,
@@ -351,7 +346,7 @@
         initializeContainers() {
             throw new Error('not implemented');
         },
-        async detectMedia(partId) {
+        async detectMedia() {
             throw new Error('not implemented');
         },
         addEventListener(event) {
@@ -506,288 +501,344 @@
 
     var utils = {};
 
-    var oldJapaneseNumerics$1 = {};
+    var oldJapaneseNumerics = {};
 
-    Object.defineProperty(oldJapaneseNumerics$1, "__esModule", {
-      value: true
-    });
-    const oldJapaneseNumerics = {
-      零: '〇',
-      壱: '一',
-      壹: '一',
-      弐: '二',
-      弍: '二',
-      貳: '二',
-      貮: '二',
-      参: '三',
-      參: '三',
-      肆: '四',
-      伍: '五',
-      陸: '六',
-      漆: '七',
-      捌: '八',
-      玖: '九',
-      拾: '十',
-      廿: '二十',
-      陌: '百',
-      佰: '百',
-      阡: '千',
-      仟: '千',
-      萬: '万'
-    };
-    oldJapaneseNumerics$1.default = oldJapaneseNumerics;
-
-    var japaneseNumerics$1 = {};
-
-    Object.defineProperty(japaneseNumerics$1, "__esModule", {
-      value: true
-    });
-    const japaneseNumerics = {
-      〇: 0,
-      一: 1,
-      二: 2,
-      三: 3,
-      四: 4,
-      五: 5,
-      六: 6,
-      七: 7,
-      八: 8,
-      九: 9,
-      '０': 0,
-      '１': 1,
-      '２': 2,
-      '３': 3,
-      '４': 4,
-      '５': 5,
-      '６': 6,
-      '７': 7,
-      '８': 8,
-      '９': 9
-    };
-    japaneseNumerics$1.default = japaneseNumerics;
-
-    (function (exports) {
-
-      Object.defineProperty(exports, "__esModule", {
+    var hasRequiredOldJapaneseNumerics;
+    function requireOldJapaneseNumerics() {
+      if (hasRequiredOldJapaneseNumerics) return oldJapaneseNumerics;
+      hasRequiredOldJapaneseNumerics = 1;
+      Object.defineProperty(oldJapaneseNumerics, "__esModule", {
         value: true
       });
-      exports.zen2han = exports.n2kan = exports.kan2n = exports.splitLargeNumber = exports.normalize = exports.smallNumbers = exports.largeNumbers = void 0;
-      const oldJapaneseNumerics_1 = oldJapaneseNumerics$1;
-      const japaneseNumerics_1 = japaneseNumerics$1;
-      exports.largeNumbers = {
-        '兆': 1000000000000,
-        '億': 100000000,
-        '万': 10000
+      const oldJapaneseNumerics$1 = {
+        零: '〇',
+        壱: '一',
+        壹: '一',
+        弐: '二',
+        弍: '二',
+        貳: '二',
+        貮: '二',
+        参: '三',
+        參: '三',
+        肆: '四',
+        伍: '五',
+        陸: '六',
+        漆: '七',
+        捌: '八',
+        玖: '九',
+        拾: '十',
+        廿: '二十',
+        陌: '百',
+        佰: '百',
+        阡: '千',
+        仟: '千',
+        萬: '万'
       };
-      exports.smallNumbers = {
-        '千': 1000,
-        '百': 100,
-        '十': 10
+      oldJapaneseNumerics.default = oldJapaneseNumerics$1;
+      return oldJapaneseNumerics;
+    }
+
+    var japaneseNumerics = {};
+
+    var hasRequiredJapaneseNumerics;
+    function requireJapaneseNumerics() {
+      if (hasRequiredJapaneseNumerics) return japaneseNumerics;
+      hasRequiredJapaneseNumerics = 1;
+      Object.defineProperty(japaneseNumerics, "__esModule", {
+        value: true
+      });
+      const japaneseNumerics$1 = {
+        〇: 0,
+        一: 1,
+        二: 2,
+        三: 3,
+        四: 4,
+        五: 5,
+        六: 6,
+        七: 7,
+        八: 8,
+        九: 9,
+        '０': 0,
+        '１': 1,
+        '２': 2,
+        '３': 3,
+        '４': 4,
+        '５': 5,
+        '６': 6,
+        '７': 7,
+        '８': 8,
+        '９': 9
       };
-      function normalize(japanese) {
-        for (const key in oldJapaneseNumerics_1.default) {
-          const reg = new RegExp(key, 'g');
-          japanese = japanese.replace(reg, oldJapaneseNumerics_1.default[key]);
-        }
-        return japanese;
-      }
-      exports.normalize = normalize;
-      /**
-       * 漢数字を兆、億、万単位に分割する
-       */
-      function splitLargeNumber(japanese) {
-        let kanji = japanese;
-        const numbers = {};
-        for (const key in exports.largeNumbers) {
-          const reg = new RegExp(`(.+)${key}`);
-          const match = kanji.match(reg);
-          if (match) {
-            numbers[key] = kan2n(match[1]);
-            kanji = kanji.replace(match[0], '');
-          } else {
-            numbers[key] = 0;
+      japaneseNumerics.default = japaneseNumerics$1;
+      return japaneseNumerics;
+    }
+
+    var hasRequiredUtils;
+    function requireUtils() {
+      if (hasRequiredUtils) return utils;
+      hasRequiredUtils = 1;
+      (function (exports$1) {
+
+        Object.defineProperty(exports$1, "__esModule", {
+          value: true
+        });
+        exports$1.zen2han = exports$1.n2kan = exports$1.kan2n = exports$1.splitLargeNumber = exports$1.normalize = exports$1.smallNumbers = exports$1.largeNumbers = void 0;
+        const oldJapaneseNumerics_1 = requireOldJapaneseNumerics();
+        const japaneseNumerics_1 = requireJapaneseNumerics();
+        exports$1.largeNumbers = {
+          '兆': 1000000000000,
+          '億': 100000000,
+          '万': 10000
+        };
+        exports$1.smallNumbers = {
+          '千': 1000,
+          '百': 100,
+          '十': 10
+        };
+        function normalize(japanese) {
+          for (const key in oldJapaneseNumerics_1.default) {
+            const reg = new RegExp(key, 'g');
+            japanese = japanese.replace(reg, oldJapaneseNumerics_1.default[key]);
           }
+          return japanese;
         }
-        if (kanji) {
-          numbers['千'] = kan2n(kanji);
-        } else {
-          numbers['千'] = 0;
+        exports$1.normalize = normalize;
+        /**
+         * 漢数字を兆、億、万単位に分割する
+         */
+        function splitLargeNumber(japanese) {
+          let kanji = japanese;
+          const numbers = {};
+          for (const key in exports$1.largeNumbers) {
+            const reg = new RegExp(`(.+)${key}`);
+            const match = kanji.match(reg);
+            if (match) {
+              numbers[key] = kan2n(match[1]);
+              kanji = kanji.replace(match[0], '');
+            } else {
+              numbers[key] = 0;
+            }
+          }
+          if (kanji) {
+            numbers['千'] = kan2n(kanji);
+          } else {
+            numbers['千'] = 0;
+          }
+          return numbers;
         }
-        return numbers;
-      }
-      exports.splitLargeNumber = splitLargeNumber;
-      /**
-       * 千単位以下の漢数字を数字に変換する（例: 三千 => 3000）
-       *
-       * @param japanese
-       */
-      function kan2n(japanese) {
-        if (japanese.match(/^[0-9]+$/)) {
-          return Number(japanese);
-        }
-        let kanji = zen2han(japanese);
-        let number = 0;
-        for (const key in exports.smallNumbers) {
-          const reg = new RegExp(`(.*)${key}`);
-          const match = kanji.match(reg);
-          if (match) {
-            let n = 1;
-            if (match[1]) {
-              if (match[1].match(/^[0-9]+$/)) {
-                n = Number(match[1]);
-              } else {
-                n = japaneseNumerics_1.default[match[1]];
+        exports$1.splitLargeNumber = splitLargeNumber;
+        /**
+         * 千単位以下の漢数字を数字に変換する（例: 三千 => 3000）
+         *
+         * @param japanese
+         */
+        function kan2n(japanese) {
+          if (japanese.match(/^[0-9]+$/)) {
+            return Number(japanese);
+          }
+          let kanji = zen2han(japanese);
+          let number = 0;
+          for (const key in exports$1.smallNumbers) {
+            const reg = new RegExp(`(.*)${key}`);
+            const match = kanji.match(reg);
+            if (match) {
+              let n = 1;
+              if (match[1]) {
+                if (match[1].match(/^[0-9]+$/)) {
+                  n = Number(match[1]);
+                } else {
+                  n = japaneseNumerics_1.default[match[1]];
+                }
+              }
+              number = number + n * exports$1.smallNumbers[key];
+              kanji = kanji.replace(match[0], '');
+            }
+          }
+          if (kanji) {
+            if (kanji.match(/^[0-9]+$/)) {
+              number = number + Number(kanji);
+            } else {
+              for (let index = 0; index < kanji.length; index++) {
+                const char = kanji[index];
+                const digit = kanji.length - index - 1;
+                number = number + japaneseNumerics_1.default[char] * 10 ** digit;
               }
             }
-            number = number + n * exports.smallNumbers[key];
-            kanji = kanji.replace(match[0], '');
           }
+          return number;
         }
-        if (kanji) {
-          if (kanji.match(/^[0-9]+$/)) {
-            number = number + Number(kanji);
-          } else {
-            for (let index = 0; index < kanji.length; index++) {
-              const char = kanji[index];
-              const digit = kanji.length - index - 1;
-              number = number + japaneseNumerics_1.default[char] * 10 ** digit;
+        exports$1.kan2n = kan2n;
+        /**
+         * Converts number less than 10000 to kanji.
+         *
+         * @param num
+         */
+        function n2kan(num) {
+          const kanjiNumbers = Object.keys(japaneseNumerics_1.default);
+          let number = num;
+          let kanji = '';
+          for (const key in exports$1.smallNumbers) {
+            const n = Math.floor(number / exports$1.smallNumbers[key]);
+            if (n) {
+              number = number - n * exports$1.smallNumbers[key];
+              if (1 === n) {
+                kanji = `${kanji}${key}`;
+              } else {
+                kanji = `${kanji}${kanjiNumbers[n]}${key}`;
+              }
             }
           }
+          if (number) {
+            kanji = `${kanji}${kanjiNumbers[number]}`;
+          }
+          return kanji;
         }
-        return number;
+        exports$1.n2kan = n2kan;
+        /**
+         * Converts double-width number to number as string.
+         *
+         * @param num
+         */
+        function zen2han(str) {
+          return str.replace(/[０-９]/g, s => {
+            return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+          });
+        }
+        exports$1.zen2han = zen2han;
+      })(utils);
+      return utils;
+    }
+
+    var hasRequiredDist;
+    function requireDist() {
+      if (hasRequiredDist) return dist;
+      hasRequiredDist = 1;
+      Object.defineProperty(dist, "__esModule", {
+        value: true
+      });
+      dist.findKanjiNumbers = dist.number2kanji = dist.kanji2number = void 0;
+      const utils_1 = requireUtils();
+      const japaneseNumerics_1 = requireJapaneseNumerics();
+      function kanji2number(japanese) {
+        japanese = (0, utils_1.normalize)(japanese);
+        if (japanese.match('〇') || japanese.match(/^[〇一二三四五六七八九]+$/)) {
+          for (const key in japaneseNumerics_1.default) {
+            const reg = new RegExp(key, 'g');
+            japanese = japanese.replace(reg, japaneseNumerics_1.default[key].toString());
+          }
+          return Number(japanese);
+        } else {
+          let number = 0;
+          const numbers = (0, utils_1.splitLargeNumber)(japanese);
+          // 万以上の数字を数値に変換
+          for (const key in utils_1.largeNumbers) {
+            if (numbers[key]) {
+              const n = utils_1.largeNumbers[key] * numbers[key];
+              number = number + n;
+            }
+          }
+          if (!Number.isInteger(number) || !Number.isInteger(numbers['千'])) {
+            throw new TypeError('The attribute of kanji2number() must be a Japanese numeral as integer.');
+          }
+          // 千以下の数字を足す
+          return number + numbers['千'];
+        }
       }
-      exports.kan2n = kan2n;
-      /**
-       * Converts number less than 10000 to kanji.
-       *
-       * @param num
-       */
-      function n2kan(num) {
-        const kanjiNumbers = Object.keys(japaneseNumerics_1.default);
+      dist.kanji2number = kanji2number;
+      function number2kanji(num) {
+        if (!num.toString().match(/^[0-9]+$/)) {
+          throw new TypeError('The attribute of number2kanji() must be integer.');
+        }
+        Object.keys(japaneseNumerics_1.default);
         let number = num;
         let kanji = '';
-        for (const key in exports.smallNumbers) {
-          const n = Math.floor(number / exports.smallNumbers[key]);
+        // 万以上の数字を漢字に変換
+        for (const key in utils_1.largeNumbers) {
+          const n = Math.floor(number / utils_1.largeNumbers[key]);
           if (n) {
-            number = number - n * exports.smallNumbers[key];
-            if (1 === n) {
-              kanji = `${kanji}${key}`;
-            } else {
-              kanji = `${kanji}${kanjiNumbers[n]}${key}`;
-            }
+            number = number - n * utils_1.largeNumbers[key];
+            kanji = `${kanji}${(0, utils_1.n2kan)(n)}${key}`;
           }
         }
         if (number) {
-          kanji = `${kanji}${kanjiNumbers[number]}`;
+          kanji = `${kanji}${(0, utils_1.n2kan)(number)}`;
         }
-        return kanji;
+        return kanji || '〇';
       }
-      exports.n2kan = n2kan;
+      dist.number2kanji = number2kanji;
+      function findKanjiNumbers(text) {
+        const num = '([0-9０-９]*)|([〇一二三四五六七八九壱壹弐弍貳貮参參肆伍陸漆捌玖]*)';
+        const basePattern = `((${num})(千|阡|仟))?((${num})(百|陌|佰))?((${num})(十|拾))?(${num})?`;
+        const pattern = `((${basePattern}兆)?(${basePattern}億)?(${basePattern}(万|萬))?${basePattern})`;
+        const regex = new RegExp(pattern, 'g');
+        const match = text.match(regex);
+        if (match) {
+          return match.filter(item => {
+            if (!item.match(/^[0-9０-９]+$/) && item.length && '兆' !== item && '億' !== item && '万' !== item && '萬' !== item) {
+              return true;
+            } else {
+              return false;
+            }
+          });
+        } else {
+          return [];
+        }
+      }
+      dist.findKanjiNumbers = findKanjiNumbers;
+      return dist;
+    }
+
+    var distExports = requireDist();
+
+    var lib = {};
+
+    var hasRequiredLib;
+    function requireLib() {
+      if (hasRequiredLib) return lib;
+      hasRequiredLib = 1;
+      Object.defineProperty(lib, "__esModule", {
+        value: true
+      });
+      lib.hasLength = hasLength;
+      lib.hasMinLength = hasMinLength;
+      lib.isNonEmpty = isNonEmpty;
       /**
-       * Converts double-width number to number as string.
+       * Checks whether given array's length is equal to given number.
        *
-       * @param num
+       * @example
+       * ```ts
+       * hasLength(arr, 1) // equivalent to arr.length === 1
+       * ```
        */
-      function zen2han(str) {
-        return str.replace(/[０-９]/g, s => {
-          return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
-        });
+      function hasLength(arr, length) {
+        return arr.length === length;
       }
-      exports.zen2han = zen2han;
-    })(utils);
+      /**
+       * Checks whether given array's length is greather than or equal to given number.
+       *
+       * @example
+       * ```ts
+       * hasMinLength(arr, 1) // equivalent to arr.length >= 1
+       * ```
+       */
+      function hasMinLength(arr, length) {
+        return arr.length >= length;
+      }
+      /**
+       * Checks whether given array is not empty.
+       *
+       * @example
+       * ```ts
+       * isNonEmpty(arr) // equivalent to arr.length > 0
+       * ```
+       */
+      function isNonEmpty(arr) {
+        return arr.length >= 1;
+      }
+      return lib;
+    }
 
-    Object.defineProperty(dist, "__esModule", {
-      value: true
-    });
-    var findKanjiNumbers_1 = dist.findKanjiNumbers = dist.number2kanji = kanji2number_1 = dist.kanji2number = void 0;
-    const utils_1 = utils;
-    const japaneseNumerics_1 = japaneseNumerics$1;
-    function kanji2number(japanese) {
-      japanese = (0, utils_1.normalize)(japanese);
-      if (japanese.match('〇') || japanese.match(/^[〇一二三四五六七八九]+$/)) {
-        for (const key in japaneseNumerics_1.default) {
-          const reg = new RegExp(key, 'g');
-          japanese = japanese.replace(reg, japaneseNumerics_1.default[key].toString());
-        }
-        return Number(japanese);
-      } else {
-        let number = 0;
-        const numbers = (0, utils_1.splitLargeNumber)(japanese);
-        // 万以上の数字を数値に変換
-        for (const key in utils_1.largeNumbers) {
-          if (numbers[key]) {
-            const n = utils_1.largeNumbers[key] * numbers[key];
-            number = number + n;
-          }
-        }
-        if (!Number.isInteger(number) || !Number.isInteger(numbers['千'])) {
-          throw new TypeError('The attribute of kanji2number() must be a Japanese numeral as integer.');
-        }
-        // 千以下の数字を足す
-        return number + numbers['千'];
-      }
-    }
-    var kanji2number_1 = dist.kanji2number = kanji2number;
-    function number2kanji(num) {
-      if (!num.toString().match(/^[0-9]+$/)) {
-        throw new TypeError('The attribute of number2kanji() must be integer.');
-      }
-      Object.keys(japaneseNumerics_1.default);
-      let number = num;
-      let kanji = '';
-      // 万以上の数字を漢字に変換
-      for (const key in utils_1.largeNumbers) {
-        const n = Math.floor(number / utils_1.largeNumbers[key]);
-        if (n) {
-          number = number - n * utils_1.largeNumbers[key];
-          kanji = `${kanji}${(0, utils_1.n2kan)(n)}${key}`;
-        }
-      }
-      if (number) {
-        kanji = `${kanji}${(0, utils_1.n2kan)(number)}`;
-      }
-      return kanji || '〇';
-    }
-    dist.number2kanji = number2kanji;
-    function findKanjiNumbers(text) {
-      const num = '([0-9０-９]*)|([〇一二三四五六七八九壱壹弐弍貳貮参參肆伍陸漆捌玖]*)';
-      const basePattern = `((${num})(千|阡|仟))?((${num})(百|陌|佰))?((${num})(十|拾))?(${num})?`;
-      const pattern = `((${basePattern}兆)?(${basePattern}億)?(${basePattern}(万|萬))?${basePattern})`;
-      const regex = new RegExp(pattern, 'g');
-      const match = text.match(regex);
-      if (match) {
-        return match.filter(item => {
-          if (!item.match(/^[0-9０-９]+$/) && item.length && '兆' !== item && '億' !== item && '万' !== item && '萬' !== item) {
-            return true;
-          } else {
-            return false;
-          }
-        });
-      } else {
-        return [];
-      }
-    }
-    findKanjiNumbers_1 = dist.findKanjiNumbers = findKanjiNumbers;
-
-    /**
-     * Checks whether given array's length is equal to given number.
-     *
-     * @example
-     * ```ts
-     * hasLength(arr, 1) // equivalent to arr.length === 1
-     * ```
-     */
-    /**
-     * Checks whether given array's length is greather than or equal to given number.
-     *
-     * @example
-     * ```ts
-     * hasMinLength(arr, 1) // equivalent to arr.length >= 1
-     * ```
-     */
-    function hasMinLength(arr, length) {
-      return arr.length >= length;
-    }
+    var libExports = requireLib();
 
     async function fetchArmEntries(branch = 'master') {
         const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/arm-supplementary/${branch}/dist/arm.json`);
@@ -884,12 +935,12 @@
         }
         text = text.replace(/[０-９]/g, (s) => String.fromCharCode(s.charCodeAt(0) - 65248));
         const match = /\d+(\.\d+)?/.exec(text.replace(',', ''));
-        if (match && hasMinLength(match, 1)) {
+        if (match && libExports.hasMinLength(match, 1)) {
             return parseFloat(match[0]);
         }
-        const kanjis = findKanjiNumbers_1(text);
-        if (hasMinLength(kanjis, 1)) {
-            return kanji2number_1(kanjis[0]);
+        const kanjis = distExports.findKanjiNumbers(text);
+        if (libExports.hasMinLength(kanjis, 1)) {
+            return distExports.kanji2number(kanjis[0]);
         }
     }
     async function* fetchComments(providers, media, programs) {
@@ -912,6 +963,7 @@
                 premium: c.isPremium,
                 mail: c.mails,
                 layer: c.layer,
+                is_my_post: false,
             }));
         })
             .catch((e) => {
@@ -1028,12 +1080,12 @@
     }
     function processIntervalCms(comments, symbol, normalInterval, sponsorInterval, program) {
         const partComments = comments.filter((c) => c.content === symbol);
-        if (!hasMinLength(partComments, partSymbolCommentsThreshold)) {
+        if (!libExports.hasMinLength(partComments, partSymbolCommentsThreshold)) {
             return;
         }
         if (partSymbols.indexOf(symbol) === 0) {
             const opComments = comments.filter((c) => opSymbols.includes(c.content));
-            if (hasMinLength(opComments, opSymbolCommentsThreshold)) {
+            if (libExports.hasMinLength(opComments, opSymbolCommentsThreshold)) {
                 const opStartTime = opComments[0].date;
                 const opEndTime = opStartTime + opLength;
                 if (opStartTime < partComments[0].date && partComments[0].date < opEndTime + opAdjustment) {

@@ -50,7 +50,7 @@
             });
             return response.ok;
         }
-        catch (e) {
+        catch {
             return false;
         }
     }
