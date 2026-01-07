@@ -2365,9 +2365,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.143":
-  version: 3.0.143
-  resolution: "@slashnephy/eslint-config@npm:3.0.143"
+"@slashnephy/eslint-config@npm:3.0.144":
+  version: 3.0.144
+  resolution: "@slashnephy/eslint-config@npm:3.0.144"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.5.0"
     "@eslint/js": "npm:9.39.2"
@@ -2385,7 +2385,7 @@ __metadata:
     eslint-plugin-jest: "npm:29.12.0"
     eslint-plugin-jsx-a11y: "npm:6.10.2"
     eslint-plugin-n: "npm:17.23.1"
-    eslint-plugin-package-json: "npm:0.87.0"
+    eslint-plugin-package-json: "npm:0.87.1"
     eslint-plugin-promise: "npm:7.2.1"
     eslint-plugin-react: "npm:7.37.5"
     eslint-plugin-react-hooks: "npm:7.0.1"
@@ -2405,7 +2405,7 @@ __metadata:
     yaml-eslint-parser: "npm:1.3.2"
   peerDependencies:
     eslint: ^9
-  checksum: 10/3a2b34058bace28aa1f75eecd405db46bda95f5d032405efdc321bdbec4ed676c8d7593d3f11c253f5c50a1f1ba3eaa3b1cc1365481812bb20550867ac412862
+  checksum: 10/1ba83887e22af6953b2a8a53684efe07415000d74eca6b24cdba84ff0e4a50e62a969041f9b06f0d8ee4e398c70c8e1bd422cf6dfac64b455b2358c14f298366
   languageName: node
   linkType: hard
 
@@ -4685,9 +4685,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-package-json@npm:0.87.0":
-  version: 0.87.0
-  resolution: "eslint-plugin-package-json@npm:0.87.0"
+"eslint-plugin-package-json@npm:0.87.1":
+  version: 0.87.1
+  resolution: "eslint-plugin-package-json@npm:0.87.1"
   dependencies:
     "@altano/repository-tools": "npm:^2.0.1"
     change-case: "npm:^5.4.4"
@@ -4702,7 +4702,7 @@ __metadata:
   peerDependencies:
     eslint: ">=8.0.0"
     jsonc-eslint-parser: ^2.0.0
-  checksum: 10/51c407c26ccdfe861b8ab8dd7d29d15204b892820982393d19d5ac1dd73e1f4f1055bab9ed1fc0e336ac576fdbed03cf615ea4e5375bee1d88e2b44f56e07058
+  checksum: 10/a824f067346fe4d8902b5c4791fc59dc53a2a4461ce0e49cad8b2acaa2f0f8d498e281c3ce0a39e0e50e8e17ec3bd878528c28bb2798074e6e3eefea6496be5e
   languageName: node
   linkType: hard
 
@@ -8553,7 +8553,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.0"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.143"
+    "@slashnephy/eslint-config": "npm:3.0.144"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
