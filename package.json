@@ -33,8 +33,8 @@
     "ts-array-length": "0.1.3"
   },
   "devDependencies": {
-    "@babel/core": "7.28.5",
-    "@babel/preset-env": "7.28.5",
+    "@babel/core": "7.28.6",
+    "@babel/preset-env": "7.28.6",
     "@babel/preset-typescript": "7.28.5",
     "@rollup/plugin-babel": "6.1.0",
     "@rollup/plugin-commonjs": "29.0.0",
