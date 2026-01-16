@@ -2902,12 +2902,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:25.0.6":
+"@types/node@npm:*":
   version: 25.0.6
   resolution: "@types/node@npm:25.0.6"
   dependencies:
     undici-types: "npm:~7.16.0"
   checksum: 10/19d6dcaccc49b8d9efd987d6e7573f84cf3665fbe88adc0eb08e87d3682a36a4a6997a5ead2a11c79eb891c0e0c5260caef23bd262e5772708d95330d5b7ddf1
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:25.0.7":
+  version: 25.0.7
+  resolution: "@types/node@npm:25.0.7"
+  dependencies:
+    undici-types: "npm:~7.16.0"
+  checksum: 10/1bf778bd087160903bca1d1d0ed9e0c25abd12ac9322a4d58a6918d110c8a3eaa2f5dc1437e0009b57bfa2791c2b409ebdb4bb4dc0c2e8f096db07e285e63578
   languageName: node
   linkType: hard
 
@@ -8840,7 +8849,7 @@ __metadata:
     "@types/babel__preset-env": "npm:7.10.0"
     "@types/fuzzyset": "npm:1.0.7"
     "@types/jquery": "npm:3.5.33"
-    "@types/node": "npm:25.0.6"
+    "@types/node": "npm:25.0.7"
     "@types/tampermonkey": "npm:5.0.5"
     "@xpadev-net/niconicomments": "npm:0.2.76"
     concurrently: "npm:9.2.1"
