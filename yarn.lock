@@ -2419,9 +2419,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.178":
-  version: 3.0.178
-  resolution: "@slashnephy/eslint-config@npm:3.0.178"
+"@slashnephy/eslint-config@npm:3.0.179":
+  version: 3.0.179
+  resolution: "@slashnephy/eslint-config@npm:3.0.179"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.6.0"
     "@eslint/js": "npm:9.39.2"
@@ -2439,7 +2439,7 @@ __metadata:
     eslint-plugin-jest: "npm:29.12.1"
     eslint-plugin-jsx-a11y: "npm:6.10.2"
     eslint-plugin-n: "npm:17.23.2"
-    eslint-plugin-package-json: "npm:0.88.1"
+    eslint-plugin-package-json: "npm:0.88.2"
     eslint-plugin-promise: "npm:7.2.1"
     eslint-plugin-react: "npm:7.37.5"
     eslint-plugin-react-hooks: "npm:7.0.1"
@@ -2459,7 +2459,7 @@ __metadata:
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/ba31184c2531b816ac19f1a2dc67bd4cd09b69c444b8433f042fb68d1958992dc6bc591d7b834e0c9e05e6d8cbc379bd257d78c061df3b56610d31ef21a77b23
+  checksum: 10/e07f3a54c4b14b7c8e5fa71e56f7240ff7b935aa525993142fcb44d350529d7369df3a18ad372474111d9f9f291b75102bc3de8be0925e7e0e35fc26eca9d4c4
   languageName: node
   linkType: hard
 
@@ -4818,16 +4818,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-package-json@npm:0.88.1":
-  version: 0.88.1
-  resolution: "eslint-plugin-package-json@npm:0.88.1"
+"eslint-plugin-package-json@npm:0.88.2":
+  version: 0.88.2
+  resolution: "eslint-plugin-package-json@npm:0.88.2"
   dependencies:
     "@altano/repository-tools": "npm:^2.0.1"
     change-case: "npm:^5.4.4"
     detect-indent: "npm:^7.0.2"
     detect-newline: "npm:^4.0.1"
     eslint-fix-utils: "npm:~0.4.0"
-    package-json-validator: "npm:~0.59.1"
+    package-json-validator: "npm:~0.60.0"
     semver: "npm:^7.7.3"
     sort-object-keys: "npm:^2.0.0"
     sort-package-json: "npm:^3.4.0"
@@ -4835,7 +4835,7 @@ __metadata:
   peerDependencies:
     eslint: ">=8.0.0"
     jsonc-eslint-parser: ^2.0.0
-  checksum: 10/e24e7e161671983d084cd6532b7a99cae1696d21a32de32d6bd441c698bb8bfc258ba17aa4c7af433e22a5be9dd4a0874715f31182d93ce030ee5ba6e24c63f1
+  checksum: 10/69d38acc87fd8c1a23489f480f53a07cb6c7729d815c279ef6d2e3f2ac9a0a7806b34adb4c4d93826534c7878f35c6044cd8017e063d471d2de74be16c5a1ab2
   languageName: node
   linkType: hard
 
@@ -7089,9 +7089,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"package-json-validator@npm:~0.59.1":
-  version: 0.59.1
-  resolution: "package-json-validator@npm:0.59.1"
+"package-json-validator@npm:~0.60.0":
+  version: 0.60.0
+  resolution: "package-json-validator@npm:0.60.0"
   dependencies:
     semver: "npm:^7.7.2"
     validate-npm-package-license: "npm:^3.0.4"
@@ -7099,7 +7099,7 @@ __metadata:
     yargs: "npm:~18.0.0"
   bin:
     pjv: lib/bin/pjv.mjs
-  checksum: 10/9eda1a967a59b8bce5e3f882b391dc93cd4ef18ea1851a8267944a8d8354cf345f470f503349c54336bfd0731e47f5af065f25fd75a49c785fa6740fb94734c3
+  checksum: 10/314f7e50aeda246f7a12ee583e15616aaea11ab615f67d87a4a7096d9e6bfe035c4c45732f5b590ca5e97e7ea90e888936311af2b2b1622b6ccd5fb35e46f3b3
   languageName: node
   linkType: hard
 
@@ -8703,7 +8703,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.0"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.178"
+    "@slashnephy/eslint-config": "npm:3.0.179"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
