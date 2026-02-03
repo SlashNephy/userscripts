@@ -2110,12 +2110,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:16.1.5":
-  version: 16.1.5
-  resolution: "@next/eslint-plugin-next@npm:16.1.5"
+"@next/eslint-plugin-next@npm:16.1.6":
+  version: 16.1.6
+  resolution: "@next/eslint-plugin-next@npm:16.1.6"
   dependencies:
     fast-glob: "npm:3.3.1"
-  checksum: 10/8846e6a0142b0bfbf4b08617650d0cdaf8944fa2d24a6905d69dab0c2823e5832a4041c4639c191024fb79b16f0f0174b8afb49fd684d3cbcf5bf26153e6b061
+  checksum: 10/74b427e005cd5f0ecf7b557fcbca1780f32b94c6e0fa3a774c20b79391ce660e6b52e2e70022c374f1473000de187188e58c812d53e4db440c3d8ee0848477be
   languageName: node
   linkType: hard
 
@@ -2442,15 +2442,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.183":
-  version: 3.0.183
-  resolution: "@slashnephy/eslint-config@npm:3.0.183"
+"@slashnephy/eslint-config@npm:3.0.185":
+  version: 3.0.185
+  resolution: "@slashnephy/eslint-config@npm:3.0.185"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.6.0"
     "@eslint/js": "npm:9.39.2"
     "@graphql-eslint/eslint-plugin": "npm:4.4.0"
     "@microsoft/eslint-formatter-sarif": "npm:3.1.0"
-    "@next/eslint-plugin-next": "npm:16.1.5"
+    "@next/eslint-plugin-next": "npm:16.1.6"
     "@stylistic/eslint-plugin": "npm:5.7.1"
     "@susisu/eslint-plugin-safe-typescript": "npm:0.10.1"
     "@typescript-eslint/utils": "npm:8.54.0"
@@ -2474,7 +2474,7 @@ __metadata:
     eslint-plugin-userscripts: "npm:0.5.6"
     eslint-plugin-xss: "npm:0.1.12"
     eslint-plugin-yml: "npm:2.0.2"
-    globals: "npm:17.1.0"
+    globals: "npm:17.2.0"
     graphql: "npm:16.12.0"
     jsonc-eslint-parser: "npm:2.4.2"
     typescript: "npm:5.9.3"
@@ -2482,7 +2482,7 @@ __metadata:
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/fcdd3c12c5615463f07cf5f2da3b383a7b8c46e728b4f169bc1c4c35735c504e9966cf4a55b10d27ac8c8ab8009a39b825b0afcf9a1b34a7a2f18c7ae1d733bb
+  checksum: 10/4983716d2272d4d87fbb461510f65c903e8bdb3faa888fe8b53f83a4f51eaae9ee29c9cbba1cc4b1ee1c461142dd8580963776b989deb0227afbe689ea54e522
   languageName: node
   linkType: hard
 
@@ -5537,10 +5537,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:17.1.0":
-  version: 17.1.0
-  resolution: "globals@npm:17.1.0"
-  checksum: 10/6e77442a3b80b41b11fb4f986326f0487b9872dee6852cc9373e01696787889f4648d2264a125504315a645be0dde61625200e422b5b8002c106ffbabaaf8fdc
+"globals@npm:17.2.0":
+  version: 17.2.0
+  resolution: "globals@npm:17.2.0"
+  checksum: 10/2812d7ae9a2889da33cad5188e6fe7c2d1a615e62d8e2092fbaa76a016536c2fcd72aba25896d8c6112fa0f2d95f005f59bf1dfc81ee014fe1ba54326ce14e57
   languageName: node
   linkType: hard
 
@@ -8649,7 +8649,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.0"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.183"
+    "@slashnephy/eslint-config": "npm:3.0.185"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
