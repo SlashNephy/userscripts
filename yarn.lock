@@ -2419,9 +2419,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.187":
-  version: 3.0.187
-  resolution: "@slashnephy/eslint-config@npm:3.0.187"
+"@slashnephy/eslint-config@npm:3.0.188":
+  version: 3.0.188
+  resolution: "@slashnephy/eslint-config@npm:3.0.188"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.6.0"
     "@eslint/js": "npm:9.39.2"
@@ -2445,7 +2445,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:7.0.1"
     eslint-plugin-react-refresh: "npm:0.4.26"
     eslint-plugin-relay: "npm:2.0.0"
-    eslint-plugin-storybook: "npm:10.2.1"
+    eslint-plugin-storybook: "npm:10.2.2"
     eslint-plugin-tsdoc: "npm:0.5.0"
     eslint-plugin-unused-imports: "npm:4.3.0"
     eslint-plugin-userscripts: "npm:0.5.6"
@@ -2459,7 +2459,7 @@ __metadata:
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/8533d033e03f44396f125881d6c08daabb9ccb09707395c50670c26b0df53ece8a9e6b809f3352bd248bd2c36f08b967f6c272bf952fc266a42bb5f851ea1bc3
+  checksum: 10/b7b283a1763a555b7556d8baad52f62f5f0b60dc06c02b52752ba005004f07d1c7c1c4b8db5ebc4f8749ba56a6460240c5b126bbc9c198af024a3a2e36272414
   languageName: node
   linkType: hard
 
@@ -4828,15 +4828,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-storybook@npm:10.2.1":
-  version: 10.2.1
-  resolution: "eslint-plugin-storybook@npm:10.2.1"
+"eslint-plugin-storybook@npm:10.2.2":
+  version: 10.2.2
+  resolution: "eslint-plugin-storybook@npm:10.2.2"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.48.0"
   peerDependencies:
     eslint: ">=8"
-    storybook: ^10.2.1
-  checksum: 10/16609a407bcae48742a43f2394a3635c2fbf50dd7b53710972797452a4d4ac3d78dc650a81a5a8d49d11288d322b2d60ca18aa7baeb955aa0f0b3588351838d3
+    storybook: ^10.2.2
+  checksum: 10/4520da07a9d73597b5881ca81895d97ec688f8e439c650fa73e6f23f74ac7c5e897154a94bd222d968adb1d4e081c45870a1ddd3f8787260452672c7b55c6f11
   languageName: node
   linkType: hard
 
@@ -8617,7 +8617,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.0"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.187"
+    "@slashnephy/eslint-config": "npm:3.0.188"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
