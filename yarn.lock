@@ -2419,9 +2419,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.188":
-  version: 3.0.188
-  resolution: "@slashnephy/eslint-config@npm:3.0.188"
+"@slashnephy/eslint-config@npm:3.0.190":
+  version: 3.0.190
+  resolution: "@slashnephy/eslint-config@npm:3.0.190"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.6.0"
     "@eslint/js": "npm:9.39.2"
@@ -2445,13 +2445,13 @@ __metadata:
     eslint-plugin-react-hooks: "npm:7.0.1"
     eslint-plugin-react-refresh: "npm:0.4.26"
     eslint-plugin-relay: "npm:2.0.0"
-    eslint-plugin-storybook: "npm:10.2.2"
+    eslint-plugin-storybook: "npm:10.2.3"
     eslint-plugin-tsdoc: "npm:0.5.0"
     eslint-plugin-unused-imports: "npm:4.3.0"
     eslint-plugin-userscripts: "npm:0.5.6"
     eslint-plugin-xss: "npm:0.1.12"
     eslint-plugin-yml: "npm:2.0.2"
-    globals: "npm:17.2.0"
+    globals: "npm:17.3.0"
     graphql: "npm:16.12.0"
     jsonc-eslint-parser: "npm:2.4.2"
     typescript: "npm:5.9.3"
@@ -2459,7 +2459,7 @@ __metadata:
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/b7b283a1763a555b7556d8baad52f62f5f0b60dc06c02b52752ba005004f07d1c7c1c4b8db5ebc4f8749ba56a6460240c5b126bbc9c198af024a3a2e36272414
+  checksum: 10/b7ed32abb4d2253d21514439b671027ddf6fc1b9b82cf8c0a78de03d1a4a15cf9174ec5d8b78ae235669f9e447bf7bf09a31440cc423e9215c9ad44c2d3ea4ed
   languageName: node
   linkType: hard
 
@@ -4828,15 +4828,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-storybook@npm:10.2.2":
-  version: 10.2.2
-  resolution: "eslint-plugin-storybook@npm:10.2.2"
+"eslint-plugin-storybook@npm:10.2.3":
+  version: 10.2.3
+  resolution: "eslint-plugin-storybook@npm:10.2.3"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.48.0"
   peerDependencies:
     eslint: ">=8"
-    storybook: ^10.2.2
-  checksum: 10/4520da07a9d73597b5881ca81895d97ec688f8e439c650fa73e6f23f74ac7c5e897154a94bd222d968adb1d4e081c45870a1ddd3f8787260452672c7b55c6f11
+    storybook: ^10.2.3
+  checksum: 10/ac35e5f16bf2c1ebcc9401198bdd9ad6bd0c9fe970477157434e02883f67e0dad3d713e384d06932cde1b844cff6bb954bc46670fc95dcf04a506d6cfcf53b32
   languageName: node
   linkType: hard
 
@@ -5505,10 +5505,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:17.2.0":
-  version: 17.2.0
-  resolution: "globals@npm:17.2.0"
-  checksum: 10/2812d7ae9a2889da33cad5188e6fe7c2d1a615e62d8e2092fbaa76a016536c2fcd72aba25896d8c6112fa0f2d95f005f59bf1dfc81ee014fe1ba54326ce14e57
+"globals@npm:17.3.0":
+  version: 17.3.0
+  resolution: "globals@npm:17.3.0"
+  checksum: 10/44ba2b7db93eb6a2531dfba09219845e21f2e724a4f400eb59518b180b7d5bcf7f65580530e3d3023d7dc2bdbacf5d265fd87c393f567deb9a2b0472b51c9d5e
   languageName: node
   linkType: hard
 
@@ -8617,7 +8617,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.0"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.188"
+    "@slashnephy/eslint-config": "npm:3.0.190"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
