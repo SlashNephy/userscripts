@@ -2702,12 +2702,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:25.2.2":
+"@types/node@npm:*":
   version: 25.2.2
   resolution: "@types/node@npm:25.2.2"
   dependencies:
     undici-types: "npm:~7.16.0"
   checksum: 10/a5d689d69168065da0ef2972c711b0382664fa52ad99e9988d174028444c71ecb6c5b641178c404acb6b526f27cd791341aa3998a66e71b9a9ee193d853db61e
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:25.2.3":
+  version: 25.2.3
+  resolution: "@types/node@npm:25.2.3"
+  dependencies:
+    undici-types: "npm:~7.16.0"
+  checksum: 10/46962e3c1c0205da5b637c2e924f4eb03ce16f384af686b69afeb5fd4f8274d9a570375f8a24de2750633b69cb7ac33f0e458d9c3f20a66e12eb3a569499062d
   languageName: node
   linkType: hard
 
@@ -8626,7 +8635,7 @@ __metadata:
     "@types/babel__preset-env": "npm:7.10.0"
     "@types/fuzzyset": "npm:1.0.7"
     "@types/jquery": "npm:3.5.33"
-    "@types/node": "npm:25.2.2"
+    "@types/node": "npm:25.2.3"
     "@types/tampermonkey": "npm:5.0.5"
     "@xpadev-net/niconicomments": "npm:0.2.76"
     concurrently: "npm:9.2.1"
