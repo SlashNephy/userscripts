@@ -5175,14 +5175,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-xml-parser@npm:5.3.6":
-  version: 5.3.6
-  resolution: "fast-xml-parser@npm:5.3.6"
+"fast-xml-parser@npm:5.3.7":
+  version: 5.3.7
+  resolution: "fast-xml-parser@npm:5.3.7"
   dependencies:
     strnum: "npm:^2.1.2"
   bin:
     fxparser: src/cli/cli.js
-  checksum: 10/03527ab0bdf49d960fdc8f6088cd0715c052e06b68b39459da87b1a1fbb3439a855b2d83cbf3c400e983b8e668b396296b072a4dd5c63403cf1e618c9326b6df
+  checksum: 10/c3dfba84b8c8920a1a6f2596c387c8fbb3b76fcad9a26769a793f1e26d7718c50363478f3be2a71e952b2bf765be51d8f8e3434b37cc7af029c6a09662ea6ba4
   languageName: node
   linkType: hard
 
@@ -8649,7 +8649,7 @@ __metadata:
     "@xpadev-net/niconicomments": "npm:0.2.76"
     concurrently: "npm:9.2.1"
     eslint: "npm:9.39.2"
-    fast-xml-parser: "npm:5.3.6"
+    fast-xml-parser: "npm:5.3.7"
     markdown-doc-builder: "npm:1.3.0"
     rollup: "npm:4.57.1"
     serve: "npm:14.2.5"
