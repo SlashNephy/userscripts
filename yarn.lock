@@ -2136,7 +2136,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ota-meshi/ast-token-store@npm:^0.2.0":
+"@ota-meshi/ast-token-store@npm:^0.2.1":
   version: 0.2.3
   resolution: "@ota-meshi/ast-token-store@npm:0.2.3"
   checksum: 10/a54c7e17d5f832893c7f362878c68f236668e3cea90e06e383da37eab64a828d0af06569189099da8a131b6f383080f56e804b5e1832f484b588923343a02e2d
@@ -2417,9 +2417,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.219":
-  version: 3.0.219
-  resolution: "@slashnephy/eslint-config@npm:3.0.219"
+"@slashnephy/eslint-config@npm:3.0.221":
+  version: 3.0.221
+  resolution: "@slashnephy/eslint-config@npm:3.0.221"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.6.0"
     "@eslint/js": "npm:9.39.2"
@@ -2443,12 +2443,12 @@ __metadata:
     eslint-plugin-react-hooks: "npm:7.0.1"
     eslint-plugin-react-refresh: "npm:0.5.0"
     eslint-plugin-relay: "npm:2.0.0"
-    eslint-plugin-storybook: "npm:10.2.9"
+    eslint-plugin-storybook: "npm:10.2.10"
     eslint-plugin-tsdoc: "npm:0.5.0"
     eslint-plugin-unused-imports: "npm:4.4.1"
     eslint-plugin-userscripts: "npm:0.5.6"
     eslint-plugin-xss: "npm:0.1.12"
-    eslint-plugin-yml: "npm:3.2.0"
+    eslint-plugin-yml: "npm:3.2.1"
     globals: "npm:17.3.0"
     graphql: "npm:16.12.0"
     jsonc-eslint-parser: "npm:2.4.2"
@@ -2457,7 +2457,7 @@ __metadata:
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/d143afd62d44b5e72aae3c07843588ad7234a5cc8394bceb17543882d9786666882b02b269bf4029d0f876589d6efa3fdb6bf4203a99bddab433b541d082e32c
+  checksum: 10/d83fb54be075da93998bb8bdc89848ea538b43ba2a8310d1209a47b8d14576c86337a5fe775d3d654272e7989daa7cd53b5e7a36b9b9f4f20eb9ee7ba34a1a56
   languageName: node
   linkType: hard
 
@@ -4836,15 +4836,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-storybook@npm:10.2.9":
-  version: 10.2.9
-  resolution: "eslint-plugin-storybook@npm:10.2.9"
+"eslint-plugin-storybook@npm:10.2.10":
+  version: 10.2.10
+  resolution: "eslint-plugin-storybook@npm:10.2.10"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.48.0"
   peerDependencies:
     eslint: ">=8"
-    storybook: ^10.2.9
-  checksum: 10/83053efeea44dd82304743937a7f3bb3a97d22bc85989acf9c2d394f223cab4f57a8d03dcf2cfc7679b75deea9e1dec0a963d997959638d601dc800ddc32d6b9
+    storybook: ^10.2.10
+  checksum: 10/084e4b92964354fcb9ac5ca804b76c7b443c18de2bb254ecc04929cb83b5c4480fbc04ed8b0cf9b908fd54e04a45d2dceffdf3d90cec309a55d531c52bbbad87
   languageName: node
   linkType: hard
 
@@ -4892,13 +4892,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-yml@npm:3.2.0":
-  version: 3.2.0
-  resolution: "eslint-plugin-yml@npm:3.2.0"
+"eslint-plugin-yml@npm:3.2.1":
+  version: 3.2.1
+  resolution: "eslint-plugin-yml@npm:3.2.1"
   dependencies:
     "@eslint/core": "npm:^1.0.1"
     "@eslint/plugin-kit": "npm:^0.6.0"
-    "@ota-meshi/ast-token-store": "npm:^0.2.0"
+    "@ota-meshi/ast-token-store": "npm:^0.2.1"
     debug: "npm:^4.3.2"
     diff-sequences: "npm:^29.0.0"
     escape-string-regexp: "npm:5.0.0"
@@ -4906,7 +4906,7 @@ __metadata:
     yaml-eslint-parser: "npm:^2.0.0"
   peerDependencies:
     eslint: ">=9.38.0"
-  checksum: 10/8dfd847bd039ace3ac775d7dceeadba4bb7b57aed024b1344bd97cd865098c96cc2f84d3d75233002c9fe566ad39e11fd4362f8edd3a61f472ba152f330287e3
+  checksum: 10/06568eb23689de49723c283c7881ef23f988974948fd75bd46a6c146e0ecea78a22b85fadc168bb97e00349b3088cb2ddefaaa67e17495a0dcf44b66caafa650
   languageName: node
   linkType: hard
 
@@ -8653,7 +8653,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.0"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.219"
+    "@slashnephy/eslint-config": "npm:3.0.221"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
