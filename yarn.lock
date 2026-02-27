@@ -1534,13 +1534,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.39.2":
-  version: 9.39.2
-  resolution: "@eslint/js@npm:9.39.2"
-  checksum: 10/6b7f676746f3111b5d1b23715319212ab9297868a0fa9980d483c3da8965d5841673aada2d5653e85a3f7156edee0893a7ae7035211b4efdcb2848154bb947f2
-  languageName: node
-  linkType: hard
-
 "@eslint/js@npm:9.39.3":
   version: 9.39.3
   resolution: "@eslint/js@npm:9.39.3"
@@ -2417,12 +2410,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.227":
-  version: 3.0.227
-  resolution: "@slashnephy/eslint-config@npm:3.0.227"
+"@slashnephy/eslint-config@npm:3.0.229":
+  version: 3.0.229
+  resolution: "@slashnephy/eslint-config@npm:3.0.229"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.6.0"
-    "@eslint/js": "npm:9.39.2"
+    "@eslint/js": "npm:9.39.3"
     "@graphql-eslint/eslint-plugin": "npm:4.4.0"
     "@microsoft/eslint-formatter-sarif": "npm:3.1.0"
     "@next/eslint-plugin-next": "npm:16.1.6"
@@ -2451,13 +2444,13 @@ __metadata:
     eslint-plugin-yml: "npm:3.2.1"
     globals: "npm:17.3.0"
     graphql: "npm:16.12.0"
-    jsonc-eslint-parser: "npm:3.0.0"
+    jsonc-eslint-parser: "npm:3.1.0"
     typescript: "npm:5.9.3"
     typescript-eslint: "npm:8.56.0"
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/0a0b071601b9e2fdf9099d42dff99c103b4e23c525836051cb4c8269e17a82d801fee9438dd2db695ce3b923a26f65ca1d25bed3a8222dc2580c29c9661bef2b
+  checksum: 10/9ac6d28007e8c15f18cd999c9886cb3d559165512e3bfc06716e8d5aee27e3ce212f4d4147817eaad37d7a58344c54e27af26db70a09652c2368104104f87f36
   languageName: node
   linkType: hard
 
@@ -6355,14 +6348,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsonc-eslint-parser@npm:3.0.0":
-  version: 3.0.0
-  resolution: "jsonc-eslint-parser@npm:3.0.0"
+"jsonc-eslint-parser@npm:3.1.0":
+  version: 3.1.0
+  resolution: "jsonc-eslint-parser@npm:3.1.0"
   dependencies:
     acorn: "npm:^8.5.0"
     eslint-visitor-keys: "npm:^5.0.0"
     semver: "npm:^7.3.5"
-  checksum: 10/adccf949af593454f970d508d2d486f8048f727572465c0868cbbd4082803149bc466225c549664e7c6ab4b9b4cb51833a7bf67e688990bc186d66b17e866ca2
+  checksum: 10/ed7fa186786e042f05e51325df7409c6accc73cc567ccedb2546fd0ccb769dd076ddc3fd9add0c302278cfe6161bdc9880bff5b02a7194c51ec5f53723439544
   languageName: node
   linkType: hard
 
@@ -8661,7 +8654,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.0"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.227"
+    "@slashnephy/eslint-config": "npm:3.0.229"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
