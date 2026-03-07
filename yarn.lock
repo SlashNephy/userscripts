@@ -2410,9 +2410,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.245":
-  version: 3.0.245
-  resolution: "@slashnephy/eslint-config@npm:3.0.245"
+"@slashnephy/eslint-config@npm:3.0.246":
+  version: 3.0.246
+  resolution: "@slashnephy/eslint-config@npm:3.0.246"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.6.0"
     "@eslint/js": "npm:9.39.3"
@@ -2442,7 +2442,7 @@ __metadata:
     eslint-plugin-userscripts: "npm:0.5.6"
     eslint-plugin-xss: "npm:0.1.12"
     eslint-plugin-yml: "npm:3.3.0"
-    globals: "npm:17.3.0"
+    globals: "npm:17.4.0"
     graphql: "npm:16.13.0"
     jsonc-eslint-parser: "npm:3.1.0"
     typescript: "npm:5.9.3"
@@ -2450,7 +2450,7 @@ __metadata:
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/73199dfed7869b2d3e619c4abb17c712655681a3f2b2348e3f4aecbc00f860b04e45c36e9ba934d44ceb24b5f749f31f8c6f8753e0e084abffdf20966b8f0730
+  checksum: 10/7610df4c2aec3c98f5fd388ac321cfe8df430424e213b818ca83c734c969f7d76b6a602994e5cef3a7c176f78a6103cc3e71435dbf7b4802648d6b8b3dfb923d
   languageName: node
   linkType: hard
 
@@ -5539,10 +5539,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:17.3.0":
-  version: 17.3.0
-  resolution: "globals@npm:17.3.0"
-  checksum: 10/44ba2b7db93eb6a2531dfba09219845e21f2e724a4f400eb59518b180b7d5bcf7f65580530e3d3023d7dc2bdbacf5d265fd87c393f567deb9a2b0472b51c9d5e
+"globals@npm:17.4.0":
+  version: 17.4.0
+  resolution: "globals@npm:17.4.0"
+  checksum: 10/ffad244617e94efcb3da72b7beefc941167c21316148ce378f322db7af72db06468f370e23224b3c7b17b5173a7c75b134e5e7b0949f2828519054a76892508d
   languageName: node
   linkType: hard
 
@@ -8684,7 +8684,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.0"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.245"
+    "@slashnephy/eslint-config": "npm:3.0.246"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
