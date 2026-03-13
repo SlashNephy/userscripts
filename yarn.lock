@@ -1534,13 +1534,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.39.3":
-  version: 9.39.3
-  resolution: "@eslint/js@npm:9.39.3"
-  checksum: 10/91a1a1822cfeb2eb8a89aae86be5dfabad0b66b0915946516690a8485ddd80b91f43eee346789313fea1acbb7390a4958119ca7dc9a684a5c4014f12fcb3aaf3
-  languageName: node
-  linkType: hard
-
 "@eslint/js@npm:9.39.4":
   version: 9.39.4
   resolution: "@eslint/js@npm:9.39.4"
@@ -2412,12 +2405,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.259":
-  version: 3.0.259
-  resolution: "@slashnephy/eslint-config@npm:3.0.259"
+"@slashnephy/eslint-config@npm:3.0.260":
+  version: 3.0.260
+  resolution: "@slashnephy/eslint-config@npm:3.0.260"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.7.1"
-    "@eslint/js": "npm:9.39.3"
+    "@eslint/js": "npm:9.39.4"
     "@graphql-eslint/eslint-plugin": "npm:4.4.0"
     "@microsoft/eslint-formatter-sarif": "npm:3.1.0"
     "@next/eslint-plugin-next": "npm:16.1.6"
@@ -2452,7 +2445,7 @@ __metadata:
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/deb9f3e293cc7e713c05dbc0f0d494af9c3f965986690fa36a46be63242385cb012d4d3c85dc4306f0fd3a8c259d9990e6c7cab43d1ee44ebaab137ec2a008c3
+  checksum: 10/ce2670a3ef16e38c1ddc6ae7784d9a3b0ceacfe669ce60e65acb28ebb620cc3060ff96c1c28f428bbd19ce8094f05f06226e49ccfc68df105d4629bb9935be16
   languageName: node
   linkType: hard
 
@@ -8492,7 +8485,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.2"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.259"
+    "@slashnephy/eslint-config": "npm:3.0.260"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
