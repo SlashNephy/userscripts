@@ -2405,9 +2405,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.270":
-  version: 3.0.270
-  resolution: "@slashnephy/eslint-config@npm:3.0.270"
+"@slashnephy/eslint-config@npm:3.0.272":
+  version: 3.0.272
+  resolution: "@slashnephy/eslint-config@npm:3.0.272"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.7.1"
     "@eslint/js": "npm:9.39.4"
@@ -2445,7 +2445,7 @@ __metadata:
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/5be4a030c6c2f5060708f5b743b28ad3e1e47ce9cd2f3c386e3ccd3734008dd1ad155a4fc3876a20f1cd6f9362c34712a2986471024956f54d154b7396d89b93
+  checksum: 10/3a9fdaa505945d01cde4dfc2b81c2f93dd6f1c2dd630a38e1f2f473b85e54120729b6afa5441db8b8ddcbdbe188ea2ce6674cfd0d3062366bbeb0049e287fadb
   languageName: node
   linkType: hard
 
@@ -8570,7 +8570,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.2"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.270"
+    "@slashnephy/eslint-config": "npm:3.0.272"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
