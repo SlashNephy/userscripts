@@ -2064,12 +2064,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:16.1.7":
-  version: 16.1.7
-  resolution: "@next/eslint-plugin-next@npm:16.1.7"
+"@next/eslint-plugin-next@npm:16.2.0":
+  version: 16.2.0
+  resolution: "@next/eslint-plugin-next@npm:16.2.0"
   dependencies:
     fast-glob: "npm:3.3.1"
-  checksum: 10/66a4ced42f0ef5070cc8330633b49f43da8d7c316fdf03c692b681c5d0614bd3332643169eb0545b2be3edf59aa1488d0b559cc4506649a10f1de2af459a18c6
+  checksum: 10/091a5504feefe9aa68504e1fab3413a06d4f6fb966a85896fa9bcff14aa0cf5c87344495627e4abf2a26e9b3d09bc04926c27cdc9d75428ed62a4a2d12210d3b
   languageName: node
   linkType: hard
 
@@ -2410,15 +2410,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.277":
-  version: 3.0.277
-  resolution: "@slashnephy/eslint-config@npm:3.0.277"
+"@slashnephy/eslint-config@npm:3.0.279":
+  version: 3.0.279
+  resolution: "@slashnephy/eslint-config@npm:3.0.279"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.7.1"
     "@eslint/js": "npm:9.39.4"
     "@graphql-eslint/eslint-plugin": "npm:4.4.0"
     "@microsoft/eslint-formatter-sarif": "npm:3.1.0"
-    "@next/eslint-plugin-next": "npm:16.1.7"
+    "@next/eslint-plugin-next": "npm:16.2.0"
     "@stylistic/eslint-plugin": "npm:5.10.0"
     "@susisu/eslint-plugin-safe-typescript": "npm:0.10.1"
     "@typescript-eslint/utils": "npm:8.57.1"
@@ -2436,7 +2436,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:7.0.1"
     eslint-plugin-react-refresh: "npm:0.5.2"
     eslint-plugin-relay: "npm:2.0.0"
-    eslint-plugin-storybook: "npm:10.2.19"
+    eslint-plugin-storybook: "npm:10.3.0"
     eslint-plugin-tsdoc: "npm:0.5.2"
     eslint-plugin-unused-imports: "npm:4.4.1"
     eslint-plugin-userscripts: "npm:0.5.6"
@@ -2450,7 +2450,7 @@ __metadata:
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/efa3a2df5f4e2adc692da722d89873fa0c74dc2a406f879656b4e97f6fc06e25a39b247c8fe2d63eb0e8f9713828b240f165b4df9dd8d73022acec7a6423961b
+  checksum: 10/981e39939f14ac5cd664d49917696e5f2fcb8174661544e6d8ea4c255933e33909593953bb791cdeaf541df803791781c97a16439174c801f112e8c4433db0f6
   languageName: node
   linkType: hard
 
@@ -4787,15 +4787,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-storybook@npm:10.2.19":
-  version: 10.2.19
-  resolution: "eslint-plugin-storybook@npm:10.2.19"
+"eslint-plugin-storybook@npm:10.3.0":
+  version: 10.3.0
+  resolution: "eslint-plugin-storybook@npm:10.3.0"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.48.0"
   peerDependencies:
     eslint: ">=8"
-    storybook: ^10.2.19
-  checksum: 10/28f48587dbed35ff4532c9e3d020ccd3fe5b95f151fbadbb06ed6c08a08c9618c1064ffaf0a2e2eadf595aacb1fc8f4f75978920a5d26bba6437fa97dc2113f3
+    storybook: ^10.3.0
+  checksum: 10/31c379751326481094676331e6b48589b5b0225cc0649b8a5b874762972be4a6d1334a92666158e808b81251e4332a51c64cd1f7a572989b48fc84fcd8e4a0d1
   languageName: node
   linkType: hard
 
@@ -8550,7 +8550,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.2"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.277"
+    "@slashnephy/eslint-config": "npm:3.0.279"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
