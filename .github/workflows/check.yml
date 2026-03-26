@@ -14,14 +14,14 @@ on:
 
 jobs:
   build:
-    uses: SlashNephy/.github/.github/workflows/yarn-run.yml@master
+    uses: SlashNephy/.github/.github/workflows/yarn-run.yml@2b64691f87d64d627f89946fb6f21169ddffc8b0 # master
     with:
       script: build
     permissions:
       contents: read
 
   lint:
-    uses: SlashNephy/.github/.github/workflows/yarn-lint.yml@master
+    uses: SlashNephy/.github/.github/workflows/yarn-lint.yml@2b64691f87d64d627f89946fb6f21169ddffc8b0 # master
     with:
       script: lint
     permissions:
@@ -30,7 +30,7 @@ jobs:
 
   format-and-build-ci:
     if: github.event_name != 'pull_request'
-    uses: SlashNephy/.github/.github/workflows/yarn-format.yml@master
+    uses: SlashNephy/.github/.github/workflows/yarn-format.yml@2b64691f87d64d627f89946fb6f21169ddffc8b0 # master
     with:
       script: ''
       command: 'NODE_OPTIONS="--max-old-space-size=8172" yarn ci'
