@@ -2064,12 +2064,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:16.2.0":
-  version: 16.2.0
-  resolution: "@next/eslint-plugin-next@npm:16.2.0"
+"@next/eslint-plugin-next@npm:16.2.1":
+  version: 16.2.1
+  resolution: "@next/eslint-plugin-next@npm:16.2.1"
   dependencies:
     fast-glob: "npm:3.3.1"
-  checksum: 10/091a5504feefe9aa68504e1fab3413a06d4f6fb966a85896fa9bcff14aa0cf5c87344495627e4abf2a26e9b3d09bc04926c27cdc9d75428ed62a4a2d12210d3b
+  checksum: 10/8892f8ea6b2a642d9284f05098827f6c15acf3c7e2ff592430080355f8eb3cec7a70ba7543960819d69eff4eba75430eb6ce2fee4c8918abf0d8a9366fa0a59a
   languageName: node
   linkType: hard
 
@@ -2410,15 +2410,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.281":
-  version: 3.0.281
-  resolution: "@slashnephy/eslint-config@npm:3.0.281"
+"@slashnephy/eslint-config@npm:3.0.282":
+  version: 3.0.282
+  resolution: "@slashnephy/eslint-config@npm:3.0.282"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.7.1"
     "@eslint/js": "npm:9.39.4"
     "@graphql-eslint/eslint-plugin": "npm:4.4.0"
     "@microsoft/eslint-formatter-sarif": "npm:3.1.0"
-    "@next/eslint-plugin-next": "npm:16.2.0"
+    "@next/eslint-plugin-next": "npm:16.2.1"
     "@stylistic/eslint-plugin": "npm:5.10.0"
     "@susisu/eslint-plugin-safe-typescript": "npm:0.10.1"
     "@typescript-eslint/utils": "npm:8.57.1"
@@ -2450,7 +2450,7 @@ __metadata:
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/287bad0bbdda468a39ec53e77116d68a426b5038755736b677507d448a412ebef9db025e4e7b0fe276366be10fb96b30ace94e60f3b453a462e16009923e6cd4
+  checksum: 10/ee1c090262c03e412bb893aa55389cf71b51a00aea42269ba537c294315d4d694fc7c7e39a00a93d3a7cd84af46e6c57daeb943d05d6a532c75bd0a053df927b
   languageName: node
   linkType: hard
 
@@ -8550,7 +8550,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.2"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.281"
+    "@slashnephy/eslint-config": "npm:3.0.282"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
