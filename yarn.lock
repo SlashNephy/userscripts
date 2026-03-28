@@ -2410,9 +2410,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.282":
-  version: 3.0.282
-  resolution: "@slashnephy/eslint-config@npm:3.0.282"
+"@slashnephy/eslint-config@npm:3.0.283":
+  version: 3.0.283
+  resolution: "@slashnephy/eslint-config@npm:3.0.283"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.7.1"
     "@eslint/js": "npm:9.39.4"
@@ -2422,7 +2422,7 @@ __metadata:
     "@stylistic/eslint-plugin": "npm:5.10.0"
     "@susisu/eslint-plugin-safe-typescript": "npm:0.10.1"
     "@typescript-eslint/utils": "npm:8.57.1"
-    "@vitest/eslint-plugin": "npm:1.6.12"
+    "@vitest/eslint-plugin": "npm:1.6.13"
     eslint-config-flat-gitignore: "npm:2.2.1"
     eslint-import-resolver-node: "npm:0.3.9"
     eslint-import-resolver-typescript: "npm:4.4.4"
@@ -2450,7 +2450,7 @@ __metadata:
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/ee1c090262c03e412bb893aa55389cf71b51a00aea42269ba537c294315d4d694fc7c7e39a00a93d3a7cd84af46e6c57daeb943d05d6a532c75bd0a053df927b
+  checksum: 10/9c3867f69c8636e10a971434c1305f40cca78b1cbff81823ac061f4657d35d3aca653ace69666ac6cb5ff7d59d0051a43b65b1f3447da58ad37f45d65ab66560
   languageName: node
   linkType: hard
 
@@ -3085,22 +3085,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/eslint-plugin@npm:1.6.12":
-  version: 1.6.12
-  resolution: "@vitest/eslint-plugin@npm:1.6.12"
+"@vitest/eslint-plugin@npm:1.6.13":
+  version: 1.6.13
+  resolution: "@vitest/eslint-plugin@npm:1.6.13"
   dependencies:
     "@typescript-eslint/scope-manager": "npm:^8.55.0"
     "@typescript-eslint/utils": "npm:^8.55.0"
   peerDependencies:
+    "@typescript-eslint/eslint-plugin": "*"
     eslint: ">=8.57.0"
     typescript: ">=5.0.0"
     vitest: "*"
   peerDependenciesMeta:
+    "@typescript-eslint/eslint-plugin":
+      optional: true
     typescript:
       optional: true
     vitest:
       optional: true
-  checksum: 10/0e6259262794080128732dd44acbd8b2d36c879dff341466b0cb14928a48cba6a46c209842dc9361fbeb28e66b8f8ff04308e0139509128dca045a318d8fd335
+  checksum: 10/cde8c8690267d04a301384993f398c8160f3a4a337df49b232d4e0b8e1da21413dd2ad3ecfe542e5afd72ae78b1b852d6775f4f726fc14071eab5371a5134a50
   languageName: node
   linkType: hard
 
@@ -8550,7 +8553,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.2"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.282"
+    "@slashnephy/eslint-config": "npm:3.0.283"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
