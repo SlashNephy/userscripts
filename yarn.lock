@@ -2410,9 +2410,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.288":
-  version: 3.0.288
-  resolution: "@slashnephy/eslint-config@npm:3.0.288"
+"@slashnephy/eslint-config@npm:3.0.291":
+  version: 3.0.291
+  resolution: "@slashnephy/eslint-config@npm:3.0.291"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.7.1"
     "@eslint/js": "npm:9.39.4"
@@ -2427,7 +2427,7 @@ __metadata:
     eslint-import-resolver-node: "npm:0.3.9"
     eslint-import-resolver-typescript: "npm:4.4.4"
     eslint-plugin-import-x: "npm:4.16.1"
-    eslint-plugin-jest: "npm:29.15.0"
+    eslint-plugin-jest: "npm:29.15.1"
     eslint-plugin-jsx-a11y: "npm:6.10.2"
     eslint-plugin-n: "npm:17.24.0"
     eslint-plugin-package-json: "npm:0.88.3"
@@ -2443,14 +2443,14 @@ __metadata:
     eslint-plugin-xss: "npm:0.1.12"
     eslint-plugin-yml: "npm:3.3.1"
     globals: "npm:17.4.0"
-    graphql: "npm:16.13.1"
+    graphql: "npm:16.13.2"
     jsonc-eslint-parser: "npm:3.1.0"
     typescript: "npm:5.9.3"
     typescript-eslint: "npm:8.57.2"
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/4dc6d809a613ef254190e8851d7f5ecf320a5fd5b1ac30b0755e25eca077b931b19fb03181392eaf5fd42615e7e5b6a73739102145b805a5103bb959290087f0
+  checksum: 10/144106f2315fdcd8705de73fe81f7e4d59655cf71cdf00acb7cc017beb4394132ecda008c26ddd5cf571947eb168cc9dbc844b8615dda939ad169b4a1d82c071
   languageName: node
   linkType: hard
 
@@ -4632,16 +4632,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:29.15.0":
-  version: 29.15.0
-  resolution: "eslint-plugin-jest@npm:29.15.0"
+"eslint-plugin-jest@npm:29.15.1":
+  version: 29.15.1
+  resolution: "eslint-plugin-jest@npm:29.15.1"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.0.0"
   peerDependencies:
     "@typescript-eslint/eslint-plugin": ^8.0.0
     eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
     jest: "*"
-    typescript: ">=4.8.4 <6.0.0"
+    typescript: ">=4.8.4 <7.0.0"
   peerDependenciesMeta:
     "@typescript-eslint/eslint-plugin":
       optional: true
@@ -4649,7 +4649,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10/552361326c55564fe09092adeb34bf4aae179fdd39b4de6aa561511cebedee370b4ed53f98683af6c695a30891589f54e6fa9ed03ae87957fbe16a506732d0ab
+  checksum: 10/436ae3c695f0dfe443e19d0ad94ede6e78adfaf47ba89db7046ac77b0e82127ad12ac2ed50846ef9f360d6c1bd5f0d2841b7fe5ff6e246eb069b0e85197a42fd
   languageName: node
   linkType: hard
 
@@ -5623,14 +5623,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:16.13.1":
-  version: 16.13.1
-  resolution: "graphql@npm:16.13.1"
-  checksum: 10/a42f857f60351e1f4665aa5bc5524796d3f45bf81793e6db932f902aff769b0488dafaa1d9c07bddda7122a1f6d0b0105fab12d38992f6b6fb81fc3d7ced1afc
-  languageName: node
-  linkType: hard
-
-"graphql@npm:^14.0.0 || ^15.0.0 || ^16.0.0":
+"graphql@npm:16.13.2, graphql@npm:^14.0.0 || ^15.0.0 || ^16.0.0":
   version: 16.13.2
   resolution: "graphql@npm:16.13.2"
   checksum: 10/9ede86f0a7227d47a41e2076e0132839f66fbd14899abfd818d7de2ab81076ee249c8788ad42243367d68a027a8763cc4c7be2e441ccfb03a8549490c7b66c2f
@@ -8560,7 +8553,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.2"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.288"
+    "@slashnephy/eslint-config": "npm:3.0.291"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
