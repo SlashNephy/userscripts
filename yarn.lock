@@ -1700,13 +1700,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.39.4":
-  version: 9.39.4
-  resolution: "@eslint/js@npm:9.39.4"
-  checksum: 10/0a7ab4c4108cf2cadf66849ebd20f5957cc53052b88d8807d0b54e489dbf6ffcaf741e144e7f9b187c395499ce2e6ddc565dbfa4f60c6df455cf2b30bcbdc5a3
-  languageName: node
-  linkType: hard
-
 "@eslint/js@npm:9.39.5":
   version: 9.39.5
   resolution: "@eslint/js@npm:9.39.5"
@@ -2867,13 +2860,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.366":
-  version: 3.0.366
-  resolution: "@slashnephy/eslint-config@npm:3.0.366"
+"@slashnephy/eslint-config@npm:3.0.370":
+  version: 3.0.370
+  resolution: "@slashnephy/eslint-config@npm:3.0.370"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.7.2"
     "@eslint-react/eslint-plugin": "npm:2.13.0"
-    "@eslint/js": "npm:9.39.4"
+    "@eslint/js": "npm:9.39.5"
     "@graphql-eslint/eslint-plugin": "npm:4.4.0"
     "@microsoft/eslint-formatter-sarif": "npm:3.1.0"
     "@next/eslint-plugin-next": "npm:16.2.12"
@@ -2900,14 +2893,14 @@ __metadata:
     eslint-plugin-xss: "npm:0.1.12"
     eslint-plugin-yml: "npm:3.3.2"
     globals: "npm:17.6.0"
-    graphql: "npm:16.14.0"
+    graphql: "npm:16.14.2"
     jsonc-eslint-parser: "npm:3.1.0"
     typescript: "npm:6.0.3"
     typescript-eslint: "npm:8.59.3"
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/4b92ae76bffb765c0c372f2f3ec6e3b012f6414fb69f90a1fee5d2353b2a6ec5798de4df088f5daa085b8a588833124f93bb61e99013a68f7a028e4105972415
+  checksum: 10/80ef7ade2f67389261220ea5371911f0f3707317c000210db302541499befb1ea7bfcfa402a23905db111e1fed79df6a9238a72a87f89cc2af13d88c1ad28a13
   languageName: node
   linkType: hard
 
@@ -6340,14 +6333,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:16.14.0":
-  version: 16.14.0
-  resolution: "graphql@npm:16.14.0"
-  checksum: 10/019bed00a1d62c90d38bd8971f827af9be479bd1935ac990b62edce8dbe5d9e1d93cae72e986199fdeb7108ee83e3f73c7492989ec08fcaf446b6bd79d533741
-  languageName: node
-  linkType: hard
-
-"graphql@npm:^14.0.0 || ^15.0.0 || ^16.0.0":
+"graphql@npm:16.14.2, graphql@npm:^14.0.0 || ^15.0.0 || ^16.0.0":
   version: 16.14.2
   resolution: "graphql@npm:16.14.2"
   checksum: 10/cd9a2581508f82621112a4dc625714e81ce725ab0a62502d97c14f61fee180e85276ac64bf9094f4fbf237737832ad4bb970aa26088f9dffece56f8919a49a29
@@ -9374,7 +9360,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.3"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.366"
+    "@slashnephy/eslint-config": "npm:3.0.370"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
