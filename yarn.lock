@@ -2579,13 +2579,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@package-json/types@npm:^0.0.12":
-  version: 0.0.12
-  resolution: "@package-json/types@npm:0.0.12"
-  checksum: 10/435d921b3ccc817ebe282c6eaac50282691d3be4dafb461d01c03b89fb89cda14ba7b5e20d01503bc1996ab93f98ae8e71601c3be7119b4ea76193b550523fcd
-  languageName: node
-  linkType: hard
-
 "@repeaterjs/repeater@npm:^3.0.4, @repeaterjs/repeater@npm:^3.0.6, @repeaterjs/repeater@npm:^3.1.0":
   version: 3.1.0
   resolution: "@repeaterjs/repeater@npm:3.1.0"
@@ -2860,9 +2853,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.370":
-  version: 3.0.370
-  resolution: "@slashnephy/eslint-config@npm:3.0.370"
+"@slashnephy/eslint-config@npm:3.0.373":
+  version: 3.0.373
+  resolution: "@slashnephy/eslint-config@npm:3.0.373"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.7.2"
     "@eslint-react/eslint-plugin": "npm:2.13.0"
@@ -2876,8 +2869,8 @@ __metadata:
     "@vitest/eslint-plugin": "npm:1.6.24"
     eslint-config-flat-gitignore: "npm:2.3.0"
     eslint-import-resolver-typescript: "npm:4.4.5"
-    eslint-plugin-import-x: "npm:4.16.2"
-    eslint-plugin-jest: "npm:29.15.2"
+    eslint-plugin-import-x: "npm:4.17.1"
+    eslint-plugin-jest: "npm:29.16.0"
     eslint-plugin-jsx-a11y-x: "npm:0.2.0"
     eslint-plugin-n: "npm:18.0.1"
     eslint-plugin-package-json: "npm:0.91.2"
@@ -2900,7 +2893,7 @@ __metadata:
     yaml-eslint-parser: "npm:2.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/80ef7ade2f67389261220ea5371911f0f3707317c000210db302541499befb1ea7bfcfa402a23905db111e1fed79df6a9238a72a87f89cc2af13d88c1ad28a13
+  checksum: 10/ed37fca795bfb6e8bf8312dda5a7ecb400723493e07190ecc08dddb771b8a6bd4ce242e59cdef8e67a0fc4e8c53270ca8313b1407d2835368e1544e6cc3017a4
   languageName: node
   linkType: hard
 
@@ -5211,11 +5204,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import-x@npm:4.16.2":
-  version: 4.16.2
-  resolution: "eslint-plugin-import-x@npm:4.16.2"
+"eslint-plugin-import-x@npm:4.17.1":
+  version: 4.17.1
+  resolution: "eslint-plugin-import-x@npm:4.17.1"
   dependencies:
-    "@package-json/types": "npm:^0.0.12"
     "@typescript-eslint/types": "npm:^8.56.0"
     comment-parser: "npm:^1.4.1"
     debug: "npm:^4.4.1"
@@ -5234,20 +5226,20 @@ __metadata:
       optional: true
     eslint-import-resolver-node:
       optional: true
-  checksum: 10/b149ca51ffba102535cddbe37f298ab3704181ea877a00b87d50062e03ad31a86317cf4205ac3ebc6d4e7872953215777ee4a3b0390616937f3adc9a86b86a90
+  checksum: 10/1cb95284765cf0ff937f7ab44cf965278939c25dedc72ac41d00d954f4c0bd607bcaffacdeb22a3796aa8f2775c63dd25f818c7f897f061f2339035826cbaf5c
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:29.15.2":
-  version: 29.15.2
-  resolution: "eslint-plugin-jest@npm:29.15.2"
+"eslint-plugin-jest@npm:29.16.0":
+  version: 29.16.0
+  resolution: "eslint-plugin-jest@npm:29.16.0"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.0.0"
   peerDependencies:
     "@typescript-eslint/eslint-plugin": ^8.0.0
     eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
     jest: "*"
-    typescript: ">=4.8.4 <7.0.0"
+    typescript: ">=4.8.4 <8.0.0"
   peerDependenciesMeta:
     "@typescript-eslint/eslint-plugin":
       optional: true
@@ -5255,7 +5247,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10/c7bc4dc705e5613e51a1d19bb924a439db9897c67e694f091e29dbacaa218b758040aacbb8d3f9136f2af0171ad69c1c49736b5e3f30098bdf44d4c1e93c6381
+  checksum: 10/f57ddcfe950dde5792bee08a7dfe10e7a557c35a23a7e37f7c174e17271993b9310f180d253e3f4fbe31f205ffc1cff111131b47e24471601bef50493e4403a8
   languageName: node
   linkType: hard
 
@@ -9360,7 +9352,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.3"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.370"
+    "@slashnephy/eslint-config": "npm:3.0.373"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
