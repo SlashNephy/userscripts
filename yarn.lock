@@ -1741,10 +1741,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@geolonia/japanese-numeral@npm:1.0.2":
-  version: 1.0.2
-  resolution: "@geolonia/japanese-numeral@npm:1.0.2"
-  checksum: 10/ac512d5f5181bd06d3dc0c32c616e57f47bf1538c6a3dcc028d126df2d26c3a0e7eb6b17c98036476c7ca1c0039ce187489f2d0f9f1fd15c5a49ec3b840df2d9
+"@geolonia/japanese-numeral@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@geolonia/japanese-numeral@npm:1.1.0"
+  checksum: 10/cc5d03fce5272397a41b0beb4acc74f805ae2ee3a9ba6b685f4bbf9a76bed53cb566dd687c9ff91580bfec3830fdd4439282fae012971f067b5e2f4564bcd65c
   languageName: node
   linkType: hard
 
@@ -9347,7 +9347,7 @@ __metadata:
     "@babel/core": "npm:7.29.7"
     "@babel/preset-env": "npm:7.29.7"
     "@babel/preset-typescript": "npm:7.29.7"
-    "@geolonia/japanese-numeral": "npm:1.0.2"
+    "@geolonia/japanese-numeral": "npm:1.1.0"
     "@rollup/plugin-babel": "npm:6.1.0"
     "@rollup/plugin-commonjs": "npm:29.0.3"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
