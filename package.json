@@ -27,7 +27,7 @@
     "not dead"
   ],
   "dependencies": {
-    "@geolonia/japanese-numeral": "1.0.2",
+    "@geolonia/japanese-numeral": "1.1.0",
     "@xpadev-net/niconicomments": "0.3.1",
     "fast-xml-parser": "5.10.1",
     "ts-array-length": "0.1.3"
