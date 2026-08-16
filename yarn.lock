@@ -2598,22 +2598,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-babel@npm:6.1.0":
-  version: 6.1.0
-  resolution: "@rollup/plugin-babel@npm:6.1.0"
+"@rollup/plugin-babel@npm:7.1.0":
+  version: 7.1.0
+  resolution: "@rollup/plugin-babel@npm:7.1.0"
   dependencies:
     "@babel/helper-module-imports": "npm:^7.18.6"
     "@rollup/pluginutils": "npm:^5.0.1"
+    workerpool: "npm:^9.0.0"
   peerDependencies:
     "@babel/core": ^7.0.0
     "@types/babel__core": ^7.1.9
-    rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    rollup: ^2.0.0||^3.0.0||^4.0.0
   peerDependenciesMeta:
     "@types/babel__core":
       optional: true
     rollup:
       optional: true
-  checksum: 10/9971648c2c9f2d4b7cec1c35541384414d150d50937af3729eb8ea09fa71ad0e3d11ca10a03e4ae97c0d3d5c3d619e1b693cfe81257b8ad50a4844c88dbaf384
+  checksum: 10/9e38db9c9a3c911514dbde34493c24e9eba582e9387d507078de6cf63ce7418c5fe810046ac6753a1b43f466ec380dd63e42a8e11961d6d51222e10cf18ec5b3
   languageName: node
   linkType: hard
 
@@ -9262,7 +9263,7 @@ __metadata:
     "@babel/preset-env": "npm:7.29.7"
     "@babel/preset-typescript": "npm:7.29.7"
     "@geolonia/japanese-numeral": "npm:1.1.0"
-    "@rollup/plugin-babel": "npm:6.1.0"
+    "@rollup/plugin-babel": "npm:7.1.0"
     "@rollup/plugin-commonjs": "npm:29.0.3"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
@@ -9435,6 +9436,13 @@ __metadata:
   version: 1.2.5
   resolution: "word-wrap@npm:1.2.5"
   checksum: 10/1ec6f6089f205f83037be10d0c4b34c9183b0b63fca0834a5b3cee55dd321429d73d40bb44c8fc8471b5203d6e8f8275717f49a8ff4b2b0ab41d7e1b563e0854
+  languageName: node
+  linkType: hard
+
+"workerpool@npm:^9.0.0":
+  version: 9.3.4
+  resolution: "workerpool@npm:9.3.4"
+  checksum: 10/afe729dde73bb541ba84d023813cc920b8e930e453295f58af3c45a3e42e11a2dbb6202f2a693358892d40d1e315b9a14f142d2dfd46a6078b23deda42680495
   languageName: node
   linkType: hard
 
