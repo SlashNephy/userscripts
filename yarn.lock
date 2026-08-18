@@ -2879,9 +2879,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:3.0.404":
-  version: 3.0.404
-  resolution: "@slashnephy/eslint-config@npm:3.0.404"
+"@slashnephy/eslint-config@npm:3.0.408":
+  version: 3.0.408
+  resolution: "@slashnephy/eslint-config@npm:3.0.408"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.7.2"
     "@eslint-react/eslint-plugin": "npm:2.13.0"
@@ -2896,10 +2896,10 @@ __metadata:
     eslint-config-flat-gitignore: "npm:2.3.0"
     eslint-import-resolver-typescript: "npm:4.4.5"
     eslint-plugin-import-x: "npm:4.17.1"
-    eslint-plugin-jest: "npm:29.16.0"
+    eslint-plugin-jest: "npm:29.16.1"
     eslint-plugin-jsx-a11y-x: "npm:0.2.0"
     eslint-plugin-n: "npm:18.3.0"
-    eslint-plugin-package-json: "npm:1.7.0"
+    eslint-plugin-package-json: "npm:1.7.1"
     eslint-plugin-promise: "npm:7.3.0"
     eslint-plugin-react: "npm:7.37.5"
     eslint-plugin-react-hooks: "npm:7.1.1"
@@ -2911,7 +2911,7 @@ __metadata:
     eslint-plugin-userscripts: "npm:0.5.6"
     eslint-plugin-xss: "npm:0.1.12"
     eslint-plugin-yml: "npm:3.8.1"
-    globals: "npm:17.9.0"
+    globals: "npm:17.11.0"
     graphql: "npm:16.14.2"
     jsonc-eslint-parser: "npm:3.3.0"
     typescript: "npm:6.0.3"
@@ -2919,7 +2919,7 @@ __metadata:
     yaml-eslint-parser: "npm:2.1.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/5128ffac3b620c8e4f10869c70b6653fdb473acd630fd6ded0924d7c4e778383d9659a6aa5ff68ab770a874010037a15d818a3dd6ad57b3661bf5c4fc39c6b55
+  checksum: 10/1c0f1f46e477936aac1d07ee1f840ba44c3eeffe5f67217108aa44ca23cab9bab33b00ca26a334261b2190fa6a7840aef047ce4a567e2da6024076b39d03e773
   languageName: node
   linkType: hard
 
@@ -5172,9 +5172,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:29.16.0":
-  version: 29.16.0
-  resolution: "eslint-plugin-jest@npm:29.16.0"
+"eslint-plugin-jest@npm:29.16.1":
+  version: 29.16.1
+  resolution: "eslint-plugin-jest@npm:29.16.1"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.0.0"
   peerDependencies:
@@ -5189,7 +5189,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10/f57ddcfe950dde5792bee08a7dfe10e7a557c35a23a7e37f7c174e17271993b9310f180d253e3f4fbe31f205ffc1cff111131b47e24471601bef50493e4403a8
+  checksum: 10/c13741296e115c757f11f912712b49ad35eac1c09323c65a88a75898244ae4c42e9b5046c0e48263321a048701d891a0a887ae7a3650752873d22e86c9d564f8
   languageName: node
   linkType: hard
 
@@ -5235,9 +5235,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-package-json@npm:1.7.0":
-  version: 1.7.0
-  resolution: "eslint-plugin-package-json@npm:1.7.0"
+"eslint-plugin-package-json@npm:1.7.1":
+  version: 1.7.1
+  resolution: "eslint-plugin-package-json@npm:1.7.1"
   dependencies:
     "@altano/repository-tools": "npm:^2.0.1"
     "@types/estree": "npm:^1.0.0"
@@ -5257,7 +5257,7 @@ __metadata:
   peerDependenciesMeta:
     "@eslint/json":
       optional: true
-  checksum: 10/5d7996dd1765c0198c1d70c9b483ae17e41a74896dd1b51562bb0d6ce22993180364eeebc33615a16070560a20519c9f4b51c708868dcb6054724e83adf6ae44
+  checksum: 10/be23b9e2d023f27384963884026b086d23073383dd45c5f51560ce245b6fd25e63c017e47cc3361302c72146520e1692b70d56c3dd4a86621fbe0abe7144a403
   languageName: node
   linkType: hard
 
@@ -6136,10 +6136,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:17.9.0":
-  version: 17.9.0
-  resolution: "globals@npm:17.9.0"
-  checksum: 10/8619386d449e8cbb81e242eced8bca0a42e5c3633a3a35996b8b1618beb17ff9fb33bfe703d60d83d4b7f6f8a996dede4faf02f9e966e50ff895e0cf6122ae15
+"globals@npm:17.11.0":
+  version: 17.11.0
+  resolution: "globals@npm:17.11.0"
+  checksum: 10/9cff5b8099b585862ab0d31e8b93dc1c3e7b59239dc58b59447a38709715751df8794ee0d28f434f8e421b01aee3cc10051e2455b5c967d960e79f882e68aa0f
   languageName: node
   linkType: hard
 
@@ -9300,7 +9300,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:29.0.3"
     "@rollup/plugin-node-resolve": "npm:16.0.3"
     "@rollup/plugin-typescript": "npm:12.3.0"
-    "@slashnephy/eslint-config": "npm:3.0.404"
+    "@slashnephy/eslint-config": "npm:3.0.408"
     "@slashnephy/types-amq": "npm:0.4.84"
     "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.10.0"
