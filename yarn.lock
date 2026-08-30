@@ -5831,19 +5831,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-xml-parser@npm:5.10.1":
-  version: 5.10.1
-  resolution: "fast-xml-parser@npm:5.10.1"
+"fast-xml-parser@npm:5.11.1":
+  version: 5.11.1
+  resolution: "fast-xml-parser@npm:5.11.1"
   dependencies:
     "@nodable/entities": "npm:^3.0.0"
     fast-xml-builder: "npm:^1.2.0"
     is-unsafe: "npm:^2.0.0"
     path-expression-matcher: "npm:^1.6.2"
-    strnum: "npm:^2.4.1"
+    strnum: "npm:^2.4.2"
     xml-naming: "npm:^0.3.0"
   bin:
     fxparser: src/cli/cli.js
-  checksum: 10/3d2a502efd652fbfacd5beb205f3abb61e065facd9acd6b524aee01bda19765caa47407b7aa3743fc58b3b00da51c18a0ff0ee030ba3b952341ca8717bae2b05
+  checksum: 10/9e0854bb49140bb2bdbe527fd71c74c502d5c8766587e6cad49e0175d5b1ee5e751f896445262d6ecdb7a407a644f7c25da5f20ad0feadd08787d3a9505f7dc4
   languageName: node
   linkType: hard
 
@@ -8780,7 +8780,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strnum@npm:^2.4.1":
+"strnum@npm:^2.4.2":
   version: 2.4.2
   resolution: "strnum@npm:2.4.2"
   dependencies:
@@ -9311,7 +9311,7 @@ __metadata:
     "@xpadev-net/niconicomments": "npm:0.3.1"
     concurrently: "npm:9.2.4"
     eslint: "npm:9.39.5"
-    fast-xml-parser: "npm:5.10.1"
+    fast-xml-parser: "npm:5.11.1"
     markdown-doc-builder: "npm:1.3.0"
     rollup: "npm:4.62.4"
     serve: "npm:14.2.6"
